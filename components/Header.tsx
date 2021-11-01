@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Logo from '../public/logo_text.png'
-import {BsDiscord,BsTwitter,BsTelegram,BsGithub} from 'react-icons/bs'
+import {SiDiscord,SiTwitter,SiTelegram,SiGithub} from 'react-icons/si'
 import {IoLogoMedium} from 'react-icons/io5'
 
 interface HeaderProps {
@@ -11,11 +11,11 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({ }) => {
 
   return (
-    <header className='header-main'>
+    <header className='header-container'>
 
       <div className='header-left'>
         <HeaderLogo />
-        <HeaderItem text='About Magnet DAO' />
+        <HeaderItem text='About' />
         <HeaderItem text='Tokenomics' />
         <HeaderItem text='Roadmap' />
         <HeaderItem text='FAQ' />
@@ -23,11 +23,11 @@ export const Header: React.FC<HeaderProps> = ({ }) => {
       </div>
 
       <div className='header-right'>
-        <HeaderIcon icon={<BsDiscord />} />
-        <HeaderIcon icon={<BsTwitter />} />
-        <HeaderIcon icon={<BsTelegram />} />
+        <HeaderIcon icon={<SiDiscord />} />
+        <HeaderIcon icon={<SiTwitter />} />
+        <HeaderIcon icon={<SiTelegram />} />
         <HeaderIcon icon={<IoLogoMedium />} />
-        <HeaderIcon icon={<BsGithub />} />
+        <HeaderIcon icon={<SiGithub />} />
         <HeaderButton />
       </div>
 
@@ -54,7 +54,10 @@ const HeaderLogo = ({ }) => (
 )
 
 const HeaderButton = ({ }) => (
-  <button className='header-button'>
+  <button className='header-button group'>
     Launch App
+    <span className='header-tooltip group-hover:scale-100'>
+      Coming Soon!
+    </span>
   </button>
 )

@@ -2,38 +2,184 @@
 @tailwind components;
 @tailwind utilities;
 
-.header-main {
+body {
+  @apply overflow-x-hidden;
+}
+
+.header-container {
   @apply flex flex-row items-center justify-between
-  bg-gray-300 w-full h-16 m-0 shadow-md;
+  bg-lightGray w-full h-16 m-0;
+}
+
+.header-left {
+  @apply flex-row flex items-center ml-3;
+}
+
+.header-right {
+  @apply flex-row flex items-center mr-3;
 }
 
 .header-icon {
   @apply hidden md:flex cursor-pointer
-  text-magnetdarkblue px-1 mr-2
+  text-magnetdarkblue mx-2
   transition duration-300 ease-in-out
   hover:text-magnetred cursor-pointer;
 }
 
 .header-logo {
-  @apply w-40 mr-auto ml-3;
+  @apply w-32 mr-auto ml-3 mr-3;
 }
 
 .header-item {
   @apply hidden sm:flex cursor-pointer
-  text-xs px-1 ml-4 font-semibold text-magnetdarkblue hover:text-opacity-75;
+  text-xs mx-2 font-semibold text-magnetdarkblue hover:text-opacity-75;
 }
 
 .header-button {
-  @apply relative flex items-center justify-center mr-3
-  h-10 w-24 px-2 my-2 ml-auto bg-magnetdarkblue hover:bg-magnetred
+  @apply relative flex items-center justify-center mr-3 ml-4
+  h-10 w-24 px-2 my-2 bg-magnetdarkblue hover:bg-magnetred
   text-white text-xs hover:rounded-xl rounded-2xl transition-all
-  duration-300 ease-linear cursor-pointer shadow-lg font-semibold;
+  duration-300 ease-linear cursor-pointer shadow-md hover:shadow-lg font-medium hover:font-semibold;
 }
 
-.header-left {
-  @apply flex-row flex items-center;
+.header-tooltip {
+  @apply absolute z-0 top-8 py-2 px-1 m-3 w-full rounded-xl shadow-md
+  text-white bg-gray-900 text-xs font-medium
+  transition-all duration-100 scale-0 origin-top;
 }
 
-.header-right {
-  @apply flex-row flex items-center;
+.main-container {
+  @apply bg-lightGray pt-24 px-20 shadow-md text-magnetdarkblue;
+}
+
+.main-title {
+  @apply text-6xl font-bold max-w-[500px];
+}
+
+.main-button {
+  @apply hover:shadow-md font-semibold text-white mt-6 mr-6 border-2 border-magnetdarkblue 
+  hover:border-magnetred rounded-xl bg-magnetdarkblue p-2
+  hover:rounded-lg transition-all duration-300 ease-linear hover:bg-magnetred;
+}
+
+.main-button-alt {
+  @apply hover:shadow-md font-semibold text-magnetdarkblue mt-6 rounded-xl p-2 border-2 border-magnetdarkblue
+  hover:rounded-lg transition-all duration-300 ease-linear hover:text-magnetred hover:border-magnetred bg-transparent;
+}
+
+.main-footer {
+  @apply bg-lightGray mt-24 py-8 border-t border-magnetdarkblue
+  grid-cols-2 sm:grid-cols-3 grid-flow-row gap-4 grid items-center;
+}
+
+.main-footer-item {
+  @apply flex flex-col text-xs font-medium text-magnetdarkblue;
+}
+
+.main-footer-item-number {
+  @apply font-semibold text-xl w-auto;
+}
+
+.body-row {
+  @apply my-32 flex flex-grow items-center justify-between;
+}
+
+.body-image {
+  @apply bg-lightGray w-[300px] md:w-[600px] h-[600px] rounded-3xl
+  transition-all duration-300 ease-linear;
+}
+
+.body-image-left {
+  @apply -ml-20;
+}
+
+.body-image-right {
+  @apply -mr-20;
+}
+
+.body-text-container {
+  @apply text-left w-full px-12
+  flex flex-col;
+}
+
+.body-title {
+  @apply font-bold py-8;
+}
+
+.body-text {
+  @apply font-medium py-8;
+}
+
+.body-banner {
+  @apply bg-lightGray w-full flex flex-wrap justify-evenly mt-24 py-8;
+}
+
+.body-banner-item {
+  @apply p-4 text-xs flex flex-col font-light;
+}
+
+.body-banner-item-text {
+  @apply font-semibold text-[1rem];
+}
+
+.tokenomics-container {
+  @apply my-12;
+}
+
+.tokenomics-title {
+  @apply text-black font-bold text-4xl bg-lightGray pl-24 p-4 w-80 shadow-md;
+}
+
+.tokenomics-row {
+  @apply my-24 flex flex-grow items-center justify-between;
+}
+
+.tokenomics-image {
+  @apply bg-lightGray w-[300px] md:w-[600px] h-[600px] rounded-3xl
+  transition-all duration-300 ease-linear -ml-6;
+}
+
+.tokenomics-text {
+  @apply text-left w-full px-12
+  flex flex-col;
+}
+
+.tokenomics-text-title {
+  @apply font-semibold py-6;
+}
+
+.tokenomics-text-item {
+  @apply pb-8;
+}
+
+.tokenomics-text-list {
+  @apply list-disc pb-4;
+}
+
+.roadmap-container {
+  @apply py-24 flex justify-end;
+}
+
+.roadmap-title {
+  @apply text-black font-bold text-4xl bg-lightGray pr-24 p-4 w-80 shadow-md;
+}
+
+.roadmap-element {
+  @apply flex flex-col;
+}
+
+.roadmap-item-title {
+  @apply text-lg font-semibold;
+}
+
+.roadmap-item-text {
+  @apply py-2;
+}
+
+.community-container {
+  @apply bg-lightGray my-24 p-24 flex flex-grow items-center justify-between;
+}
+
+.community-title {
+  @apply font-bold text-7xl max-w-[420px];
 }
