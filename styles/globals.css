@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.header-main {
+  @apply flex flex-row items-center justify-between
+  bg-gray-300 w-full h-16 m-0 shadow-md;
+}
+
+.header-icon {
+  @apply hidden md:flex cursor-pointer
+  text-magnetdarkblue px-1 mr-2
+  transition duration-300 ease-in-out
+  hover:text-magnetred cursor-pointer;
+}
+
+.header-logo {
+  @apply w-40 mr-auto ml-3;
+}
+
+.header-item {
+  @apply hidden sm:flex cursor-pointer
+  text-xs px-1 ml-4 font-semibold text-magnetdarkblue hover:text-opacity-75;
+}
+
+.header-button {
+  @apply relative flex items-center justify-center mr-3
+  h-10 w-24 px-2 my-2 ml-auto bg-magnetdarkblue hover:bg-magnetred
+  text-white text-xs hover:rounded-xl rounded-2xl transition-all
+  duration-300 ease-linear cursor-pointer shadow-lg font-semibold;
+}
+
+.header-left {
+  @apply flex-row flex items-center;
+}
+
+.header-right {
+  @apply flex-row flex items-center;
+}
