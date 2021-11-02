@@ -9,7 +9,7 @@ body {
 
 .header-container {
   @apply flex flex-row items-center justify-between
-  bg-lightGray w-full h-16 m-0;
+  bg-lightGray w-full h-16 m-0 pt-2;
 }
 
 .header-left {
@@ -28,11 +28,11 @@ body {
 }
 
 .header-logo {
-  @apply w-32 mr-auto ml-3 mr-3;
+  @apply w-32 mx-3;
 }
 
 .header-item {
-  @apply hidden sm:flex cursor-pointer
+  @apply hidden xs:flex cursor-pointer
   text-xs mx-2 font-semibold text-magnetdarkblue hover:text-opacity-75;
 }
 
@@ -128,7 +128,7 @@ body {
 }
 
 .tokenomics-title {
-  @apply text-black font-bold text-4xl bg-lightGray pl-24 p-4 w-80 shadow-md;
+  @apply text-black font-bold text-4xl bg-lightGray p-0 text-center sm:pl-24 p-4 w-80 shadow-md;
 }
 
 .tokenomics-row {
@@ -166,7 +166,7 @@ body {
 }
 
 .roadmap-title {
-  @apply text-black font-bold text-4xl bg-lightGray pr-24 p-4 w-80 shadow-md;
+  @apply text-black font-bold text-4xl bg-lightGray p-0 text-center sm:pr-24 p-4 w-80 shadow-md;
 }
 
 .roadmap-element {

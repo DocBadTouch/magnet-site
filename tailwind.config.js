@@ -14,6 +14,9 @@ module.exports = {
 
         gray: colors.trueGray,
         lightGray: '#EBEBEB'
+      },
+      screens: {
+        'xs': '585px'
       }
     },
   },
