@@ -21,23 +21,23 @@ body {
 }
 
 .header-icon {
-  @apply hidden md:flex cursor-pointer
-  text-magnetdarkblue mx-2
+  @apply hidden ms:flex cursor-pointer
+  text-magnetdarkblue mx-1 md:mx-2
   transition duration-300 ease-in-out
   hover:text-magnetred cursor-pointer;
 }
 
 .header-logo {
-  @apply w-32 mx-3;
+  @apply w-32 mx-1 xs:mx-3;
 }
 
 .header-item {
-  @apply hidden xs:flex cursor-pointer
-  text-xs mx-2 font-semibold text-magnetdarkblue hover:text-opacity-75;
+  @apply hidden xxs:flex cursor-pointer
+  text-xs mx-1 m:mx-2 font-semibold text-magnetdarkblue hover:text-opacity-75;
 }
 
 .header-button {
-  @apply relative flex items-center justify-center mr-3 ml-4
+  @apply relative flex items-center justify-center mx-1 xs:mx-3
   h-10 w-24 px-2 my-2 bg-magnetdarkblue hover:bg-magnetred
   text-white text-xs hover:rounded-xl rounded-2xl transition-all
   duration-300 ease-linear cursor-pointer shadow-md hover:shadow-lg font-medium hover:font-semibold;

@@ -16,7 +16,10 @@ module.exports = {
         lightGray: '#EBEBEB'
       },
       screens: {
-        'xs': '585px'
+        'xxs': '525px',
+        'xs': '585px',
+        'ms': '680px',
+        'm': '730px'
       }
     },
   },
