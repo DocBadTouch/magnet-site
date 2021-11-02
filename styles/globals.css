@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 body {
-  @apply overflow-x-hidden;
+  @apply overflow-x-hidden bg-white
+  transition-all duration-300 ease-linear;
 }
 
 .header-container {
@@ -49,7 +50,7 @@ body {
 }
 
 .main-container {
-  @apply bg-lightGray pt-24 px-12 shadow-md text-magnetdarkblue;
+  @apply bg-lightGray pt-24 px-10 sm:px-24 shadow-md text-magnetdarkblue;
 }
 
 .main-title {
@@ -69,7 +70,7 @@ body {
 
 .main-footer {
   @apply bg-lightGray mt-24 py-8 border-t border-magnetdarkblue
-  grid-cols-2 sm:grid-cols-3 grid-flow-row gap-12 sm:gap-4 grid items-center;
+  grid-cols-2 sm:grid-cols-3 grid-flow-row gap-8 sm:gap-4 grid items-center;
 }
 
 .main-footer-item {
