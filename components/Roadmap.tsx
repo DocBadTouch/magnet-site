@@ -17,7 +17,9 @@ export const Roadmap: React.FC<RoadmapProps> = ({ }) => {
       <div className='roadmap-container'>
         <RoadmapTitle />
       </div>
-      <RoadmapTimeline />
+      <div className='roadmap'>
+        <RoadmapTimeline />
+      </div>
     </div>
   )
 }
@@ -49,14 +51,14 @@ const RoadmapTimeline = ({ }) => (
 )
 
 const RoadmapItem = ({ title, text }) => (
-    <TimelineItem className=''>
-      <TimelineSeparator>
-        <TimelineDot />
-        <TimelineConnector />
-      </TimelineSeparator>
-      <TimelineContent>
-        <div className='roadmap-item-title'>{title}</div>
-        <div className='roadmap-item-text'>{text}</div>
-      </TimelineContent>
-    </TimelineItem>
+  <TimelineItem className=''>
+    <TimelineSeparator>
+      <TimelineDot />
+      <TimelineConnector />
+    </TimelineSeparator>
+    <TimelineContent>
+      <div className='roadmap-item-title'>{title}</div>
+      <div className='roadmap-item-text'>{text}</div>
+    </TimelineContent>
+  </TimelineItem>
 )

@@ -15,11 +15,14 @@ export const Community: React.FC<CommunityProps> = ({  }) => {
 
 const CommunityTitle = ({}) => (
   <div className='community-title'>
-    <div className='text-5xl'>
+    <div>
       Join the
     </div>
     <div>
-      Magnet community
+      Magnet
+    </div>
+    <div>
+      Community
     </div>
   </div>
 )
