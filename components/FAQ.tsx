@@ -27,7 +27,7 @@ export const FAQ: React.FC<FAQProps> = ({ }) => {
   const {t} = useTranslation("faq")
   console.log(t('MagnetDao.title'))
   return (
-     <div className='faq-container'>
+     <div className='faq-container' id="faq-section">
        <FAQTitle title={t('title')}/>
        <FAQTabContainer t={t} magFaqTitle={t('magnetDao.title')} ohmFaqTitle={t('ohmDao.title')}/>
      </div>

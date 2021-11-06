@@ -1,51 +1,105 @@
 {
   "title": "Roadmap",
-  "tl1": {
-    "title": "Q4 - 2021",
-    "bullets": {
-      "b1":{"text":"Discord, Twitter, and Telegram Launch"},
-      "b2":{"text":"$MAG Token Launch"},
-      "b3":{"text":"CoinGecko and CoinMarketCap Listings"},
-      "b4":{"text":"Begin deploying treasury to further build out the team - emphasis on launching our first protocol ASAP"}
-    }
-  },
-  "tl2": {
-    "title": "Q1 - 2022",
-    "bullets": {
-      "b1":{"text":"DAO proposals begin - Tokenomics, Treasury Management, etc."},
-      "b2":{"text":"Begin developing, incubating, and funding new protocols using 10% of the treasury"} 
-    }
-  },
-  "tl3": {
-    "title": "Q2 - 2022",
-    "bullets": {
-      "b1":{"text":"DAO proposals begin - Tokenomics, Treasury Management, etc."},
-      "b2":{
-        "text":"Begin developing, incubating, and funding new protocols using 10% of the treasury",
-        "subBullets": {
-          "sb1": {"text": "First protocol we are focused on developing - native DAO tooling platform, expected launch in Q2-Q3 2022"},
-          "sb2": {"text": "Other protocols will come next - direction of what to build will be governed by the DAO"},
-          "sb3": {"text": "Magnet DAO will also incubate projects, helping early-stage blockchain projects with building their protocols and providing funding from the treasury in return for tokens, which Magnet DAO treasury will receive and hold"},
-          "sb4": {"text": "Magnet DAO will also participate in early-stage funding rounds for projects if we see fit and if the DAO decides to do so - these tokens will be owned and held in the Magnet DAO treasury"}
+  "timeline": [
+    {
+      "title": "Q4 - 2021",
+      "items": [
+        {
+          "isComplete": true,
+          "text": "Discord, Twitter, and Telegram Launch"
+        },
+        {
+          "isComplete": false,
+          "text": "$MAG Token Launch"
+        },
+        {
+          "isComplete": false,
+          "text": "CoinGecko and CoinMarketCap Listings"
+        },
+        {
+          "isComplete": false,
+          "text": "Begin deploying treasury to further build out the team - emphasis on launching our first protocol ASAP"
         }
-      }
-    }
-  },
-  "tl4": {
-    "title": "Q3 - 2022 and Beyond",
-    "bullets": {
-      "b1":{"text":"Integrate native DAO tooling to make management seamless and integrated."},
-      "b2":{"text":"Promote key contributors to leadership positions in the DAO"},
-      "b3":{"text":"License our DAO tooling to other DAO’s looking for a management system"},     
-      "b4":{
-        "text":"Continue to develop, incubate, and fund new protocols",
-        "subBullets": {
-          "sb1": {"text": "At this stage, we will have initial products and will be building out networks and communities"},
-          "sb2": {"text": "We’d like DAO members to help contribute as much as possible with these new protocols, ideally with people taking on positions in the sub-communities"}
+      ]
+    },
+    {
+      "title": "Q1 - 2022",
+      "items": [
+        {
+          "isComplete": false,
+          "text": "DAO proposals begin - Tokenomics, Treasury Management, etc."
+        },
+        {
+          "isComplete": false,
+          "text": "Begin developing, incubating, and funding new protocols using 10% of the treasury"
         }
-      },
-      "b5":{"text":"And much, much more!"
-      }
-    } 
-  }
+      ]
+    },
+    {
+      "title": "Q2 - 2022",
+      "items": [
+        {
+          "isComplete": false,
+          "text": "DAO proposals begin - Tokenomics, Treasury Management, etc."
+        },
+        {
+          "isComplete": false,
+          "text": "Begin developing, incubating, and funding new protocols using 10% of the treasury",
+          "subItems": [
+            {
+              "isComplete": false,
+              "text": "First protocol we are focused on developing - native DAO tooling platform, expected launch in Q2-Q3 2022"
+            },
+            {
+              "isComplete": false,
+              "text": "Other protocols will come next - direction of what to build will be governed by the DAO"
+            },
+            {
+              "isComplete": false,
+              "text": "Magnet DAO will also incubate projects, helping early-stage blockchain projects with building their protocols and providing funding from the treasury in return for tokens, which Magnet DAO treasury will receive and hold"
+            },
+            {
+              "isComplete": false,
+              "text": "Magnet DAO will also participate in early-stage funding rounds for projects if we see fit and if the DAO decides to do so - these tokens will be owned and held in the Magnet DAO treasury"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Q3 - 2022 and Beyond",
+      "items": [
+        {
+          "isComplete": false,
+          "text": "Integrate native DAO tooling to make management seamless and integrated."
+        },
+        {
+          "isComplete": false,
+          "text": "Promote key contributors to leadership positions in the DAO"
+        },
+        {
+          "isComplete": false,
+          "text": "License our DAO tooling to other DAO’s looking for a management system"
+        },
+        {
+          "isComplete": false,
+          "text": "Continue to develop, incubate, and fund new protocols",
+          "subItems": [
+            {
+              "isComplete": false,
+              "text": "At this stage, we will have initial products and will be building out networks and communities"
+            },
+            {
+              "isComplete": false,
+              "text": "We’d like DAO members to help contribute as much as possible with these new protocols, ideally with people taking on positions in the sub-communities"
+            }
+          ]
+        },
+        {
+          "isComplete": false,
+          "text": "And much, much more!"
+        }
+      ]
+    }
+  ]
 }

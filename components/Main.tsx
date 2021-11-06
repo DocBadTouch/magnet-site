@@ -3,7 +3,9 @@ import { useTranslation } from 'next-i18next';
 interface MainProps {
 
 }
-
+const scrollToSection = (tag)=>{
+  document.getElementById(tag+"-section").scrollIntoView({behavior: "smooth", block: "start"})
+}
 export const Main: React.FC<MainProps> = ({ }) => {
   const {t} = useTranslation('main')
   const title = t("catchphrase")
@@ -28,13 +30,13 @@ const MainTitle = ({ title }) => (
 )
 
 const MainButton = ({ text }) => (
-  <button className='main-button'>
+  <button className='main-button' onClick={()=>scrollToSection("about")}>
     {text}
   </button>
 )
 
 const MainButtonAlt = ({text }) => (
-  <button className='main-button-alt'>
+  <button className='main-button-alt' onClick={()=>scrollToSection("tokenomics")}>
     {text}
   </button>
 )

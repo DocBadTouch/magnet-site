@@ -10,7 +10,7 @@ export const Tokenomics: React.FC<TokenomicsProps> = ({ }) => {
   const totalSupply = t("totalSupply",{returnObjects: true});
   const distribution = t("distribution",{returnObjects: true})
   return (
-    <div className='tokenomics-container'>
+    <div className='tokenomics-container' id="tokenomics-section">
       <TokenomicsTitle />
       <div className='tokenomics-row'>
         <TokenomicsImage />

@@ -14,7 +14,7 @@ export const Body: React.FC<BodyProps> = ({ }) => {
   const bannerItems = t('banner',{returnObjects: true});
   console.log(bannerItems)
   return (
-    <div className='body-container'>
+    <div className='body-container' id="about-section">
       
       <div className='body-row'>
         <BodyImageLeft />
