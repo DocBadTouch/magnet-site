@@ -3,11 +3,29 @@
   "but1": "What is Magnet DAO?",
   "but2": "Tokenomics",
   "stats": {
-    "treasuryBal": "Treasury Balance",
-    "currAPY": "Current APY",
-    "price": "Price",
-    "circSupp": "Circulating Supply",
-    "mCap": "Market Cap",
-    "tvl": "TVL"
+    "treasuryBal": { 
+      "title": "Treasury Balance", 
+      "value": "$12,458,785.99 USD"
+    }, 
+    "currAPY": { 
+      "title": "Current APY", 
+      "value": "12,947%"
+    }, 
+    "price": { 
+      "title": "Price", 
+      "value": "$1,247.34 USD"
+    }, 
+    "circSupp": { 
+      "title": "Circulating Supply", 
+      "value": "648,423 MAG"
+    },
+    "mCap": { 
+      "title": "Market Cap", 
+      "value": "$74,147,347.21 USD"
+    },
+    "tvl": { 
+      "title": "TVL", 
+      "value": "$92,147,442.00 USD"
+    }
   }
 }

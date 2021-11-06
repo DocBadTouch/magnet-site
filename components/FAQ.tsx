@@ -68,8 +68,8 @@ const FAQTabContainer = ({t, magFaqTitle, ohmFaqTitle}) => (
    </TabPanel>
   </Tabs>
 )
-const FAQQuestion = ({key,prompt,answers}) => (
-  <div key={key} className='faq-question'>
+const FAQQuestion = ({prompt,answers}) => (
+  <div  className='faq-question'>
     <Collapsible trigger={prompt}>
      {
      Object.entries(answers).map(x=><p key={x[0]} className="faq-answer">{x[1]}</p>)
