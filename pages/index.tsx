@@ -8,6 +8,18 @@ import { Roadmap } from '../components/Roadmap'
 import { Community } from '../components/Community'
 import { FAQ } from '../components/FAQ'
 
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['body','community','faq', 'header','main','roadmap','tokenomics'])),
+      // Will be passed to the page component as props
+    },
+  };
+}
+
+
 const Home: NextPage = () => {
   return (
     <div>

@@ -206,7 +206,7 @@ body {
   @apply text-3xl font-bold 
   
 }
-.faq-prompt {
+/*.faq-prompt {
   @apply font-bold text-left
 }
 .faq-prompt::after{
@@ -215,7 +215,7 @@ body {
   transition: transform 300ms;
   right: 10px;
   top: 10px;
-}
+}*/
 
 .faq-question {
 text-align: start;
@@ -228,8 +228,31 @@ max-width: 800px;;
   @apply mt-4 h-1 bg-magnetdarkblue 
 }
 .faq-answer {
-  @apply  text-2xl py-6  
+  @apply  text-2xl py-6 
 }
 .faq-answer::before {
   content: '-';  
 }
+.Collapsible__trigger {
+  display: block;
+  font-weight: 400;
+  text-decoration: none;
+  color: #333333;
+  position: relative;
+  border: 1px solid white;
+  padding: 10px;
+  background: #00ac9d;
+  color: white; }
+.Collapsible__trigger:after {
+  font-family: 'FontAwesome';
+  content: '\f107';
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: block;
+  transition: transform 300ms; }
+.Collapsible__trigger.is-open:after {
+  transform: rotateZ(180deg); }
+.Collapsible__trigger.is-disabled {
+  opacity: 0.5;
+  background-color: grey; }

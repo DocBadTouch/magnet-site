@@ -2,66 +2,78 @@ import React, {Component} from 'react';
 import Collapsible from 'react-collapsible'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css'; 
+import { useTranslation } from 'next-i18next';
+import faq from "../public/locales/en/faq.json"
 interface FAQProps {
   
 }
-const getFaqProps = ()=>{
-  //Retrieve FAQ Info from and Easy to maintain/update place.
-  return {
-    magFaq:{
-      title: "Magnet DAO - Specific FAQ",
-      questions: [
-        {prompt: "Are you an Ohm fork?", answer: "Yes, but we are awesome"}
-      ]
-    }, 
-    ohmFaq:{
-      title: "Ohm DAO - Related FAQ",
-      questions: [
-        {prompt: "Does Ohm Suck?", answer: "Yes, when compared to Magnet DAO"}
+const magtitle = faq.magnetDao.title
+const magDaoQuestions = faq.magnetDao.questions
+const ohmDaoQuestions = faq.ohmDao.questions
+const magQPrefix = 'magnetDao.questions.'
+const ohmQPrefix = 'ohmDao.questions.'
 
-      ]
-
-    }}
-     
+const mapAPrefix = (currPrefix,currObj, tFunc)=>{
+  let answers = {}
+  for(const q of Object.keys(currObj)) {
+    answers[q] = tFunc(`${currPrefix+"."+q}`)
+  } 
+  return answers
 }
+
+     
+
 export const FAQ: React.FC<FAQProps> = ({ }) => {
-  const faqProps = getFaqProps();
+  const {t} = useTranslation("faq")
+  console.log(t('MagnetDao.title'))
   return (
      <div className='faq-container'>
-       <FAQTitle/>
-       <FAQTabContainer magnetDaoFaq={faqProps.magFaq} ohmDaoFaq={faqProps.ohmFaq}/>
+       <FAQTitle title={t('title')}/>
+       <FAQTabContainer t={t} magFaqTitle={t('magnetDao.title')} ohmFaqTitle={t('ohmDao.title')}/>
      </div>
   )
 }
 
-const FAQTitle = ({}) => (
+const FAQTitle = ({title}) => (
   <div className='faq-title-container'>
-   <span className='faq-title-text'>Frequently Asked Questions</span>
+   <span className='faq-title-text'>{title}</span>
   </div>
 )
 
-const FAQTabContainer = ({magnetDaoFaq,ohmDaoFaq}) => (
+const FAQTabContainer = ({t, magFaqTitle, ohmFaqTitle}) => (
   <Tabs >
     <TabList className='faq-tab-title'>
-      <Tab >{magnetDaoFaq.title}</Tab>
-      <Tab >{ohmDaoFaq.title}</Tab>
+      <Tab >{magFaqTitle}</Tab>
+      <Tab >{ohmFaqTitle}</Tab>
     </TabList>
    <TabPanel>
-   {magnetDaoFaq.questions.map((question: {prompt: string,answer: string})=>(
-     <FAQQuestion prompt={question.prompt} answer={question.answer}/>
-   ))}
+    {Object.keys(magDaoQuestions).map((key) => (
+      <FAQQuestion 
+      key={key}
+      prompt={t(`${magQPrefix+key}.q`)} 
+      answers={t(`${magQPrefix+key}.a`, {returnObjects: true})}
+      />
+    ))}
+    
    </TabPanel>
    <TabPanel>
-   {ohmDaoFaq.questions.map((question: {prompt: string,answer: string})=>(
-     <FAQQuestion prompt={question.prompt} answer={question.answer}/>
-   ))}
+   {
+   Object.keys(ohmDaoQuestions).map((key) => (
+      <FAQQuestion
+      key={key} 
+      prompt={t(`${ohmQPrefix+key}.q`)} 
+      answers={t(`${ohmQPrefix+key}.a`, {returnObjects: true})}
+      />
+    ))}
    </TabPanel>
   </Tabs>
 )
-const FAQQuestion = ({prompt,answer}) => (
-  <div className='faq-question'>
-    <Collapsible trigger={prompt} triggerClassName='faq-prompt'>
-     <p className="faq-answer">{answer}</p>
+const FAQQuestion = ({key,prompt,answers}) => (
+  <div key={key} className='faq-question'>
+    <Collapsible trigger={prompt}>
+     {
+     Object.entries(answers).map(x=><p key={x[0]} className="faq-answer">{x[1]}</p>)
+     } 
     </Collapsible>
     <hr/>
   </div>
