@@ -23,7 +23,7 @@ export async function getStaticProps({ locale }) {
 const Home: NextPage = () => {
   return (
     <div>
-      <Head children={''}>
+      <Head >
         <title>Magnet DAO</title>
         <meta name="description" content="Magnet DAO is a new, innovative project which implements protocol controlled value and deflationary mechanisms in order to create long-standing value for tokenholders." />
         <link rel="icon" href="/favicon.ico" />
