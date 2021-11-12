@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+DEFINE SOME ROOT VARIABLES 
+
+--mag-blue = The darkblue we use
+--mag-dark-text = The dark text color
+--mag-light-text = The light text color
+--mag-gray = The light gray Bg color
+--mag-accent = The accent color used for contrasting
+*/
+:root{
+--mag-dark-blue: #0F1831;
+--mag-grey: #F5F8FF;
+--mag-accent: #FF7A00;
+--mag-light-blue: #59627C;
+--mag-dark-text:var(--mag-dark-blue);
+--mag-light-text:var(--mag-grey);
+--mag-accent-text:var(--mag-accent);
+
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -249,77 +269,154 @@ body {
 }
 
 .community-container {
-  @apply bg-lightGray my-24 p-24 flex flex-grow items-center justify-between;
+  height: 680px;
+  background: radial-gradient(24.14% 42.38% at 100% 100%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #0F1831;
+  background-blend-mode: overlay, normal;
+  
+  @apply  p-24 flex flex-grow items-center justify-between;
 }
 
 .community-title {
+  color: var(--mag-accent);
   @apply font-bold text-2xl md:text-6xl max-w-[420px];
 }
+/*FAQ CSS SECTION*/
+
 .faq-container{
-  @apply flex flex-col justify-between items-center my-24 w-full
+  background: var(--mag-grey);
+  padding-top: 40px;
+  margin-bottom: 200px;
+  @apply flex flex-col justify-between   w-full
 }
 .faq-title-container{
-  @apply flex justify-center my-4 py-10
+  position: relative;
+  height: 285px;
+  @apply flex   
+}
+.faq-title-text, .faq-title-text-outline {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 150%; 
+  position: absolute;
 }
 .faq-title-text {
-  @apply text-6xl font-bold 
-}
-.react-tabs{
-  width: 100%;
-  text-align: center;
-}
-.faq-tab-title {
-  border-bottom: 1px solid #ccc;
-  @apply text-3xl font-bold 
   
+  color: var(--mag-dark-text);
+  left: 7%;
+  top: 40%;
+  z-index: 2;
+  font-size: 36px;
 }
-/*.faq-prompt {
-  @apply font-bold text-left
-}
-.faq-prompt::after{
-  content: '+';
+.faq-title-text-outline{ 
+  z-index: 0;
   position: absolute;
-  transition: transform 300ms;
-  right: 10px;
-  top: 10px;
-}*/
+  letter-spacing: .01em;
+  color: var(--mag-grey);;
+  font-size: 50px;
+  left: 7%;
+  top: 40%;
+  margin-left: -40px;
+  margin-top: -25px;
+  text-shadow:  -1px -1px 0 #DEE3F2,
+				  -1px -1px 0 #DEE3F2,
+				 -1px -1px 0 #DEE3F2,
+				-1px -1px 0 #DEE3F2;
+}
+.faq-title-text-accent{
+  position: absolute;
+  left: 7%;
+  top: 40%;
+  margin-top: 55px;
+  margin-left: 15px;
+  width: 75px;
+  height: 5px;
+  background-color: var(--mag-accent);
+}
+/* FAQ tabs CSS */
+.faq-tab-title-container {
+  width: 100%;
+  text-align: right;
+  margin-bottom: none;
+}
+.react-tabs__tab-list.faq-tab-title-container {
+  margin: 0 0 0 0;
+  border-bottom: none;
+}
+.react-tabs__tab.faq-tab-title{
+  right: 5%;
+  height: 70;
+  text-align: center;
+  width: 390px;
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 150%;
+  color: var(--mag-light-blue); 
+  border: none;
+}
+.react-tabs__tab--selected.faq-tab-title {
+  border-top: var(--mag-accent) 5px solid;
+  color: var(--mag-dark-blue);
+}
 
+.faq-tab-panel.react-tabs__tab-panel--selected {
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+}
 .faq-question {
-text-align: start;
+width: 70%;
 align-self: center;
-margin: auto;
-max-width: 800px;;
-@apply text-2xl mt-6 
+color: #0F1831;
+padding-top: 2.5rem;
+@apply text-2xl 
 }
 .faq-question hr {
-  @apply mt-4 h-1 bg-magnetdarkblue 
+  @apply mt-4  bg-magnetdarkblue 
 }
 .faq-answer {
-  @apply  text-2xl py-6 
+  
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 175%;
+  padding-right: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
-.faq-answer::before {
-  content: '-';  
-}
+
 .Collapsible__trigger {
   display: block;
-  font-weight: 400;
   text-decoration: none;
-  color: #333333;
   position: relative;
   border: 1px solid white;
-  padding: 10px;
-  background: #00ac9d;
-  color: white; }
+  padding: 10px 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 150%;
+  color: #0F1831; }
 .Collapsible__trigger:after {
   font-family: 'FontAwesome';
-  content: '\f107';
+  content: '\002B';
   position: absolute;
-  right: 10px;
+  font-size: xx-large;
+  right: -15px;
   top: 10px;
+  font-weight: 600;
   display: block;
-  transition: transform 300ms; }
+  color: #FF9900;
+  transform: rotateZ(-540deg);
+  transition: transform 400ms; }
 .Collapsible__trigger.is-open:after {
-  transform: rotateZ(180deg); }
+  content: "\2212";
+  font-size: xx-large;
+  transform: rotateZ(540deg);
+  transition: transform 400ms; 
+ }
 .Collapsible__trigger.is-disabled {
   opacity: 0.5;
   background-color: grey; }

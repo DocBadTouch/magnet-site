@@ -37,16 +37,18 @@ export const FAQ: React.FC<FAQProps> = ({ }) => {
 const FAQTitle = ({title}) => (
   <div className='faq-title-container'>
    <span className='faq-title-text'>{title}</span>
+   <span className='faq-title-text-outline'>{title}</span>
+   <span className='faq-title-text-accent'> </span>
   </div>
 )
 
 const FAQTabContainer = ({t, magFaqTitle, ohmFaqTitle}) => (
-  <Tabs >
-    <TabList className='faq-tab-title'>
-      <Tab >{magFaqTitle}</Tab>
-      <Tab >{ohmFaqTitle}</Tab>
+  <Tabs  >
+    <TabList className='react-tabs__tab-list faq-tab-title-container'>
+      <Tab className='react-tabs__tab faq-tab-title' >{magFaqTitle}</Tab>
+      <Tab className='react-tabs__tab faq-tab-title'>{ohmFaqTitle}</Tab>
     </TabList>
-   <TabPanel>
+   <TabPanel className='faq-tab-panel'> 
     {Object.keys(magDaoQuestions).map((key) => (
       <FAQQuestion 
       key={key}
@@ -56,7 +58,7 @@ const FAQTabContainer = ({t, magFaqTitle, ohmFaqTitle}) => (
     ))}
     
    </TabPanel>
-   <TabPanel>
+   <TabPanel className='faq-tab-panel'>
    {
    Object.keys(ohmDaoQuestions).map((key) => (
       <FAQQuestion
