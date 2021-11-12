@@ -3,14 +3,15 @@ import Image from 'next/image'
 import Logo from '../public/logo_text.png'
 import {SiDiscord,SiTwitter,SiTelegram,SiGithub} from 'react-icons/si'
 import {IoLogoMedium} from 'react-icons/io5'
-import { useTranslation } from 'next-i18next';
+import { useTranslation} from 'next-i18next';
+
 interface HeaderProps {
 
 }
 
 export const Header: React.FC<HeaderProps> = ({ }) => {
   const {t} = useTranslation("header")
-  const info = t("navigation", {returnObjects: true})
+  const info: {about,tokenomics,roadmap,faq,docs} = t('navigation', {returnObjects: true})
   return (
     <header className='header-container'>
 

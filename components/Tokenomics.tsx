@@ -6,7 +6,7 @@ interface TokenomicsProps {
 
 export const Tokenomics: React.FC<TokenomicsProps> = ({ }) => {
   const {t} = useTranslation('tokenomics');
-  const title = t("title");
+  const title: String = t("title");
   const totalSupply = t("totalSupply",{returnObjects: true});
   const distribution = t("distribution",{returnObjects: true})
   return (

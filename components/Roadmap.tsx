@@ -12,9 +12,9 @@ interface RoadmapProps {
 }
 
 export const Roadmap: React.FC<RoadmapProps> = ({ }) => {
-  const {t} = useTranslation("roadmap")
+  const {t} = useTranslation('roadmap')
   const timeline = t("timeline",{returnObjects: true})
-  const title = t("title")
+  const title: String = t("title")
   return (
     <div id="roadmap-section">
       <div className='roadmap-container'>

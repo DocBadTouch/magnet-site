@@ -25,7 +25,7 @@ const mapAPrefix = (currPrefix,currObj, tFunc)=>{
 
 export const FAQ: React.FC<FAQProps> = ({ }) => {
   const {t} = useTranslation("faq")
-  console.log(t('MagnetDao.title'))
+  //console.log(t('MagnetDao.title'))
   return (
      <div className='faq-container' id="faq-section">
        <FAQTitle title={t('title')}/>

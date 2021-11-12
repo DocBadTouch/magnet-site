@@ -8,9 +8,9 @@ const scrollToSection = (tag)=>{
 }
 export const Main: React.FC<MainProps> = ({ }) => {
   const {t} = useTranslation('main')
-  const title = t("catchphrase")
-  const button1Text = t("but1")
-  const button2Text = t("but2")
+  const title: String = t("catchphrase")
+  const button1Text: String = t("but1")
+  const button2Text: String = t("but2")
   const stats = t("stats", {returnObjects: true})
   
   return (
