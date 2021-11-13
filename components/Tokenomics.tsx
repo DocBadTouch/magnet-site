@@ -1,5 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'next-i18next';
+import {SectionHeader} from './SectionHeader'
 interface TokenomicsProps {
 
 }
@@ -11,7 +12,7 @@ export const Tokenomics: React.FC<TokenomicsProps> = ({ }) => {
   const distribution = t("distribution",{returnObjects: true})
   return (
     <div className='tokenomics-container' id="tokenomics-section">
-      <TokenomicsTitle />
+      <TokenomicsTitle title = {title} />
       <div className='tokenomics-row'>
         <TokenomicsImage />
         <TokenomicsText totalSupply={totalSupply} distribution={distribution} />
@@ -20,10 +21,10 @@ export const Tokenomics: React.FC<TokenomicsProps> = ({ }) => {
   )
 }
 
-const TokenomicsTitle = ({ }) => (
-  <div className='tokenomics-title'>
-    Tokenomics
-  </div>
+const TokenomicsTitle = ({ title }) => (
+  
+    <SectionHeader title={title} xTitleClassName='tokenomics-title'></SectionHeader>
+  
 )
 
 const TokenomicsImage = ({ }) => (

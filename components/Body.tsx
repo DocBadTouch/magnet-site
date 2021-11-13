@@ -1,5 +1,8 @@
 import React from 'react'
 import { useTranslation } from 'next-i18next';
+import Satellite from '../public/Satellite.svg'
+import Image from 'next/image'
+import {SectionHeader} from './SectionHeader'
 interface BodyProps {
 
 }
@@ -15,9 +18,12 @@ export const Body: React.FC<BodyProps> = ({ }) => {
   console.log(bannerItems)
   return (
     <div className='body-container' id="about-section">
+      <BodyImageLeft src={Satellite} />
+      <SectionHeader title={'Discover'} xContClassName={'body-title'}></SectionHeader>
       
       <div className='body-row'>
-        <BodyImageLeft />
+      
+      
         <BodyText title={title1} text={text1} />
       </div>
 
@@ -32,9 +38,9 @@ export const Body: React.FC<BodyProps> = ({ }) => {
   )
 }
 
-const BodyImageLeft = ({ }) => (
+const BodyImageLeft = ({ src}) => (
   <div className='body-image body-image-left'>
-
+    <Image src={src}></Image>
   </div>
 )
 

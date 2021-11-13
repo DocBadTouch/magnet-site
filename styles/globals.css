@@ -14,7 +14,7 @@ DEFINE SOME ROOT VARIABLES
 :root{
 --mag-dark-blue: #0F1831;
 --mag-grey: #F5F8FF;
---mag-accent: #FF7A00;
+--mag-accent: #E93C3C;;
 --mag-light-blue: #59627C;
 --mag-dark-text:var(--mag-dark-blue);
 --mag-light-text:var(--mag-grey);
@@ -26,10 +26,88 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  @apply overflow-x-hidden bg-white
+  background-color: #28374D;
+  @apply overflow-x-hidden 
   transition-all duration-300 ease-linear;
 }
 
+/* COMMMON COMPONENT CSS*/
+.section-header {
+  display: flex;
+  position: relative;
+  --sec-head-top: 20%;
+  
+}
+.section-header-title, .section-header-outline {
+  font-style: normal;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 150%; 
+  position: absolute;
+}
+.section-header-title{
+  left: 7%;
+  top: 40%;
+  z-index: 2;
+  font-size: 36px;
+}
+.section-header-outline {
+  z-index: 1;
+  position: absolute;
+  letter-spacing: .01em;
+  color:var(--mag-dark-text);
+  font-size: 50px;
+  left: 7%;
+  top: 40%;
+  margin-left: -40px;
+  margin-top: -25px;
+  text-shadow:  -1px -1px 0 #DEE3F2,
+				  -1px -1px 0 #DEE3F2,
+				 -1px -1px 0 #DEE3F2,
+				-1px -1px 0 #DEE3F2;
+  animation: spin-away  5s linear infinite;
+}
+
+@keyframes spin-away {
+  
+  50% {
+    font-size: 20px;
+    margin-top: -65px;
+    margin-left: 45px;
+    opacity: 0;
+    
+    transform: rotate3d(1,0,1,540deg);
+  }
+  75% {
+    
+  }
+  90% {
+    transform: rotate3d(1,0,1,540deg);
+  }
+  100% {
+    margin-top: -25px;
+    margin-left: -40px;
+    font-size: 50px;
+    
+    
+    transform:scale3d(1,1,1);
+  }
+  
+  
+}
+.section-header-accent {
+  position: absolute;
+  left: 7%;
+  top: 40%;
+  margin-top: 55px;
+  margin-left: 15px;
+  width: 75px;
+  height: 5px;
+  background-color: var(--mag-accent);
+}
+
+
+/* HEADER CSS*/
 .header-container {
   @apply flex flex-row items-center justify-between
   bg-lightGray w-full h-16 m-0 pt-2;
@@ -114,7 +192,10 @@ body {
 }
 
 .body-image-left {
-  @apply -ml-20;
+  position: absolute;
+  z-index: 1;
+  background-color: #0F1831
+  
 }
 
 .body-image-right {
@@ -127,6 +208,8 @@ body {
 }
 
 .body-title {
+  margin-bottom: -100px;
+  top: 20px;
   @apply font-bold py-8;
 }
 
@@ -151,7 +234,7 @@ body {
 }
 
 .tokenomics-title {
-  @apply text-black font-bold text-4xl bg-lightGray p-0 text-center sm:pl-24 p-4 w-80 shadow-md;
+ color:whitesmoke
 }
 
 .tokenomics-row {
@@ -267,16 +350,51 @@ body {
   border-width: 0 2px 2px 0;
   border-style: solid;
 }
-
+/*Community Section*/
 .community-container {
+  display: flex;
+  position: relative;
   height: 680px;
   background: radial-gradient(24.14% 42.38% at 100% 100%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #0F1831;
   background-blend-mode: overlay, normal;
   
   @apply  p-24 flex flex-grow items-center justify-between;
 }
-
+.community-image {
+  position: absolute;
+  z-index: 1;
+  animation: spinz  5s ease infinite;
+  transform: rotate3d(0,1,0,180deg);
+  transform: translateY(10%);
+}
+.community-image-container {
+  position: absolute;
+  top: -105%;
+}
+@keyframes spinz{
+  0% {
+    transform: scale(1.0);
+  }
+  50% {
+    transform: scale(0.8);
+    transform: rotate3d(1,0,0,180deg);
+  }
+  100% {
+    
+    transform: rotate3d(1,0,0,180deg);
+    transform: scale(1.0);
+  }
+}
+.animated-globe {
+  left: -10%;
+  position: absolute;
+  z-index: 2;
+  animation: spinz  5s linear infinite;
+}
 .community-title {
+  
+  position: absolute;
+  z-index: 2;
   color: var(--mag-accent);
   @apply font-bold text-2xl md:text-6xl max-w-[420px];
 }
