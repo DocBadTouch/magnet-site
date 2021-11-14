@@ -222,7 +222,7 @@ body {
   to {background-position:-10000px 5000px;}
 }
 .stars {
-  background:#0F1831 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+  background:#0F1831 url(../public/stars.png) repeat top center;
   z-index:1;
 }
 .stars, .twinkling {
