@@ -36,6 +36,7 @@ body {
 
 /* COMMMON COMPONENT CSS*/
 .section-header-container {
+  z-index: 2;
   display: flex;
   position: relative;
   @apply  p-24 flex flex-grow items-center justify-between;
@@ -67,29 +68,34 @@ body {
 				  -1px -1px 0 #DEE3F2,
 				 -1px -1px 0 #DEE3F2,
 				-1px -1px 0 #DEE3F2;
-  animation: spin-away  5s linear infinite;
+  animation: spin-away  15s linear infinite;
 }
 
 @keyframes spin-away {
-  
-  50% {
-    font-size: 20px;
-    margin-top: -65px;
-    margin-left: 45px;
-    opacity: 0;
-    
-    transform: rotate3d(1,0,1,540deg);
-  }
-  75% {
-  }
-  90% {
-    transform: rotate3d(1,0,1,540deg);
-  }
-  100% {
+  0% {
     margin-top: -25px;
     margin-left: -40px;
     font-size: 50px;
     transform:scale3d(1,1,1);
+    transform: rotate3d(1,0,1,-540deg);
+
+  }
+  50% {
+    font-size: 20px;
+    margin-top: -65px;
+    margin-left: 45px;
+    opacity: .0;
+    transform:scale3d(.5,.5,.5);
+    transform: rotate3d(1,0,1,540deg);
+  }
+  
+  100% {
+    opacity: 1;
+    margin-top: -25px;
+    margin-left: -40px;
+    font-size: 50px;
+    transform:scale3d(1,1,1);
+    transform: rotate3d(1,0,1,-540deg);
   }
 }
 .section-header-accent {
@@ -145,7 +151,7 @@ body {
   text-white bg-gray-900 text-xs font-medium
   transition-all duration-100 scale-0 origin-top;
 }
-
+/**MAIN SECTION CSS**/
 .main-container {
   @apply bg-lightGray pt-24 px-10 sm:px-24 shadow-md text-magnetdarkblue;
 }
@@ -177,18 +183,13 @@ body {
 .main-footer-item-number {
   @apply font-semibold text-sm sm:text-lg w-auto;
 }
+/**BODY SECTION CSS**/
 .body-container{
   position: relative;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  
-  
   background:#0F1831 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
-}
-
-.body-row {
-  
 }
 .body-col {
   display: flex;
@@ -197,10 +198,8 @@ body {
 .flex-row{
   display: flex;
   flex-direction: row;
-
 }
 .body-image-container {
-  
   position: fixed;
   top: 30%;
   width: 750px;
@@ -258,39 +257,37 @@ body {
 }
 @keyframes soft-motion {
   0% {
-    fill: red;
-    top: 0%;
+    top: 5%;
     left: 0%;
-    transform: scale3d(.2,.2,.2)
+    transform: scale3d(.2,.2,.2);
+    
   }
   20%{
-    fill: tomato;
     top:10%;
-    left: 5%;
+    left: 10%;
     transform: scale3d(.4,.4,.4)
   }
   40% {
-    color: #E93C3C;
     top:15%;
-    left: 8%;
-    transform: scale3d(.6,.6,.6)
+    left: 20%;
+    transform: scale3d(.6,.6,.6);
+    
   }
   60% {
-    color: #FF9900;
-    top:18%;
-    left: 8%;
-    transform: scale3d(.6,.6,.6)
+    top:20%;
+    left: 20%;
+    transform: scale3d(.7,.7,.7)
   }
   80% {
-    color: #FF9900;
-    top:24%;
-    left: 5%;
+    top:25%;
+    left: 10%;
     transform: scale3d(.8,.8,.8)
   }
   100% {
     top: 30%;
     left: 0%;
-    transform: scale3d(1,1,1)
+    transform: scale3d(1,1,1);
+    
   }
   
 }
