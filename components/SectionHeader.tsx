@@ -14,9 +14,9 @@ const defaultProps ={
 export const SectionHeader: React.FC<SectionHeaderProps> = (props) => {
 
   return (
-     <div className='community-container'>
+     //<div className='community-container'>
        <HeaderTitle title={props.title} xContClassName={props.xContClassName} xTitleClassName={props.xTitleClassName} xOutlineClassName={props.xOutlineClassName} />
-     </div>
+     //</div>
   )
 }
 const HeaderTitle = ({title, xContClassName, xTitleClassName,xOutlineClassName }) => (

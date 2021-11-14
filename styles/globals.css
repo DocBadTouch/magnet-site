@@ -21,6 +21,9 @@ DEFINE SOME ROOT VARIABLES
 --mag-accent-text:var(--mag-accent);
 
 }
+.mag-text-white {
+  color: whitesmoke
+}
 
 html {
   scroll-behavior: smooth;
@@ -32,11 +35,14 @@ body {
 }
 
 /* COMMMON COMPONENT CSS*/
+.section-header-container {
+  display: flex;
+  position: relative;
+  @apply  p-24 flex flex-grow items-center justify-between;
+}
 .section-header {
   display: flex;
   position: relative;
-  --sec-head-top: 20%;
-  
 }
 .section-header-title, .section-header-outline {
   font-style: normal;
@@ -46,8 +52,6 @@ body {
   position: absolute;
 }
 .section-header-title{
-  left: 7%;
-  top: 40%;
   z-index: 2;
   font-size: 36px;
 }
@@ -57,8 +61,6 @@ body {
   letter-spacing: .01em;
   color:var(--mag-dark-text);
   font-size: 50px;
-  left: 7%;
-  top: 40%;
   margin-left: -40px;
   margin-top: -25px;
   text-shadow:  -1px -1px 0 #DEE3F2,
@@ -79,7 +81,6 @@ body {
     transform: rotate3d(1,0,1,540deg);
   }
   75% {
-    
   }
   90% {
     transform: rotate3d(1,0,1,540deg);
@@ -88,17 +89,12 @@ body {
     margin-top: -25px;
     margin-left: -40px;
     font-size: 50px;
-    
-    
     transform:scale3d(1,1,1);
   }
-  
-  
 }
 .section-header-accent {
   position: absolute;
-  left: 7%;
-  top: 40%;
+  
   margin-top: 55px;
   margin-left: 15px;
   width: 75px;
@@ -181,52 +177,223 @@ body {
 .main-footer-item-number {
   @apply font-semibold text-sm sm:text-lg w-auto;
 }
+.body-container{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  
+  
+  background:#0F1831 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+}
 
 .body-row {
-  @apply my-32 flex flex-grow items-center justify-between;
-}
-
-.body-image {
-  @apply bg-lightGray w-[300px] md:w-[600px] h-[600px] rounded-3xl
-  transition-all duration-300 ease-linear;
-}
-
-.body-image-left {
-  position: absolute;
-  z-index: 1;
-  background-color: #0F1831
   
 }
+.body-col {
+  display: flex;
+  flex-direction: column;
+}
+.flex-row{
+  display: flex;
+  flex-direction: row;
 
-.body-image-right {
-  @apply rounded-sm
+}
+.body-image-container {
+  
+  position: fixed;
+  top: 30%;
+  width: 750px;
+  flex-shrink: 0;
+  z-index: 1;
+  background-color: transparent;
+  animation: soft-motion 20s ease-in-out 1s infinite;
 }
 
+.body-image-space {
+  position: relative;
+  content: " ";
+  height: 1px;
+  width: 750px;
+  flex-shrink: 0;
+}
+/*TWINKLY STARS*/
+@keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+.stars {
+  background:#0F1831 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+  z-index:1;
+}
+.stars, .twinkling {
+  content: " ";
+  width: inherit;
+  height:inherit;
+  display:block;
+}
+
+.twinkling{
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:inline-flex;
+  
+  z-index:1;
+  background:transparent url(../public/twinkler.png) repeat top center;
+  -moz-animation:move-twink-back 200s linear infinite;
+  -ms-animation:move-twink-back 200s linear infinite;
+  -o-animation:move-twink-back 200s linear infinite;
+  -webkit-animation:move-twink-back 200s linear infinite;
+  animation:move-twink-back 200s linear infinite;
+}
+.body-image{
+  
+  animation: spinzx 20s linear infinite;
+  animation-play-state: paused;
+}
+@keyframes soft-motion {
+  0% {
+    fill: red;
+    top: 0%;
+    left: 0%;
+    transform: scale3d(.2,.2,.2)
+  }
+  20%{
+    fill: tomato;
+    top:10%;
+    left: 5%;
+    transform: scale3d(.4,.4,.4)
+  }
+  40% {
+    color: #E93C3C;
+    top:15%;
+    left: 8%;
+    transform: scale3d(.6,.6,.6)
+  }
+  60% {
+    color: #FF9900;
+    top:18%;
+    left: 8%;
+    transform: scale3d(.6,.6,.6)
+  }
+  80% {
+    color: #FF9900;
+    top:24%;
+    left: 5%;
+    transform: scale3d(.8,.8,.8)
+  }
+  100% {
+    top: 30%;
+    left: 0%;
+    transform: scale3d(1,1,1)
+  }
+  
+}
+@keyframes spinzx{
+  0% {
+    transform: scale(1.0);
+  }
+  50% {
+    transform: scale(0.8);
+    transform: rotate3d(.5,0,1,180deg);
+  }
+  100% {
+    
+    transform: rotate3d(.5,0,1,180deg);
+    transform: scale(1.0);
+  }
+}
+.body-image:hover{
+  animation-play-state: running;
+ 
+  
+}
+.body-text-section-right{
+  align-self: right;
+  float: right;
+  max-width: 650px;
+  height: auto;
+  z-index: 1;
+}
 .body-text-container {
-  @apply text-left w-full px-12
-  flex flex-col;
+  z-index: 1;
+  padding-bottom: 40px;
+  @apply text-left  px-12
 }
-
-.body-title {
-  margin-bottom: -100px;
-  top: 20px;
+.body-text-container > span,.body-text-container p {
+  padding: 30px 0px;
+  color: #DEE3F2;
+}
+.body-text-container > p {
+  font-size: smaller;
+  @apply font-semibold py-8;
+}
+.body-text-container > p >span {
+  color: red;
+}
+.body-text-title {
+  color: #DEE3F2;
   @apply font-bold py-8;
 }
 
 .body-text {
-  @apply font-medium py-8;
+  color: #DEE3F2;
+  @apply font-medium font-light py-8;
 }
-
+.body-banner-section {
+  z-index: 1;
+  background-color: #28374D;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.grid-pattern {
+  background-size: 45px 45px;
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+}
 .body-banner {
-  @apply bg-lightGray w-full flex flex-wrap justify-evenly mt-24 py-8;
+  position: relative;
+  left: 10;
+  height: 430px;
+  width: 630px;
+  border-top: #DEE3F2 5px solid;
+  background-color:#405066;
+  @apply  flex  justify-evenly  py-8;
 }
 
+.body-banner::after{
+  color: #00a8a8;
+  background-color: #28374D;
+  content: " ";
+  position: absolute;
+  left: 90%;
+  top: 90%;
+  width: 17%;
+  height: 15%;
+  transform: rotateZ(-45deg);
+}
+.body-banner-text-section {
+  width: 620px;
+}
+.body-banner-item-container {
+  width: 90%;
+  @apply  flex  justify-evenly ;
+}
 .body-banner-item {
-  @apply p-4 text-xs flex flex-col font-light;
+  color:whitesmoke;
+  @apply p-6 px-20 text-xs flex flex-col justify-evenly font-light;
 }
 
 .body-banner-item-text {
-  @apply font-semibold text-[1rem];
+  @apply font-semibold py-4 text-[1rem];
 }
 
 .tokenomics-container {
