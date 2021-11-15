@@ -28,7 +28,7 @@ const Home: NextPage = () => {
         <meta name="description" content="Magnet DAO is a new, innovative project which implements protocol controlled value and deflationary mechanisms in order to create long-standing value for tokenholders." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <div className='starybg'></div>
       <Header />
       <Main />
       <Body />

@@ -25,7 +25,7 @@ export const Body: React.FC<BodyProps> = ({ }) => {
       <div className="twinkling"></div>
       <div className='flex-row' >
         <BodyImageLeft src={Satellite} />
-        <div className='body-image-space'></div>
+        
         <BodyTextSectionRight props={{title1,text1}}/>
       </div>
       <BodyBannerSection props={banner}></BodyBannerSection>

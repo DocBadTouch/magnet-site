@@ -21,8 +21,13 @@ export const SectionHeader: React.FC<SectionHeaderProps> = (props) => {
 }
 const HeaderTitle = ({title, xContClassName, xTitleClassName,xOutlineClassName }) => (
   <div className={'section-header-container '+xContClassName}>
+   <svg xmlns="http://www.w3.org/2000/svg"
+     xmlnsXlink="http://www.w3.org/1999/xlink">
+    <text x="0%" y="50%" textAnchor="start" fontSize="66px" fill='none' strokeWidth=".2" stroke="white" fontFamily="sans-serif">{title}</text>
+   </svg>
    <span className={'section-header-title ' + xTitleClassName}>{title}</span>
-   <span className={'section-header-outline ' + xOutlineClassName}>{title}</span>
+   
+   
    <span className='section-header-accent'> </span>
   </div>
 )
