@@ -1,5 +1,8 @@
 import React from "react";
 import { useTranslation } from 'next-i18next';
+import magToken from '../assets/img/mag-token.svg';
+import avaxToken from '../assets/img/avax-token.svg';
+import Image from 'next/image';
 
 interface TokenProps {
 
@@ -47,8 +50,8 @@ const TokenContent = (props)=>(
           <div>
             <div className="tokens">
               <div className="token-icons">
-                <img data-srcset="../assets/img/mag-token.svg" className="mag" alt="Magnet Token logo" />
-                <img data-srcset="../assets/img/avax-token.svg" className="avax" alt="Avalanche Token logo" />
+                <Image src={magToken} alt="MAG token icon" className="mag" />
+                <Image src={avaxToken} alt="AVAX token icon" className="avax" />
               </div>
               <p>$MAG is launching natively on Avalanche (AVAX) and will be available for swapping on Trader Joe. We plan to expand to cross-chain in the future.</p>
             </div>

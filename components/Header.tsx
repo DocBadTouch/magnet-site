@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import Logo from '../public/logo_text.png'
+import headerLogo from '../assets/img/magnet-logo.svg';
 import {SiDiscord,SiTwitter,SiTelegram,SiGithub} from 'react-icons/si'
 import {IoLogoMedium} from 'react-icons/io5'
 import { useTranslation} from 'next-i18next';
@@ -15,7 +15,7 @@ export const Header: React.FC<HeaderProps> = ({ }) => {
   return (
     <header>
     <div className="col-left">
-    <a href="index.html" id="logo-header"><img data-srcset="../assets/img/magnet-logo.svg"/></a>
+    <a href="index.html" id="logo-header"><Image src={headerLogo} alt="Magnet DAO Logo"/></a>
     <nav>
         <ul>
             <li><a href="#overview" className="anchor"><span>Overview</span></a></li>

@@ -26,7 +26,7 @@ export const Footer: React.FC<FooterProps> =()=>(
 
             <div className="content">
                 <div className="col-left">
-                    <a href="index.html" id="logo-footer"><img data-srcset="assets/img/magnet-logo.svg"/></a>
+                    <a href="index.html" id="logo-footer"><img data-srcset="../assets/img/magnet-logo.svg"/></a>
                     <nav className="socials">
                         <ul>
                             <li><a href="https://discord.com/magnetdao" className="anchor" title="Discord"><svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">

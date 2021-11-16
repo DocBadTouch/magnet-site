@@ -1,8 +1,5 @@
-import React from 'react'
-import Image from 'next/image'
-import logo from '../public/Logo_v2.0.png'
-import globe from '../public/globe.png'
-import globe3d from '../public/globe.svg'
+import React from 'react';
+import Image from 'next/image';
 
 interface CommunityProps {
 

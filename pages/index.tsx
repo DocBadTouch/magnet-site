@@ -1,14 +1,14 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import { Header } from '../components/Header'
-import { Overview } from '../components/Overview'
-import { Body } from '../components/Body'
-import { Token } from '../components/Token'
-import { Tokenomics } from '../components/Tokenomics'
-import { Roadmap } from '../components/Roadmap'
-import { Community } from '../components/Community'
-import { FAQ } from '../components/FAQ'
-import { Footer } from '../components/Footer'
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import { Header } from '../components/Header';
+import { Overview } from '../components/Hero';
+import { Body } from '../components/Overview';
+import { Token } from '../components/Token';
+import { Tokenomics } from '../components/Tokenomics';
+import { Roadmap } from '../components/Roadmap';
+import { Community } from '../components/Community';
+import { FAQ } from '../components/FAQ';
+import { Footer } from '../components/Footer';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 export async function getStaticProps({ locale }) {
