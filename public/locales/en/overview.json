@@ -1,0 +1,31 @@
+{
+  "catchphrase": "Magnet DAO - Redifining the Early Innovation Expience",
+  "but1": "What is Magnet DAO?",
+  "but2": "Tokenomics",
+  "stats": {
+    "treasuryBal": { 
+      "title": "treasury balance", 
+      "value": "$12,458,785.99 USD"
+    }, 
+    "currAPY": { 
+      "title": "annual percentage yield", 
+      "value": "12,947%"
+    }, 
+    "price": { 
+      "title": "Price", 
+      "value": "$1,247.34 USD"
+    }, 
+    "circSupp": { 
+      "title": "Circulating Supply", 
+      "value": "648,423 MAG"
+    },
+    "mCap": { 
+      "title": "market capitalization", 
+      "value": "$74,147,347.21 USD"
+    },
+    "tvl": { 
+      "title": "total value locked", 
+      "value": "$92,147,442.00 USD"
+    }
+  }
+}

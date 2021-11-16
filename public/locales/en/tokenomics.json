@@ -1,0 +1,46 @@
+{
+  "title": "Tokenomics",
+  "token": {
+    "text1": "Magnet DAO ($MAG) is our native governance token which will be used to govern the DAO. The DAO will have voting power for major protocol decisions and treasury management. ",
+    "text2": "$MAG is launching natively on Avalanche (AVAX) and will be available for swapping on Trader Joe. We plan to expand to cross-chain in the future.",
+    "items": {
+      "name": {
+        "label": "name",
+        "text": "Magnet DAO"
+      },
+      "symbol": {
+        "label": "symbol",
+        "text": "MAG"
+      },
+      "contract": {
+        "label": "contract",
+        "text": "TBD"
+      },
+      "initialSupply": {
+        "label": "initial supply",
+        "text": "750,000"
+      },
+      "chain": {
+        "label": "chain",
+        "text": "Avalanche (AVAX)"
+      },
+      "totalSupply": {
+        "label": "total supply",
+        "text": "1,000,000 MAG"
+      }
+    }
+  },
+  "totalSupply": {
+    "title": "Total Supply",
+    "text": "Magnet DAO will have a maximum supply of 1 million $MAG. At launch, Total Circulating Supply will be 750,000 $MAG. Total Diluted Supply will be 1,000,000 million $MAG."
+  },
+  "distribution": {
+    "title": "Distribution",
+    "b0": "37.5% of $MAG’s Total Diluted Supply will be sold via a fair launch:",
+    "b1": "Investors will be able to contribute USDC to our launchpad - the amount of AVAX contributed will establish a price for $MAG token",
+    "b2": "We will be selling 350k",
+    "b3": "Price will equal amount of $ raised / # of shares for sale (75% * 1 million= 750K tokens)",
+    "b4": "For example: if we receive $5M of contributions to the pool, implied price of $MAG upon close of the funding round will be equal to $5M / 750k = $6.666 per MAG",
+    "text1": "20% of tokens will be held by the dev team. \nThese tokens will vest linearly over 2 years. \n5% of tokens will be used for partnerships, promotions, etc."
+  }
+}
