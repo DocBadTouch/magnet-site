@@ -16,14 +16,22 @@ export const Roadmap: React.FC<RoadmapProps> = ({ }) => {
   const timeline = t("timeline",{returnObjects: true})
   const title: String = t("title")
   return (
-    <div id="roadmap-section">
-      <div className='roadmap-container'>
-        <RoadmapTitle title={title} />
-      </div>
-      <div className='roadmap'>
-        <RoadmapTimeline timeline={timeline}/>
-      </div>
-    </div>
+    <section id="roadmap">
+        <div className="wrapper">
+
+            <div className="outline-title left">
+                <span className="outline">Roadmap</span>
+                <h2>Roadmap</h2>
+            </div>
+
+            <div>
+                <RoadmapTimeline timeline={timeline}/>
+            </div>
+
+        </div>
+
+        <div className="angle"></div>
+    </section>
   )
 }
 

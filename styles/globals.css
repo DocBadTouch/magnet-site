@@ -11,6 +11,7 @@ DEFINE SOME ROOT VARIABLES
 --mag-gray = The light gray Bg color
 --mag-accent = The accent color used for contrasting
 */
+
 :root{
 --mag-dark-blue: #0F1831;
 --mag-grey: #F5F8FF;

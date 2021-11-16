@@ -4,11 +4,11 @@
   "but2": "Tokenomics",
   "stats": {
     "treasuryBal": { 
-      "title": "Treasury Balance", 
+      "title": "treasury balance", 
       "value": "$12,458,785.99 USD"
     }, 
     "currAPY": { 
-      "title": "Current APY", 
+      "title": "annual percentage yield", 
       "value": "12,947%"
     }, 
     "price": { 
@@ -20,11 +20,11 @@
       "value": "648,423 MAG"
     },
     "mCap": { 
-      "title": "Market Cap", 
+      "title": "market capitalization", 
       "value": "$74,147,347.21 USD"
     },
     "tvl": { 
-      "title": "TVL", 
+      "title": "total value locked", 
       "value": "$92,147,442.00 USD"
     }
   }
