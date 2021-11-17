@@ -153,24 +153,26 @@ p.small {
   opacity: .01;
 }
 /* OUTLINE TITLE */
-.outline-title-anim span.outline {
-  
-  animation: fadein .5s ease;
-}
+
 .outline-title-anim h2 {
   white-space: nowrap;
   overflow: hidden;
   width: 30em;
-  animation: type 4s steps(60, end); 
+  animation: type 3s steps(120, end);
 }
 @keyframes type{ 
   from { width: 0; } 
 } 
+
+.outline-title-anim span.outline {
+  animation: fadein ease;
+}
 .outline-title {
   position:  relative;
   width: 100%;
   text-align: center;
-  margin-bottom: 50px;}
+  margin-bottom: 50px;
+  z-index: 1;}
 
 .outline-title.left {text-align: left;}
 .outline-title.left span.outline {margin-left: -30px;}
@@ -184,6 +186,7 @@ p.small {
   color: var(--white);
   line-height:130%;
   text-transform: uppercase;
+  z-index: 9;
 }
 
 .outline-title h2:after {
