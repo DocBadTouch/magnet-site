@@ -851,8 +851,6 @@ nav.socials ul li a:hover svg {
   background-color: var(--dark03);
 }
 .faq-tab-title-container {
-  width: 100%;
-  text-align: right;
   margin-bottom: none;
 }
 .react-tabs__tab-list.faq-tab-title-container {
@@ -860,21 +858,20 @@ nav.socials ul li a:hover svg {
   border-bottom: none;
 }
 .react-tabs__tab.faq-tab-title{
-  right: 5%;
-  height: 70;
+  padding: 10px 0;
   text-align: center;
-  width: 390px;
-  font-family: Gilroy;
+  width: 50%;
+  font-family: Lufga;
   font-style: normal;
-  font-weight: bold;
   font-size: 20px;
   line-height: 150%;
   color: white; 
   border: none;
+  border-top: var(--dark03) 5px solid;
 }
 .react-tabs__tab--selected.faq-tab-title {
   border-top: var(--brandprimary) 5px solid;
-  color: white;
+  color: var(--white);
   background-color: var(--dark02);
 }
 
@@ -884,17 +881,18 @@ nav.socials ul li a:hover svg {
   background-color: var(--dark02);
   padding-top: 80px;
 }
+
 .faq-question {
-font-family: 'Lufga';
-font-size: 18px;
-align-self: center;
-color: var(--brandtertiary);
-padding-top: 2.5rem;
-padding: 20px 0 30px 0;
-border-bottom: 1px solid var(--dark02-accent);
-width: 60%;
-margin: 0 auto;
-}
+  font-family: 'Lufga';
+  font-size: 18px;
+  align-self: center;
+  color: var(--brandtertiary);
+  padding-top: 2.5rem;
+  padding: 20px 0 30px 0;
+  border-bottom: 1px solid var(--dark02-accent);
+  width: 60%;
+  margin: 0 auto;
+  }
 
 .faq-answer {
   color: var(--brandtertiary);
@@ -918,12 +916,13 @@ margin: 0 auto;
   font-size: 16px;
   line-height: 150%;
    }
+
 .Collapsible__trigger:after {
   font-family: 'FontAwesome';
   content: '\002B';
   position: absolute;
   font-size: xx-large;
-  right: -15px;
+  right: 0;
   top: 10px;
   font-weight: 600;
   display: block;

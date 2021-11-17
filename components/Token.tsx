@@ -53,7 +53,7 @@ const TokenContent = (props)=>(
                 <Image src={magToken} alt="MAG token icon" className="mag" />
                 <Image src={avaxToken} alt="AVAX token icon" className="avax" />
               </div>
-              <p>$MAG is launching natively on Avalanche (AVAX) and will be available for swapping on Trader Joe. We plan to expand to cross-chain in the future.</p>
+              <p>{props.text2}</p>
             </div>
           </div>
         </div>

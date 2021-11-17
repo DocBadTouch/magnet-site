@@ -8,19 +8,19 @@
   "metrics": {
     "tBal": {
       "label": "treasury balance",
-      "value": "$12,458,785.99 USD"
+      "value": "--"
     },
     "cAPY": {
       "label": "annual percentage yield",
-      "value": "12,947%"
+      "value": "--"
     },
     "mCap": {
       "label": "market capitalization",
-      "value": "$74,147,347.21 USD"
+      "value": "--"
     },
     "tvl": {
       "label": "total value locked",
-      "value": "$92,147,442.00 USD"
+      "value": "--"
     }
   }
 }

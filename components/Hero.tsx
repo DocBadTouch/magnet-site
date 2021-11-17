@@ -50,11 +50,11 @@ const HeroMetrics = ({ metrics }) => (
   <div className="metrics">
     <div className="flex-row">
       <HeroMetricsItem item={metrics.cAPY} valClass='percentage' xClass='primary'/>
-      <HeroMetricsItem item={metrics.tBal} valClass='monentary' xClass= ''/>
+      <HeroMetricsItem item={metrics.tBal} valClass='monetary' xClass= ''/>
     </div>
     <div className="flex-row">
-      <HeroMetricsItem item={metrics.mCap} valClass='monentary' xClass= ''/>
-      <HeroMetricsItem item={metrics.tvl}  valClass='monentary' xClass=''/>
+      <HeroMetricsItem item={metrics.mCap} valClass='monetary' xClass= ''/>
+      <HeroMetricsItem item={metrics.tvl}  valClass='monetary' xClass=''/>
     </div>
   </div>
 )

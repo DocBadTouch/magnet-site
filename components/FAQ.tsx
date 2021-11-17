@@ -44,8 +44,10 @@ export const FAQ: React.FC<FAQProps> = ({ }) => {
 const FAQTabContainer = ({ t, magFaqTitle, ohmFaqTitle }) => (
   <Tabs  >
     <TabList className='react-tabs__tab-list faq-tab-title-container '>
+    <div className="wrapper">
       <Tab className='react-tabs__tab faq-tab-title' >{magFaqTitle}</Tab>
       <Tab className='react-tabs__tab faq-tab-title'>{ohmFaqTitle}</Tab>
+    </div>
     </TabList>
     <TabPanel className='faq-tab-panel'>
       {Object.keys(magDaoQuestions).map((key) => (

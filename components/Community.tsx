@@ -14,7 +14,7 @@ export const Community: React.FC<CommunityProps> = ({  }) => {
         <div className="col-left">
             <div className="join">
                 <div className="line1">Join the</div>
-                <Image src={comLogo} data-srcset="../assets/img/magnet-logo-community.svg" alt="magnet" title="Magnet logo" className="line2"/>
+                <Image src={comLogo} alt="magnet" title="Magnet logo" className="line2"/>
                 <div className="line3">community</div>
             </div>
         </div>
