@@ -18,7 +18,7 @@ declare global {
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['hero','overview','community', 'tokenomics','faq', 'header',,'roadmap',])),
+      ...(await serverSideTranslations(locale, ['hero','overview','community', 'tokenomics','faq', 'header',,'roadmap','token'])),
       // Will be passed to the page component as props
     },
   };

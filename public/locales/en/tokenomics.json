@@ -1,33 +1,5 @@
 {
   "title": "Tokenomics",
-  "token": {
-    "items": {
-      "name": {
-        "label": "name",
-        "text": "Magnet DAO"
-      },
-      "symbol": {
-        "label": "symbol",
-        "text": "MAG"
-      },
-      "contract": {
-        "label": "contract",
-        "text": "TBD"
-      },
-      "initialSupply": {
-        "label": "initial supply",
-        "text": "750,000"
-      },
-      "chain": {
-        "label": "chain",
-        "text": "Avalanche (AVAX)"
-      },
-      "totalSupply": {
-        "label": "total supply",
-        "text": "1,000,000 MAG"
-      }
-    }
-  },
   "totalSupply": {
     "title": "Token Supply",
     "text1": "At launch, Magnet DAO will have a Total Circulating Supply of 750,000 $MAG and a Total Diluted Supply of 1,000,000 $MAG."

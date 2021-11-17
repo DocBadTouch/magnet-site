@@ -14,9 +14,11 @@ export const Token: React.FC<TokenProps> = ({ }) => {
   const items = t('token.items', {returnObjects: true})
  */
   export const Token: React.FC<TokenProps> = ({ }) => {
-    const { t } = useTranslation('tokenomics')
-    const token = t('token',{returnObjects: true});
-    const items: {name,symbol, totalSupply,initialSupply, chain, contract} = t("token.items", { returnObjects: true }) 
+    const { t } = useTranslation('token')
+    const text1 = t('text1');
+    const text2 = t('text2');
+    
+    const items: {name,symbol, totalSupply,initialSupply, chain, contract} = t("items", { returnObjects: true }) 
   return (
     <section id="token">
       <div className="wrapper">
@@ -36,24 +38,21 @@ export const Token: React.FC<TokenProps> = ({ }) => {
             </div>
           </div>
         </div>
-        <TokenContent props={token}/>
-
-        
-
+        <TokenContent text1={text1} text2={text2}/>
       </div>
     </section>
   )
 }
-const TokenContent = (props)=>(
+const TokenContent = ({text1,text2})=>(
   <div className="contents">
-          <p className="big">{props.text1}</p>
+          <p className="big">{text1}</p>
           <div>
             <div className="tokens">
               <div className="token-icons">
                 <Image src={magToken} alt="MAG token icon" className="mag" />
                 <Image src={avaxToken} alt="AVAX token icon" className="avax" />
               </div>
-              <p>{props.text2}</p>
+              <p>{text2}</p>
             </div>
           </div>
         </div>

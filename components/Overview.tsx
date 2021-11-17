@@ -38,10 +38,10 @@ const OverviewImage = () => (
 
 const OverviewTextSection = ({ props }) => (
   <div className="contents">
-    <p className="big">Magnet DAO is the evolution of the reserve currency protocol. The DAO uses its protocol controlled value to reward token holders with market-beating yields. At the same time, it uses its treasury reserves to invest in and incubate innovative projects.</p>
-    <p>Unlike first-generation reserve currency protocols, the goal of Magnet DAO isn’t just to grow its market cap and treasury. Instead, it uses 10% of bond profits to invest in high-quality crypto assets, effectively turning the DAO into an on-chain venture fund. The DAO will also help incubate and build projects from the earliest stages. Since all fees and value accrued from these protocols are distributed directly to token holders, Magnet DAO creates exponential value for all its investors.</p>
-    <p>Magnet DAO is the next stage of the tried and tested reserve currency model. While building a sufficient treasury is important for a protocol, the portfolio management of that treasury is equally as important. We are hyper focused on putting the treasury to use to generate return, including building, incubating, and investing in early-stage projects - opportunities that are typically not available to the average investor.</p>
-    <p>For a in-depth view of our vision, you can read more here on <a href="https://magnetdao.medium.com/" title="Go to our blog">our Medium blog</a>.</p>
+    <p className="big">{props.text1}</p>
+    <p>{props.text2}</p>
+    <p>{props.text3}</p>
+    <p>{props.text4}<a href="https://magnetdao.medium.com/" title="Go to our blog">{props.text5}</a>.</p>
   </div>
 
 )
