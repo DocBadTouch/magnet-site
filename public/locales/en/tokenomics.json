@@ -31,16 +31,12 @@
     }
   },
   "totalSupply": {
-    "title": "Total Supply",
-    "text": "Magnet DAO will have a maximum supply of 1 million $MAG. At launch, Total Circulating Supply will be 750,000 $MAG. Total Diluted Supply will be 1,000,000 million $MAG."
+    "title": "Token Supply",
+    "text1": "At launch, Magnet DAO will have a Total Circulating Supply of 750,000 $MAG and a Total Diluted Supply of 1,000,000 $MAG."
   },
   "distribution": {
     "title": "Distribution",
-    "b0": "37.5% of $MAG’s Total Diluted Supply will be sold via a fair launch:",
-    "b1": "Investors will be able to contribute USDC to our launchpad - the amount of AVAX contributed will establish a price for $MAG token",
-    "b2": "We will be selling 350k",
-    "b3": "Price will equal amount of $ raised / # of shares for sale (75% * 1 million= 750K tokens)",
-    "b4": "For example: if we receive $5M of contributions to the pool, implied price of $MAG upon close of the funding round will be equal to $5M / 750k = $6.666 per MAG",
-    "text1": "20% of tokens will be held by the dev team. \nThese tokens will vest linearly over 2 years. \n5% of tokens will be used for partnerships, promotions, etc."
+    "text1": "Magnet DAO will be selling 50% of the Total Diluted Supply at launch. 25% of tokens will be used for liquidity providing, 20% of tokens are team tokens (locked and vested), and 5% of tokens are for marketing and partnerships.",
+    "text2": "The proceeds raised from the sale will be used as follows: 40% to the treasury, 40% to liquidity providing, and 20% to a stable coin fund to help fund team operations."
   }
 }

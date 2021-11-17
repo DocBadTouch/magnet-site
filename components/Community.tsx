@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-
+import comLogo from '../assets/img/magnet-logo-community.svg'
 interface CommunityProps {
 
 }
@@ -14,7 +14,7 @@ export const Community: React.FC<CommunityProps> = ({  }) => {
         <div className="col-left">
             <div className="join">
                 <div className="line1">Join the</div>
-                <img srcSet='../assets/img/magnet-logo-community.svg' data-srcset="../assets/img/magnet-logo-community.svg" alt="magnet" title="Magnet logo" className="line2"/>
+                <Image src={comLogo} data-srcset="../assets/img/magnet-logo-community.svg" alt="magnet" title="Magnet logo" className="line2"/>
                 <div className="line3">community</div>
             </div>
         </div>

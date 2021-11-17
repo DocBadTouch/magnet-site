@@ -50,6 +50,15 @@ body {
   font-family: 'Poppins', monospace;
   font-weight: 400;
   }
+.bodyDiv {
+  max-width:100%;
+  margin:0px;    
+  background-color:  var(--body-bg);
+  color: var(--txt-color);
+  font-family: 'Poppins', monospace;
+  font-weight: 400;
+      
+  }
 
 main {
   z-index:0;
@@ -124,6 +133,7 @@ p.small {
 }
 
 .crosshair {
+  transform: rotate(var(--rotate));
   height: 30px;
   width: 30px;
   background-image: url('../img/crosshair.svg');
@@ -139,9 +149,23 @@ p.small {
   position: absolute;
 }
 
-
+.faded {
+  opacity: .01;
+}
 /* OUTLINE TITLE */
-
+.outline-title-anim span.outline {
+  
+  animation: fadein .5s ease;
+}
+.outline-title-anim h2 {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 30em;
+  animation: type 4s steps(60, end); 
+}
+@keyframes type{ 
+  from { width: 0; } 
+} 
 .outline-title {
   position:  relative;
   width: 100%;
@@ -839,7 +863,7 @@ nav.socials ul li a:hover svg {
   right: 5%;
   height: 70;
   text-align: center;
-  width: 50%;
+  width: 390px;
   font-family: Gilroy;
   font-style: normal;
   font-weight: bold;

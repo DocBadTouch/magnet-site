@@ -1,0 +1,26 @@
+{
+  "caption": {
+    "line1": "Revolutionizing",
+    "line2": "early-stage investing",
+    "but1": "Overview",
+    "but2": "Join Discord"
+  },
+  "metrics": {
+    "tBal": {
+      "label": "treasury balance",
+      "value": "$12,458,785.99 USD"
+    },
+    "cAPY": {
+      "label": "annual percentage yield",
+      "value": "12,947%"
+    },
+    "mCap": {
+      "label": "market capitalization",
+      "value": "$74,147,347.21 USD"
+    },
+    "tvl": {
+      "label": "total value locked",
+      "value": "$92,147,442.00 USD"
+    }
+  }
+}

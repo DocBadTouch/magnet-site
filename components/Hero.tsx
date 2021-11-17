@@ -2,31 +2,29 @@ import React from 'react';
 import { useTranslation } from 'next-i18next';
 import Radar from '../assets/img/radar.png';
 import Image from 'next/image';
-interface OverviewProps {
+interface HeroProps {
 
 }
 const scrollToSection = (tag) => {
   document.getElementById(tag + "-section").scrollIntoView({ behavior: "smooth", block: "start" })
 }
-export const Overview: React.FC<OverviewProps> = ({ }) => {
-  const { t } = useTranslation('overview')
-  const title: String = t("catchphrase")
-  const button1Text: String = t("but1")
-  const button2Text: String = t("but2")
-  const stats = t("stats", { returnObjects: true })
-
+export const Hero: React.FC<HeroProps> = ({ }) => {
+  const { t } = useTranslation('hero')
+  const caption = t("caption",{ returnObjects: true })
+  const metrics = t("metrics", { returnObjects: true })
+  console.log("Metrics",metrics)
   return (
     <section id="hero">
-      <OverviewCaption props={{ line1: "Revolutionizing", line2: "early-stage investing", button1Text: "Overview", button2Text: "Join Discord" }} />
-      <OverviewImage />
-      <OverviewMetrics stats={stats} />
+      <HeroCaption props={caption} />
+      <HeroImage />
+      <HeroMetrics metrics={metrics} />
       <div className="crosshair"></div>
     </section>
 
   )
 }
 
-const OverviewCaption = ({ props }) => (
+const HeroCaption = ({ props }) => (
   <div className="wrapper">
     <div className="caption">
       <h1>
@@ -34,37 +32,37 @@ const OverviewCaption = ({ props }) => (
         <div className="line2">{props.line2}</div>
       </h1>
       <div className="btn-group">
-        <a href="#overview" className="btn btn-primary anchor"><span>{props.button1Text}</span></a>
-        <a href="https://discord.gg/magnetdao" className="btn btn-secondary"><span>{props.button2Text}</span></a>
+        <a href="#overview" className="btn btn-primary anchor"><span>{props.but1}</span></a>
+        <a href="https://discord.gg/magnetdao" className="btn btn-secondary"><span>{props.but2}</span></a>
       </div>
     </div>
   </div>
 )
 
-const OverviewImage = () => (
+const HeroImage = () => (
   <div className="radar">
     <Image src={Radar} alt="Radar background image"/>
   </div>
 
 )
 
-const OverviewMetrics = ({ stats }) => (
+const HeroMetrics = ({ metrics }) => (
   <div className="metrics">
     <div className="flex-row">
-      <OverviewMetricsItem props={{ text: stats.currAPY.title, number: stats.currAPY.value, valClass: 'percentage', xClass: 'primary' }} />
-      <OverviewMetricsItem props={{ text: stats.treasuryBal.title, number: stats.treasuryBal.value, valClass: 'monentary' }} />
+      <HeroMetricsItem item={metrics.cAPY} valClass='percentage' xClass='primary'/>
+      <HeroMetricsItem item={metrics.tBal} valClass='monentary' xClass= ''/>
     </div>
     <div className="flex-row">
-      <OverviewMetricsItem props={{ text: stats.mCap.title, number: stats.mCap.value, valClass: 'monentary' }} />
-      <OverviewMetricsItem props={{ text: stats.tvl.title, number: stats.tvl.value, valClass: 'monentary' }} />
+      <HeroMetricsItem item={metrics.mCap} valClass='monentary' xClass= ''/>
+      <HeroMetricsItem item={metrics.tvl}  valClass='monentary' xClass=''/>
     </div>
   </div>
 )
 
 
-const OverviewMetricsItem = ({ props }) => (
-  <div className={"metrics-item " + props.xClass}>
-    <div className="label">{props.text}</div>
-    <div className={"value " + props.valClass}><span>{props.number}</span></div>
+const HeroMetricsItem = ({ item, valClass, xClass }) => (
+  <div className={"metrics-item " + xClass}>
+    <div className="label">{item.label}</div>
+    <div className={"value " + valClass}><span>{item.value}</span></div>
   </div>
 )

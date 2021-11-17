@@ -1,8 +1,8 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { Header } from '../components/Header';
-import { Overview } from '../components/Hero';
-import { Body } from '../components/Overview';
+import { Hero } from '../components/Hero';
+import { Overview } from '../components/Overview';
 import { Token } from '../components/Token';
 import { Tokenomics } from '../components/Tokenomics';
 import { Roadmap } from '../components/Roadmap';
@@ -10,11 +10,15 @@ import { Community } from '../components/Community';
 import { FAQ } from '../components/FAQ';
 import { Footer } from '../components/Footer';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-
+declare global {
+  interface Window {
+      FB:any;
+  }
+}
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['body','community','faq', 'header','overview','roadmap','tokenomics'])),
+      ...(await serverSideTranslations(locale, ['hero','overview','community', 'tokenomics','faq', 'header',,'roadmap',])),
       // Will be passed to the page component as props
     },
   };
@@ -22,8 +26,49 @@ export async function getStaticProps({ locale }) {
 
 
 const Home: NextPage = () => {
+  //let window = 
+  function startAnimations() {
+    const titleObservers = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('outline-title-anim');
+          return;
+        }
+        entry.target.classList.remove('outline-title-anim');
+      });
+    });
+    const crossHairObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('inview');
+          return;
+        }
+        entry.target.classList.remove('inview');
+      });
+    });
+  
+    document.querySelectorAll('.outline-title').forEach(el => {
+      titleObservers.observe(el);
+      //el.querySelector('.outline').classList.add('faded')
+    });
+    document.querySelectorAll('.crosshair').forEach(el => {
+      crossHairObserver.observe(el);
+      //el.querySelector('.outline').classList.add('faded')
+    });
+    window.onscroll = function () {
+      scrollRotate();
+    };
+  
+    function scrollRotate() {
+      document.querySelectorAll(".crosshair.inview").forEach(el => {
+        el.setAttribute("style", "--rotate: " + window.pageYOffset / 2 + "deg");
+      });
+  
+    }
+  }
+  //window.addEventListener('load',startAnimations)
   return (
-    <div>
+    <div id='bodyDiv'>
       <Head >
       <meta charSet="utf-8"/>
       <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
@@ -47,11 +92,10 @@ const Home: NextPage = () => {
       <meta name="twitter:description" content="..."/>
       <meta name="twitter:image" content="../assets/img/radar.png"/>
       </Head>
-      <body>
-      <main>
-        
+      
+      <main onLoad={startAnimations}>
+        <Hero/>
         <Overview />
-        <Body />
         <Token />
         <Tokenomics />
         <Roadmap />
@@ -60,8 +104,8 @@ const Home: NextPage = () => {
         <Footer/>
       </main>
       <Header />
-      </body>
     </div>
+    
   )
 }
 

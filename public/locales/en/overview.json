@@ -1,31 +1,9 @@
 {
-  "catchphrase": "Magnet DAO - Redifining the Early Innovation Expience",
-  "but1": "What is Magnet DAO?",
-  "but2": "Tokenomics",
-  "stats": {
-    "treasuryBal": { 
-      "title": "treasury balance", 
-      "value": "$12,458,785.99 USD"
-    }, 
-    "currAPY": { 
-      "title": "annual percentage yield", 
-      "value": "12,947%"
-    }, 
-    "price": { 
-      "title": "Price", 
-      "value": "$1,247.34 USD"
-    }, 
-    "circSupp": { 
-      "title": "Circulating Supply", 
-      "value": "648,423 MAG"
-    },
-    "mCap": { 
-      "title": "market capitalization", 
-      "value": "$74,147,347.21 USD"
-    },
-    "tvl": { 
-      "title": "total value locked", 
-      "value": "$92,147,442.00 USD"
-    }
-  }
+  "title": "Overview",    
+  "text1": "Magnet DAO is the evolution of the reserve currency protocol. The DAO uses its protocol controlled value to reward token holders with market-beating yields. At the same time, it uses its treasury reserves to invest in and incubate innovative projects.",
+  "text2": "Unlike first-generation reserve currency protocols, the goal of Magnet DAO isn’t just to grow its market cap. Instead, it uses its treasury assets to acquire and invest in high-quality crypto assets, effectively turning the DAO into an on-chain venture fund. Since all fees and value accrued from these assets is distributed directly to token holders, Magnet DAO creates exponential value for all its investors.",  
+  "text3": "Magnet DAO is the next stage of the tried and tested reserve currency model. While building a sufficient treasury is important for a protocol, the portfolio management of that treasury is equally as important. We are hyper focused on putting the treasury to use to generate return, including building, incubating, and investing in early-stage projects - opportunities that are typically not available to the average investor.",
+  "text4": "For a in-depth view of our vision, you can read more here on ",
+  "text5": "our Medium blog.",
+  "link": "https://magnetdao.medium.com/"      
 }

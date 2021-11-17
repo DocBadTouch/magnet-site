@@ -70,7 +70,7 @@ const HeaderIcon = ({ icon }) => (
 
 const HeaderLogo = ({ }) => (
   <div className='header-logo'>
-    <Image src={Logo} layout='responsive' />
+    <Image src={headerLogo} layout='responsive' />
   </div>
 )
 

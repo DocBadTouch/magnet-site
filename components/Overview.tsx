@@ -2,48 +2,41 @@ import React from 'react';
 import { useTranslation } from 'next-i18next';
 import Satellite from '../assets/img/satellite.png';
 import Image from 'next/image';
-import { SectionHeader } from './SectionHeader';
-interface BodyProps {
+interface OverviewProps {
 
 }
 
-export const Body: React.FC<BodyProps> = ({ }) => {
-  const { t } = useTranslation('body')
+export const Overview: React.FC<OverviewProps> = ({ }) => {
+  const { t } = useTranslation('overview')
   const title: String = t('title')
-  const title1: String = t('about1.title')
-  const text1: String[] = t('about1.text', { returnObjects: true });
-  const title2: String = t('about2.title')
-  const text2: String[] = t('about2.text', { returnObjects: true });
-  const banner = t('banner', { returnObjects: true });
-  const bannerText1 = t('banner.text1')
-  const bannerText2 = t('banner.text2')
-  console.log(banner)
+  const text1: String = t('text1')
+  const text2: String = t('text2');
+  const text3: String = t('text3')
+  const text4: String = t('text4');
+  const text5: String = t('text5');
+  
   return (
     <section id="overview">
-      <BodyImage />
-
-
+      <OverviewImage />
       <div className="wrapper">
         <div className="outline-title left">
-          <span className="outline">Overview</span>
-          <h2>Overview</h2>
+          <span className="outline">{title}</span>
+          <h2>{title}</h2>
         </div>
-        <BodyTextSection props={{}} />
+        <OverviewTextSection props={{text1,text2,text3,text4,text5}} />
       </div>
-
       <div className="angle"></div>
-
     </section>
   )
 }
 
-const BodyImage = () => (
+const OverviewImage = () => (
   <div className="satellite">
     <Image src={Satellite} alt="Satellite background image" />
   </div>
 )
 
-const BodyTextSection = ({ props }) => (
+const OverviewTextSection = ({ props }) => (
   <div className="contents">
     <p className="big">Magnet DAO is the evolution of the reserve currency protocol. The DAO uses its protocol controlled value to reward token holders with market-beating yields. At the same time, it uses its treasury reserves to invest in and incubate innovative projects.</p>
     <p>Unlike first-generation reserve currency protocols, the goal of Magnet DAO isn’t just to grow its market cap and treasury. Instead, it uses 10% of bond profits to invest in high-quality crypto assets, effectively turning the DAO into an on-chain venture fund. The DAO will also help incubate and build projects from the earliest stages. Since all fees and value accrued from these protocols are distributed directly to token holders, Magnet DAO creates exponential value for all its investors.</p>
