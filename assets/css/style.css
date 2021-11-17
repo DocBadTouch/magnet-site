@@ -319,6 +319,7 @@ nav.socials ul li a:hover svg {
 #hero {
   position: relative;
   height:80vh;
+  max-height: 850px;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -838,12 +839,11 @@ nav.socials ul li a:hover svg {
   top: 95px;
   right: 95px;
 }
-.faq-container{
-  background: var(--mag-grey);
-  padding-top: 40px;
-  margin-bottom: 200px;
-  @apply flex flex-col justify-between   w-full
+
+#faq .react-tabs__tab-list .wrapper {
+  justify-content: flex-end;
 }
+
 
 /* FAQ tabs CSS */
 .react-tabs {
@@ -858,21 +858,21 @@ nav.socials ul li a:hover svg {
   border-bottom: none;
 }
 .react-tabs__tab.faq-tab-title{
-  padding: 10px 0;
+  padding: 15px 0;
   text-align: center;
-  width: 50%;
+  width: 25%;
   font-family: Lufga;
   font-style: normal;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 150%;
-  color: white; 
   border: none;
   border-top: var(--dark03) 5px solid;
+  background-color: var(--dark03);
 }
 .react-tabs__tab--selected.faq-tab-title {
   border-top: var(--brandprimary) 5px solid;
-  color: var(--white);
   background-color: var(--dark02);
+  color: var(--white);
 }
 
 .faq-tab-panel.react-tabs__tab-panel--selected {
@@ -883,38 +883,26 @@ nav.socials ul li a:hover svg {
 }
 
 .faq-question {
-  font-family: 'Lufga';
-  font-size: 18px;
-  align-self: center;
-  color: var(--brandtertiary);
-  padding-top: 2.5rem;
-  padding: 20px 0 30px 0;
+  padding: 40px 0 40px 0;
   border-bottom: 1px solid var(--dark02-accent);
   width: 60%;
   margin: 0 auto;
+  font-size: 18px;
   }
 
 .faq-answer {
   color: var(--brandtertiary);
-  font-style: normal;
-  font-weight: normal;
-  
-  line-height: 175%;
-  padding-right: 2em;
-  padding-top: 1em;
-  padding-bottom: em;
+  font-size: 16px;
 }
 
 .Collapsible__trigger {
   display: block;
   text-decoration: none;
   position: relative;
-  
-  padding: 10px 0;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 150%;
+  cursor: pointer;
+  padding-right: 50px;
+  font-family: 'Lufga';
+  line-height: 175%;
    }
 
 .Collapsible__trigger:after {
@@ -923,7 +911,7 @@ nav.socials ul li a:hover svg {
   position: absolute;
   font-size: xx-large;
   right: 0;
-  top: 10px;
+  top:  0px;
   font-weight: 600;
   display: block;
   color: var(--brandprimary);
@@ -1006,7 +994,7 @@ footer .content .col-right {
 
 
 footer #powered-by-avalanche img {
-  width: 150px;
+  width: 150px!important;
 }
 
 

@@ -1,8 +1,8 @@
-import React from 'react'
-import Image from 'next/image'
+import React from 'react';
+import Image from 'next/image';
 import headerLogo from '../assets/img/magnet-logo.svg';
-import {SiDiscord,SiTwitter,SiTelegram,SiGithub} from 'react-icons/si'
-import {IoLogoMedium} from 'react-icons/io5'
+import {SiDiscord,SiTwitter,SiTelegram,SiGithub} from 'react-icons/si';
+import {IoLogoMedium} from 'react-icons/io5';
 import { useTranslation} from 'next-i18next';
 
 interface HeaderProps {

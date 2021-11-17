@@ -1,5 +1,7 @@
 import React from "react";
-
+import Image from 'next/image';
+import footerLogo from '../assets/img/magnet-logo.svg';
+import avaxPowered from '../assets/img/powered-by-avalanche.svg';
 interface FooterProps {
 
 }
@@ -26,7 +28,7 @@ export const Footer: React.FC<FooterProps> =()=>(
 
             <div className="content">
                 <div className="col-left">
-                    <a href="index.html" id="logo-footer"><img data-srcset="../assets/img/magnet-logo.svg"/></a>
+                    <a href="index.html" id="logo-footer"><Image src={footerLogo} alt="Magnet DAO Logo"/></a>
                     <nav className="socials">
                         <ul>
                             <li><a href="https://discord.com/magnetdao" className="anchor" title="Discord"><svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
@@ -53,7 +55,7 @@ export const Footer: React.FC<FooterProps> =()=>(
                 </div>
 
                 <div className="col-right">
-                    <a href="https://www.avax.network/" id="powered-by-avalanche" title="Visit avax.network"><img data-srcset="assets/img/powered-by-avalanche.svg"/></a>
+                    <a href="https://www.avax.network/" id="powered-by-avalanche" title="Visit avax.network"><Image src={avaxPowered} alt="Powered by Avalanche"/></a>
                 </div>
             </div>
 
