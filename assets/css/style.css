@@ -36,6 +36,7 @@
 }
 
 
+
 /* LAYOUT */
 
 ::selection {
@@ -92,11 +93,19 @@ a:hover {
 }
 
 .wrapper {
-  width: 1440px;
-  margin: auto;
-  display: flex;
-  flex-flow: row wrap;
+    margin: 0 3%;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+@media (min-width: 1200px) {
+  .wrapper {
+    width: 1440px;
+    margin: auto;
+  }
 }
+
+
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Lufga';
@@ -282,6 +291,16 @@ footer #logo-footer, footer #logo-footer img {
   height: 22px;
 }
 
+header nav {
+    display: none;
+  }
+
+@media (min-width: 1200px) {
+  header nav {
+    display: block;
+  }
+}
+
 header nav ul, footer nav ul {
   display: flex;
   padding: 0;
@@ -326,10 +345,6 @@ nav.socials ul li a:hover svg {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-}
-
-#hero .caption {
-  width: 50%;
 }
 
 #hero .caption h1 {
@@ -383,17 +398,17 @@ nav.socials ul li a:hover svg {
 
 #hero .metrics {
   border-top: 5px solid var(--brandtertiary);
-  width: 50%;
+  width: 100%;
   position:  absolute;
-  left: 50%;
-  bottom: -100px;
+  box-sizing: border-box;
+  padding: 20px;
+  bottom: -30px;
   z-index: 9;
-  padding: 50px 75px;
   background-color: var(--dark03);
   display: flex;
   flex-flow: row wrap;
 
-  --notchSize: 50px;
+  --notchSize: 20px;
   clip-path: 
     polygon(
       0 calc(100% - var(--notchSize)), 
@@ -455,6 +470,7 @@ nav.socials ul li a:hover svg {
 }
 
 #hero .radar {
+  display: none;
   width: 500px;
   position: absolute;
   right: 10%;
@@ -472,6 +488,26 @@ nav.socials ul li a:hover svg {
 
 #hero .radar img {
   width: 100%;
+}
+
+@media (min-width: 1200px) {
+  #hero .caption {
+    width: 50%;
+  }
+
+  #hero .radar {
+  display: block;
+  }
+
+  #hero .metrics {
+  width: 50%;
+  position:  absolute;
+  left: 50%;
+  bottom: -100px;
+  z-index: 9;
+  padding:  50px 75px;
+  --notchSize: 50px;
+  }
 }
 
 /* SECTION : OVERVIEW */
@@ -673,11 +709,117 @@ nav.socials ul li a:hover svg {
   -webkit-text-stroke-color: var(--dark02-accent);
 }
 
+#roadmap .wrapper {
+  justify-content: center;
+}
+
 #roadmap .angle {
   top: 100px;
   left: 100px;
 }
 
+ #roadmap .timeline {
+    display:  flex;
+    flex-direction: column;
+    padding: 40px 30px;
+    width: 80%;
+  }
+
+
+  #roadmap .timeline .step {
+      text-align: left;
+      width:  100%;
+      margin: 0 auto;
+      display: flex;
+      align-content: stretch;
+  }
+
+  #roadmap .timeline .step:nth-child(even) {
+    text-align: right;
+  }
+
+  #roadmap .timeline .step .pointer {
+    width: 30px;
+    height: 100%;
+    display: block;
+    position:  absolute;
+  }
+
+  #roadmap .timeline .step .content span {
+    color:  var(--brandprimary);
+    font-family: 'Lufga';
+  }
+
+  #roadmap .timeline .step .content {margin:  0 0 20px 0;}
+
+  #roadmap .timeline .step .content p {line-height: 175%; margin: 5px 0; color: var(--brandtertiary)}
+
+    #roadmap .timeline .step:hover .content p {color: var(--white);}
+
+  #roadmap .timeline .step .pointer .line {
+    width: 1px;
+    margin-left: calc(50% - 2px);
+    border-right: 2px dashed var(--brandtertiary);
+    height:  100%;
+  }
+
+  #roadmap .timeline .step.checked .pointer .line {
+    border-right: 2px solid var(--brandprimary);
+  }
+  #roadmap .timeline .step.checked .pointer .bubble {
+    background-color: var(--brandprimary);
+  }
+
+  #roadmap .timeline .step.checked .pointer .bubble {
+    content: url('../img/check.svg');
+    padding: 6px;
+    width:  40px;
+    height: 40px;
+    left: calc(50% - 22px);
+    margin:  0px;
+  }
+
+  #roadmap .timeline .step.checked .content {
+    text-decoration: line-through;
+  }
+
+  #roadmap .timeline .step .pointer .bubble {
+    width:  20px;
+    height: 20px;
+    background: white;
+    border-radius: 20px;
+    position: absolute;margin:  5px;
+    border: 5px solid var(--dark02);
+    left: calc(50% - 16px);
+    top: -5px;
+  }
+
+
+
+  #roadmap .timeline .step .wrap {
+    padding-left: calc(50% + 40px);
+    position:  relative;
+    width: 100%;
+  }
+
+  #roadmap .timeline .step:nth-child(even) .wrap {
+    padding-right: calc(50% + 40px);
+    padding-left: 0;
+  }
+
+  #roadmap .timeline .step:nth-child(odd) .pointer {
+    left: calc(50% - 15px);
+  }
+
+  #roadmap .timeline .step:nth-child(even) .pointer {
+    right: calc(50% - 15px);
+  }
+
+  @media screen and (max-width:1140px) {
+      #roadmap .timeline .step:nth-child(even) {text-align: left;}
+      #roadmap .timeline .step .wrap, #roadmap .timeline .step:nth-child(even) .wrap {padding:  10px 0px 30px 10px;}
+      #roadmap .timeline .step:nth-child(odd) .pointer, #roadmap .timeline .step:nth-child(even) .pointer {left: -30px;}
+  }
 
 /* COMMUNITY */
 
@@ -890,6 +1032,15 @@ nav.socials ul li a:hover svg {
   border-top: var(--brandprimary) 5px solid;
   background-color: var(--dark02);
   color: var(--white);
+  border-radius: 0;
+}
+
+.react-tabs__tab:focus {
+  border-color: var(--brandprimary);
+}
+
+.react-tabs__tab:after {
+  display:  none;
 }
 
 .faq-tab-panel.react-tabs__tab-panel--selected {

@@ -24,55 +24,139 @@ export const Roadmap: React.FC<RoadmapProps> = ({ }) => {
                 <h2>Roadmap</h2>
             </div>
 
-            <div>
-                <RoadmapTimeline timeline={timeline}/>
+            <div class="timeline">
+                  <div class="step checked">
+                    <div class="wrap">
+                      <div class="pointer">
+                        <div class="bubble"></div>
+                        <div class="line"></div>
+                      </div>
+                      <div class="content"><span>Q4 2021</span><p> Discord, Twitter, and Telegram Launch</p></div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="wrap">
+                      <div class="pointer">
+                        <div class="bubble"></div>
+                        <div class="line"></div>
+                      </div>
+                      <div class="content"><span>Q4 2021</span><p>$MAG token sale</p></div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="wrap">
+                      <div class="pointer">
+                        <div class="bubble"></div>
+                        <div class="line"></div>
+                      </div>
+                      <div class="content"><span>Q4 2021</span><p>CoinGecko and CoinMarketCap Listings</p></div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="wrap">
+                      <div class="pointer">
+                        <div class="bubble"></div>
+                        <div class="line"></div>
+                      </div>
+                      <div class="content"><span>Q1 2022</span><p>DAO proposals for Magnet DAO begin - tokenomics, treasury management, innovation fund deployment, etc.</p></div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="wrap">
+                      <div class="pointer">
+                        <div class="bubble"></div>
+                        <div class="line"></div>
+                      </div>
+                      <div class="content"><span>Q1 2022</span><p>Propose various upgrades for the protocol - such as variable-rate ROI for bonding based on length of vesting, adding bonus rewards for diamond hands stakers, “zapping” liquidity for easier bonding</p></div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="wrap">
+                      <div class="pointer">
+                        <div class="bubble"></div>
+                        <div class="line"></div>
+                      </div>
+                      <div class="content"><span>Q1 2022</span><p>Investment Thesis Call with DAO for Development and Incubation Strategy Outline</p></div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="wrap">
+                      <div class="pointer">
+                        <div class="bubble"></div>
+                        <div class="line"></div>
+                      </div>
+                      <div class="content"><span>Q2 2022</span><p>Begin developing, incubating, and funding new protocols using the Innovation Fund</p>
+                      <p>Direction of where to deploy funds will be governed by the DAO</p></div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="wrap">
+                      <div class="pointer">
+                        <div class="bubble"></div>
+                        <div class="line"></div>
+                      </div>
+                      <div class="content"><span>Q2 2022</span><p>Begin development of native DAO tooling platform</p></div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="wrap">
+                      <div class="pointer">
+                        <div class="bubble"></div>
+                        <div class="line"></div>
+                      </div>
+                      <div class="content"><span>Q2 2022</span><p> Begin development or incubate a novel, liquid-staking solution for stablecoins, native to AVAX</p></div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="wrap">
+                      <div class="pointer">
+                        <div class="bubble"></div>
+                        <div class="line"></div>
+                      </div>
+                      <div class="content"><span>Q2 2022</span><p> Magnet DAO begins to incubate and invest in projects, helping early-stage crypto projects with building their protocols and providing funding from the innovation fund in return for tokens, which Magnet DAO treasury will receive and hold</p></div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="wrap">
+                      <div class="pointer">
+                        <div class="bubble"></div>
+                        <div class="line"></div>
+                      </div>
+                      <div class="content"><span>Q3 2022</span><p>Integrate native DAO tooling to make management seamless and integrated</p></div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="wrap">
+                      <div class="pointer">
+                        <div class="bubble"></div>
+                        <div class="line"></div>
+                      </div>
+                      <div class="content"><span>Q3 2022</span><p>Promote key contributors to leadership positions in the DAO</p></div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="wrap">
+                      <div class="pointer">
+                        <div class="bubble"></div>
+                        <div class="line"></div>
+                      </div>
+                      <div class="content"><span>Q3 2022</span><p>License our DAO tooling to other DAO’s looking for a management system</p></div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="wrap">
+                      <div class="pointer">
+                        <div class="bubble"></div>
+                        <div class="line"></div>
+                      </div>
+                      <div class="content"><span>Q3 2022 and beyond</span><p>Continue to develop, incubate, and fund new protocols and get the DAO involved as much as possible in new initiatives</p></div>
+                    </div>
+                  </div>
+              </div>
             </div>
 
-        </div>
 
         <div className="angle"></div>
     </section>
   )
 }
-
-const RoadmapTitle = ({ title }) => (
-  <div className='roadmap-title'>
-    {title}
-  </div>
-)
-
-const RoadmapTimeline = ({ timeline}) => (
-  <Timeline position='alternate'>
-    {timeline.map((tl)=>(
-      <RoadmapItem  key={tl.title} title={tl.title} items={tl.items}></RoadmapItem>
-    ))}
-  </Timeline>
-)
-
-const RoadmapItem = ({ title, items }) => (
-  <TimelineItem className='roadmap-item'>
-    <TimelineSeparator>
-      <TimelineDot />
-      <TimelineConnector />
-    </TimelineSeparator>
-    <TimelineContent>
-      <div className='roadmap-item-title'>{title}</div>
-      <TimelineList items={items} />
-    </TimelineContent>
-  </TimelineItem>
-)
-
-const TimelineList = ({items})=>(
-  <ul className="timeline-list">
-    {items.map(item=>(
-      <TimelineListItem key={item.text} item={item}></TimelineListItem>
-    ))}
-  </ul>
-)
-const TimelineListItem =({item}) =>(
-  <li className={`timeline-list-item ${item.isComplete?"completed":"incomplete"}`}> 
-  {item.text}
-  {item.subItems?<TimelineList items={item.subItems} />:""}
-  </li>
-  
-)

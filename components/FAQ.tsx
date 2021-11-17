@@ -30,8 +30,8 @@ export const FAQ: React.FC<FAQProps> = ({ }) => {
     <section id="faq">
       <div className="wrapper">
         <div className="outline-title left">
-          <span className="outline">Frequently Asked Questions</span>
-          <h2>Frequently Asked Questions</h2>
+          <span className="outline">FAQ</span>
+          <h2>FAQ</h2>
         </div>
         <div className="crosshair"></div>
       </div>

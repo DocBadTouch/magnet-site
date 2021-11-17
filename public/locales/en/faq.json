@@ -1,5 +1,5 @@
 {
-  "title": "Frequently Asked Questions",
+  "title": "FAQ",
   "magnetDao": {
     "title": "Magnet DAO - Specific FAQ",
     "questions": {
@@ -87,7 +87,7 @@
       "q4": {
         "q": "What is the deal with (🧲,🧲) and (❗, ❗)?",
         "a": {
-          "text1": "(Insert two emoji magnets) is the belief that if everyone in Magnet worked together, everyone would benefit the most (from a game theory standpoint). A user can currently take one of three actions:",
+          "text1": "(🧲,🧲) is the belief that if everyone in Magnet worked together, everyone would benefit the most (from a game theory standpoint). A user can currently take one of three actions:",
           "text2": "Staking (+2)\nBonding (+1)\nSelling (-2)",
           "text3": "Staking and bonding are thought to be advantageous to the procedure, whereas selling is thought to be harmful. Bonding does not produce a price change, whereas staking and selling do (we consider buying $MAG from the market as a prerequisite of staking, thus causing a price move). If both acts are advantageous, the actor who moves the price receives half of the profit (+1). If both acts are incompatible, the bad actor who moves the price receives half of the benefit (+1), while the good actor who moves the price receives half of the disadvantage (-1). (-1). If both activities are harmful, which suggests that both actors are selling, they will each receive half of the negative consequences (-1).",
           "text4": "As a result, given two actors, all possible scenarios for what they could do and their impact on the protocol are displayed here:",
