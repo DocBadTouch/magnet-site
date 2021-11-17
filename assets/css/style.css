@@ -733,6 +733,18 @@ nav.socials ul li a:hover svg {
   padding: 20px;
 }
 
+#community .col-right .community-item svg {
+  zoom:  .8;
+  fill: var(--white);
+  transition: fill .2s ease;
+  margin-bottom: 20px;
+}
+
+#community .col-right .community-item:hover svg {
+  fill: var(--brandprimary);
+  transition: fill .2s ease;
+}
+
 #community .col-right .community-item .label {
   font-family: 'Lufga';
   font-size: 20px;
@@ -750,6 +762,8 @@ nav.socials ul li a:hover svg {
 #community .col-right .flex-row:last-child  {
   margin-bottom: 0;
 }
+
+
 
 
 
