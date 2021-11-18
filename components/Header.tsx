@@ -8,32 +8,58 @@ import { useTranslation } from 'next-i18next';
 interface HeaderProps {
 
 }
-
+function openNav() {
+  const el = document.getElementById("mobile-draw")
+  const width = el.style.width;
+  console.log(width)
+  if(width=='0px'){
+    el.style.width = '280px'
+  }
+  else {
+    el.style.width = '0'
+  }
+}
 export const Header: React.FC<HeaderProps> = ({ }) => {
   const { t } = useTranslation("header")
   const info: { overview, tokenomics, roadmap, faq, docs } = t('navigation', { returnObjects: true })
   return (
     <header>
-      <DesktopMenu props={IoInformation} />
+      <MobileMenu props={info} />
+      <DesktopMenu props={info} />
     </header>
   )
 }
-const MobileMenu = () => {
-  <div>
-
+const MobileMenu = ({props}) => (
+  <div className="header-mobile">
+    <span onClick={openNav} >☰</span>
+    <HeaderImage />
+    <LaunchButton />
+    <MobileMenuDraw props ={props} />
   </div>
-}
+)
+const MobileMenuDraw = ({props})=>(
+  <div id="mobile-draw" className="header-menu-draw">
+    <PageNav props={props}/>
+    <SocialsNav />
+  </div>
+)
 const DesktopMenu = ({props}) => (
-  <div>
+  <div className="header-desktop">
     <div className="col-left">
-      <a href="index.html" id="logo-header"><Image src={headerLogo} alt="Magnet DAO Logo" /></a>
+      <HeaderImage />
       <PageNav props={{ ...props }} />
     </div>
     <div className="col-right">
       <SocialsNav />
-      <a href="https://app.magnetdao.finance/" className="btn primary"><span>Launch app</span></a>
+      <LaunchButton />
     </div>
   </div>
+)
+const LaunchButton= ()=>(
+  <a href="https://app.magnetdao.finance/" className="btn primary"><span>Launch app</span></a>
+)
+const HeaderImage = ()=>(
+  <a href="index.html" id="logo-header"><Image src={headerLogo} alt="Magnet DAO Logo" /></a>
 )
 const PageNav = ({ props }) => (
   <nav>
