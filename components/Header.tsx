@@ -19,6 +19,9 @@ function openNav() {
     el.style.width = '0'
   }
 }
+function closeDraw() {
+  document.getElementById("mobile-draw").style.width = '0';
+}
 export const Header: React.FC<HeaderProps> = ({ }) => {
   const { t } = useTranslation("header")
   const info: { overview, tokenomics, roadmap, faq, docs } = t('navigation', { returnObjects: true })
@@ -64,11 +67,11 @@ const HeaderImage = ()=>(
 const PageNav = ({ props }) => (
   <nav>
     <ul>
-      <li><a href="#overview" className="anchor"><span>{props.overview}</span></a></li>
-      <li><a href="#tokenomics" className="anchor"><span>{props.tokenomics}</span></a></li>
-      <li><a href="#roadmap" className="anchor"><span>{props.roadmap}</span></a></li>
-      <li><a href="#faq" className="anchor"><span>{props.faq}</span></a></li>
-      <li><a href="#" className="anchor"><span>{props.docs}</span></a></li>
+      <li><a onClick={closeDraw} href="#overview" className="anchor"><span>{props.overview}</span></a></li>
+      <li><a onClick={closeDraw} href="#tokenomics" className="anchor"><span>{props.tokenomics}</span></a></li>
+      <li><a onClick={closeDraw} href="#roadmap" className="anchor"><span>{props.roadmap}</span></a></li>
+      <li><a onClick={closeDraw} href="#faq" className="anchor"><span>{props.faq}</span></a></li>
+      <li><a onClick={closeDraw} href="#" className="anchor"><span>{props.docs}</span></a></li>
     </ul>
   </nav>
 )
