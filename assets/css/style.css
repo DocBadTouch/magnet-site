@@ -7,7 +7,7 @@
   }
 
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 
 /* COLORS : THEME */
@@ -1390,13 +1390,9 @@ footer .content .col-left {
   align-items: center;
 }
 
-footer .content .col-right {
-  
-}
-
-
 footer #powered-by-avalanche img {
-  width: 150px!important;
+  width: 150px;
+  flex-shrink: 0;
 }
 
 
