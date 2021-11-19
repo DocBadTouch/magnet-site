@@ -50,7 +50,7 @@
   --font-75: 45px;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
   :root {
   --font-40: 40px;
   --font-50: 50px;
@@ -123,9 +123,9 @@ a:hover {
     flex-flow: row wrap;
   }
 
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
   .wrapper {
-    width: 1440px;
+    width: 1200px;
     margin: auto;
   }
 }
@@ -205,13 +205,19 @@ p.small {
   position:  relative;
   width: 100%;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   z-index: 1;}
 
+@media (min-width: 1200px) {
+  .outline-title {
+  margin-bottom: 50px;
+  }
+}
+
 .outline-title.left {text-align: left;}
-.outline-title.left span.outline {margin-left: -30px;}
+.outline-title.left span.outline {margin-left: -15px;}
 .outline-title.right {text-align: right;}
-.outline-title.right span.outline {margin-right: -30px;}
+.outline-title.right span.outline {margin-right: -15px;}
 
 .outline-title h2 {
   display:  block;
@@ -240,7 +246,7 @@ p.small {
   display:  block;
   font-size: var(--font-50);
   text-transform: uppercase;
-  margin-bottom:  -70px;
+  margin-bottom:  -55px;
   z-index:  1;
   font-family: 'Lufga', Fallback, sans-serif;
   color:  transparent;
@@ -256,6 +262,13 @@ p.small {
   -ms-user-select: none;
   user-select: none;
 }
+
+@media (min-width: 1200px) {
+  .outline-title span.outline  {margin-bottom: -70px;}
+  .outline-title.left span.outline {margin-left: -30px;}
+  .outline-title.right span.outline {margin-right: -30px;}
+}
+
 
 
 /* BUTTONS */
@@ -334,6 +347,7 @@ header {
   background-color: transparent;
   color: var(--white);
   padding-right: 20px;
+  padding-bottom: 8px;
   font-size: var(--font-36); 
 }
 .header-menu-draw {
@@ -377,7 +391,7 @@ header nav {
     display: none;
   }
 
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
   .header-desktop {
     display: flex;
   }
@@ -428,11 +442,14 @@ nav.socials ul li a:hover svg {
 
 #hero {
   position: relative;
-  height:80vh;
-  max-height: 850px;
+  padding: 150px 0 0 0;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
+}
+
+#hero .caption {
+  margin-bottom: 50px;
 }
 
 #hero .caption h1 {
@@ -486,11 +503,10 @@ nav.socials ul li a:hover svg {
 
 #hero .metrics {
   border-top: 5px solid var(--brandtertiary);
-  width: 100%;
-  position:  absolute;
+  width: 90%;
   box-sizing: border-box;
   padding: 20px;
-  bottom: -30px;
+  margin: 0 auto -20px auto;
   z-index: 9;
   background-color: var(--dark03);
   display: flex;
@@ -520,9 +536,17 @@ nav.socials ul li a:hover svg {
   padding-left: 20px;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
+  #hero {
+    height:80vh;
+    max-height: 850px;
+    padding: 0;
+  }
+
   #hero .metrics .metrics-item {
     width: 50%;
+    bottom: -30px;
+    margin: 0;
   }
 }
 
@@ -558,11 +582,11 @@ nav.socials ul li a:hover svg {
 }
 
 #hero .crosshair {
-  bottom: 20px;
-  left: 20px;
+  top: 150px;
+  right: 20px;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
   #hero .crosshair {
     bottom: 95px;
     left: 95px;
@@ -590,7 +614,7 @@ nav.socials ul li a:hover svg {
   width: 100%;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
   #hero .caption {
     width: 50%;
   }
@@ -640,27 +664,25 @@ nav.socials ul li a:hover svg {
   user-select: none;
 }
 
-@media (min-width: 1440px) {
+#overview .satellite img {
+  width: 100%;
+}
+
+#overview .contents {
+  padding: 20px 0 0 0;
+}
+
+@media (min-width: 1200px) {
   #overview .satellite {
     width: 55%;
     left: -10%;
     top:  20%;
     opacity: 1;
   }
-}
 
-
-#overview .satellite img {
-  width: 100%;
-}
-
-#overview .contents {
-  padding: 50px 0;
-}
-
-@media (min-width: 1440px) {
   #overview .contents {
-    width: 50%;
+  padding: 50px 0;
+  width: 50%;
   }
 }
 
@@ -682,11 +704,11 @@ nav.socials ul li a:hover svg {
 }
 
 #overview .angle {
-  top: 25px;
+  top: 45px;
   left: 25px;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
     #overview .angle {
     top: 100px;
     left: 100px;
@@ -711,7 +733,7 @@ nav.socials ul li a:hover svg {
   padding-bottom: 100px;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
   #token .contents {
     width: 50%;
   }
@@ -755,7 +777,7 @@ nav.socials ul li a:hover svg {
     );   
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
   #token .tokeninfo {
      position: absolute;
     left: 5%;
@@ -811,7 +833,7 @@ nav.socials ul li a:hover svg {
   width: 100%;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
   #tokenomics .col-left,
   #tokenomics .col-right {
     width: 45%;
@@ -836,7 +858,7 @@ nav.socials ul li a:hover svg {
   right: 20px;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
   #tokenomics .crosshair {
     top: 95px;
     right: 95px;
@@ -846,9 +868,15 @@ nav.socials ul li a:hover svg {
 /* ROADMAP */
 
 #roadmap {
-  padding: 100px 0;
+  padding: 75px 0 0 0;
   background-color: var(--dark02);
   position: relative;
+}
+
+@media (min-width: 1200px) {
+  #roadmap {
+    padding: 100px 0;
+  }
 }
 
 #roadmap .outline-title span.outline {
@@ -864,7 +892,7 @@ nav.socials ul li a:hover svg {
   left: 25px;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
     #roadmap .angle {
     top: 100px;
     left: 100px;
@@ -907,7 +935,7 @@ nav.socials ul li a:hover svg {
 
 #roadmap .timeline .step .content p {line-height: 175%; margin: 5px 0; color: var(--brandtertiary)}
 
-  #roadmap .timeline .step:hover .content p {color: var(--white);}
+#roadmap .timeline .step:hover .content p {color: var(--white);}
 
 #roadmap .timeline .step .pointer .line {
   width: 1px;
@@ -947,8 +975,6 @@ nav.socials ul li a:hover svg {
   top: -5px;
 }
 
-
-
 #roadmap .timeline .step .wrap {
   padding-left: calc(50% + 40px);
   position:  relative;
@@ -968,7 +994,7 @@ nav.socials ul li a:hover svg {
   right: calc(50% - 15px);
 }
 
-@media screen and (max-width:1140px) {
+@media screen and (max-width:1200px) {
     #roadmap .timeline .step:nth-child(even) {text-align: left;}
     #roadmap .timeline .step .wrap, #roadmap .timeline .step:nth-child(even) .wrap {padding:  10px 0px 30px 10px;}
     #roadmap .timeline .step:nth-child(odd) .pointer, #roadmap .timeline .step:nth-child(even) .pointer {left: -30px;}
@@ -1026,7 +1052,7 @@ nav.socials ul li a:hover svg {
   width: 100%;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
   #community .col-left {
   width: 42%;
 }
@@ -1077,9 +1103,15 @@ nav.socials ul li a:hover svg {
 /* FAQ */
 
 #faq {
-  padding: 100px 0 0 0;
+  padding: 50px 0 0 0;
   background-color: var(--dark03);
   position: relative;
+}
+
+@media (min-width: 1200px) {
+  #faq {
+    padding: 100px 0;
+  }
 }
 
 #faq .outline-title span.outline {
@@ -1161,7 +1193,7 @@ nav.socials ul li a:hover svg {
   right: 20px;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
   #faq .crosshair {
     top: 95px;
     right: 95px;
@@ -1179,6 +1211,7 @@ nav.socials ul li a:hover svg {
   margin-bottom: 150px;
   background-color: var(--dark03);
 }
+
 .faq-tab-title-container {
   margin-bottom: none;
 }
@@ -1189,7 +1222,7 @@ nav.socials ul li a:hover svg {
 .react-tabs__tab.faq-tab-title{
   padding: 15px 0;
   text-align: center;
-  width: 25%;
+  width: 50%;
   font-family: Lufga;
   font-style: normal;
   font-size: var(--font-18);
@@ -1217,16 +1250,34 @@ nav.socials ul li a:hover svg {
   display: flex;
   flex-direction: column;
   background-color: var(--dark02);
-  padding-top: 80px;
+  padding-top: 20px;
 }
+
 
 .faq-question {
   padding: 40px 0 40px 0;
   border-bottom: 1px solid var(--dark02-accent);
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
+  box-sizing: border-box;
   font-size: var(--font-18);
   }
+
+  @media (min-width: 1200px) {
+
+  .react-tabs__tab.faq-tab-title{
+    width: 25%;
+  }
+
+  .faq-question {
+    width: 60%;
+  }
+
+  .faq-tab-panel.react-tabs__tab-panel--selected {
+    padding-top: 80px;
+  }
+}
+
 
 .faq-answer {
   color: var(--brandtertiary);
@@ -1282,6 +1333,7 @@ footer .cta {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-flow: column wrap;
 
   --notchSize: 50px;
   clip-path: 
@@ -1295,7 +1347,19 @@ footer .cta {
 }
 
 footer .cta .col-left {
-  width: 60%;
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+@media (min-width: 1200px) {
+  footer .cta {
+    flex-flow: row wrap;
+  }
+
+  footer .cta .col-left {
+    width: 60%;
+    padding-bottom: 0;
+  }
 }
 
 footer .cta .col-left .title {
