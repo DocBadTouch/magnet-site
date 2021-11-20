@@ -49,8 +49,8 @@ const TokenContent = ({text1,text2})=>(
           <div>
             <div className="tokens">
               <div className="token-icons">
-                <Image src={magToken} alt="MAG token icon" className="mag" />
-                <Image src={avaxToken} alt="AVAX token icon" className="avax" />
+                <Image src={magToken} alt="MAG token icon" className="mag" layout="intrinsic" height={75} width={75}/>
+                <Image src={avaxToken} alt="AVAX token icon" className="avax" layout="intrinsic" height={75} width={75} objectPosition={-1}/>
               </div>
               <p>{text2}</p>
             </div>

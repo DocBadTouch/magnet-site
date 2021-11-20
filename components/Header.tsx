@@ -1,8 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import headerLogo from '../assets/img/magnet-logo.svg';
-import { SiDiscord, SiTwitter, SiTelegram, SiGithub } from 'react-icons/si';
-import { IoInformation, IoLogoMedium } from 'react-icons/io5';
 import { useTranslation } from 'next-i18next';
 
 interface HeaderProps {
@@ -26,7 +24,7 @@ export const Header: React.FC<HeaderProps> = ({ }) => {
   const { t } = useTranslation("header")
   const info: { overview, tokenomics, roadmap, faq, docs } = t('navigation', { returnObjects: true })
   return (
-    <header>
+    <header id="header">
       <MobileMenu props={info} />
       <DesktopMenu props={info} />
     </header>
@@ -41,9 +39,12 @@ const MobileMenu = ({props}) => (
   </div>
 )
 const MobileMenuDraw = ({props})=>(
-  <div id="mobile-draw" className="header-menu-draw">
+  <div style={{ position: "relative"}}>
+    <div className="mobile-draw-mask" onClick={()=>closeDraw()} style={{width: "1200px", height: "1200px",  opacity: ".9", position:"absolute"}}></div>
+    <div id="mobile-draw" className="header-menu-draw"style={{ height: "1200px"}} >
     <PageNav props={props}/>
     <SocialsNav />
+  </div>
   </div>
 )
 const DesktopMenu = ({props}) => (

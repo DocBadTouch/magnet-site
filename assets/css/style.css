@@ -312,6 +312,7 @@ p.small {
 
 /* Header */
 header {
+  z-index: 10;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -331,7 +332,7 @@ header {
   position: relative;
   display: flex;
   align-content: center;
-  justify-content: start;
+  justify-content: flex-start;
 }
 .header-mobile .header-menu-draw nav {
   display: block;
@@ -355,9 +356,9 @@ header {
   width: 0;
   position: fixed;
   z-index: 1;
-  height: 320px;
-  top: 65px;
-  left: 50px;
+  height: 1200px;
+  top: 0px;
+  left: 0px;
   background-color:var(--dark01);
   overflow-x: hidden;
   transition: 0.5s;
@@ -733,11 +734,7 @@ nav.socials ul li a:hover svg {
   padding-bottom: 100px;
 }
 
-@media (min-width: 1200px) {
-  #token .contents {
-    width: 50%;
-  }
-}
+
 
 #token .contents p.big {
   margin-bottom: 50px;
@@ -745,19 +742,46 @@ nav.socials ul li a:hover svg {
 
 #token .contents .tokens {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 #token .contents .tokens .token-icons {
   display: flex;
-  margin-right: 50px;
+  justify-content: center;
+  margin-right: 25px;
+  width: 100%;
+  padding: 20px 0;
+  background-color: transparent;
+  
 }
-
+#token .contents .tokens .token-icons > span {
+  background-color: transparent;
+}
 #token .contents .tokens .token-icons .mag {
-  z-index: 9;
+
+  background-color: transparent;
 }
 
 #token .contents .tokens .token-icons .avax {
-  margin-left: -15px;
+  background-color: transparent;
+  
+}
+@media (min-width: 1200px) {
+  #token .contents {
+    width: 50%;
+  }
+  #token .contents .tokens .token-icons {
+    display: flex;
+    margin-right: 50px;
+    width: 100%;
+  }
+  #token .contents .tokens {
+    display: flex;
+    flex-wrap: nowrap;
+    
+  }
+
 }
 
 #token .tokeninfo {

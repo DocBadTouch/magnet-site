@@ -1,6 +1,7 @@
 //import '../styles/globals.css'
 import '../assets/css/normalize.css'   
 import '../assets/css/style.css' 
+import "../assets/css/SmoothScroll.css";
 import { appWithTranslation } from 'next-i18next';
 import type { AppProps } from 'next/app'
 import { useRef } from 'react';

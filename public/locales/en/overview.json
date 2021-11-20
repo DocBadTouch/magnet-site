@@ -1,9 +1,11 @@
 {
   "title": "Overview",    
-  "text1": "Magnet DAO is the evolution of the reserve currency protocol. The DAO uses its protocol controlled value to reward token holders with market-beating yields. At the same time, it uses its treasury reserves to invest in and incubate innovative projects.",
-  "text2": "Unlike first-generation reserve currency protocols, the goal of Magnet DAO isn’t just to grow its market cap. Instead, it uses its treasury assets to acquire and invest in high-quality crypto assets, effectively turning the DAO into an on-chain venture fund. Since all fees and value accrued from these assets is distributed directly to token holders, Magnet DAO creates exponential value for all its investors.",  
-  "text3": "Magnet DAO is the next stage of the tried and tested reserve currency model. While building a sufficient treasury is important for a protocol, the portfolio management of that treasury is equally as important. We are hyper focused on putting the treasury to use to generate return, including building, incubating, and investing in early-stage projects - opportunities that are typically not available to the average investor.",
-  "text4": "For a in-depth view of our vision, you can read more here on ",
-  "text5": "our Medium blog.",
-  "link": "https://magnetdao.medium.com/"      
+  "text1": "Magnet DAO is the evolution of the reserve currency protocol. The DAO uses its protocol controlled value to reward token holders with exceptional yields. At the same time, it uses its treasury reserves to invest in and incubate innovative projects.",
+  "text2": "Unlike first-generation reserve currency protocols, the goal of Magnet DAO isn’t just to grow its market cap and treasury. Instead, it uses ",
+  "text3": "10% of bond profits to invest in high-quality crypto assets, effectively turning the DAO into an on-chain venture fund. ",
+  "text4": "The DAO will also help incubate and build projects from the earliest stages. All tokens acquired by the DAO will be owned by the treasury, creating exponential value and unmatched upside for investors.",  
+  "text5": "Magnet DAO is the next stage of the tried and tested reserve currency model. While building a sufficient treasury is important for a protocol, the portfolio management of that treasury is equally as important. We are hyper focused on putting the treasury to use to generate return, including building, incubating, and investing in early-stage projects - opportunities that are typically not available to the average investor. We will also be exploring ways to generate risk-free return on our stablecoins, in order to turn them into productive assets.",
+  "text6": "For a in-depth view of our vision, you can read more here on ",
+  "text7": "our Medium blog.",
+  "link": "https://magnetdao.medium.com/an-introduction-to-magnet-dao-ae1b1e6ef1ad"      
 }

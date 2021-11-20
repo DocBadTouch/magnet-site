@@ -39,7 +39,7 @@ const HeroCaption = ({ props }) => (
   </div>
 )
 
-const HeroImage = () => (
+const HeroImage = (percentage) => (
   <div className="radar">
     <Image src={Radar} alt="Radar background image"/>
   </div>

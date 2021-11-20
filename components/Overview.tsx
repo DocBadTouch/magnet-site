@@ -14,7 +14,9 @@ export const Overview: React.FC<OverviewProps> = ({ }) => {
   const text3: String = t('text3')
   const text4: String = t('text4');
   const text5: String = t('text5');
-  
+  const text6: String = t('text6');
+  const text7: String = t('text7');
+  const link: String = t('link')
   return (
     <section id="overview">
       <OverviewImage />
@@ -23,7 +25,7 @@ export const Overview: React.FC<OverviewProps> = ({ }) => {
           <span className="outline">{title}</span>
           <h2>{title}</h2>
         </div>
-        <OverviewTextSection props={{text1,text2,text3,text4,text5}} />
+        <OverviewTextSection props={{text1,text2,text3,text4,text5,text6,text7}} />
       </div>
       <div className="angle"></div>
     </section>
@@ -39,9 +41,9 @@ const OverviewImage = () => (
 const OverviewTextSection = ({ props }) => (
   <div className="contents">
     <p className="big">{props.text1}</p>
-    <p>{props.text2}</p>
-    <p>{props.text3}</p>
-    <p>{props.text4}<a href="https://magnetdao.medium.com/" title="Go to our blog">{props.text5}</a>.</p>
+    <p>{props.text2}<strong>{props.text3}</strong>{props.text4}</p>
+    <p>{props.text5}</p>
+    <p>{props.text6}<a href={props.link} title="Go to our blog">{props.text7}</a>.</p>
   </div>
 
 )
