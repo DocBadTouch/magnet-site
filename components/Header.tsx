@@ -11,13 +11,16 @@ function openNav() {
   const width = el.style.width;
   console.log(width)
   if(width=='0px'){
-    el.style.width = '280px'
+    el.style.width = '280px' //todo make this based on class
+    document.getElementById("mobile-draw-mask").style.width = '1200px';//todo make this based on class
   }
   else {
     el.style.width = '0'
+    document.getElementById("mobile-draw-mask").style.width = '0'
   }
 }
 function closeDraw() {
+  document.getElementById("mobile-draw-mask").style.width = '0';
   document.getElementById("mobile-draw").style.width = '0';
 }
 export const Header: React.FC<HeaderProps> = ({ }) => {
@@ -40,8 +43,8 @@ const MobileMenu = ({props}) => (
 )
 const MobileMenuDraw = ({props})=>(
   <div style={{ position: "relative"}}>
-    <div className="mobile-draw-mask" onClick={()=>closeDraw()} style={{width: "1200px", height: "1200px",  opacity: ".9", position:"absolute"}}></div>
-    <div id="mobile-draw" className="header-menu-draw"style={{ height: "1200px"}} >
+    <div id="mobile-draw-mask" onClick={()=>closeDraw()} style={{width: "1200px", height: "1200px",  opacity: ".9", position:"absolute"}}></div>
+    <div id="mobile-draw" onClick={()=>closeDraw()} className="header-menu-draw"style={{ height: "1200px"}} >
     <PageNav props={props}/>
     <SocialsNav />
   </div>
