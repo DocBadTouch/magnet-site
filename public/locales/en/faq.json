@@ -6,49 +6,54 @@
       "q1": {
         "q": "Are you forking OHM?",
         "a": {
-          "text1": "Yes, we are forking OHM; however; we are implementing a unique strategy for the treasury. We want our protocol controlled value “PCV” to have more depth than simply representing a floor price / treasury for our token. OHM created something incredible with PCV, and we want to take it to the next level.",
-          "text2": "10% of bonded assets will be directed to an Innovation Fund which will be used to incubate and invest in new, disruptive projects. Magnet DAO will be highly involved, helping ideate projects and helping founders build their projects from the earliest stages. The Innovation Fund will also be used to invest projects that are further along but have yet to launch their token, giving token holders early exposure to projects they otherwise wouldn’t be able to invest in.",
-          "text3": "Our network effect, community engagement, and synergies will allow us to build and scale projects quickly and efficiently; while providing investors with an unparalleled opportunity to invest in early-stage crypto projects."
+          "text1": "Yes, we are forking OHM; however; we are implementing a unique strategy for the treasury. We want our protocol controlled value “PCV” to have more depth than simply representing a floor price / treasury for our token. OHM created something incredible with PCV, and we want to take it to the next level."
         }
       },
       "q2": {
+        "q": "What is the innovation fund and how will it work?",
+        "a": {
+          "text1": "10% of bonded assets will be directed to an Innovation Fund which will be used to incubate and invest in new, disruptive projects. Magnet DAO will be highly involved, helping ideate projects and helping founders build their projects from the earliest stages. The Innovation Fund will also be used to invest projects that are further along but have yet to launch their token, giving token holders early exposure to projects they otherwise wouldn’t be able to invest in.",
+          "text2": "Our network effect, community engagement, and synergies will allow us to build and scale projects quickly and efficiently; while providing investors with an unparalleled opportunity to invest in early-stage crypto projects."
+        }
+      },
+      "q3": {
         "q": "What do you think the vetting process of these start up projects will look like?",
         "a": {
           "text1": "The core team & DAO leadership will actively perform due diligence on the projects. We have a robust team, including those with early-stage investing experience, marketing, product management, design and engineering. This will all go into vetting the projects that we consider investing in. Additionally, any use of funds we make from the treasury will be voted on by the DAO (token holders). DAO leadership will present their findings to the rest of the DAO and then hold a vote."
         }
       },
-      "q3": {
+      "q4": {
         "q": "What measures are you considering to use for mitigating risk when choosing projects to use the Innovative fund?",
         "a": {
           "text1": "The projects we invest in will likely be later stage, closer to their launch, so those inherently are less risky and we will be able to see community, traction, and product.",
           "text2": "For earlier projects that are less proven, we plan on having a very active relationship with those teams, helping them incubate and grow. We even envision ourselves having developers reach out to us telling us that they want to build something, and us providing them with an idea and infrastructure to start. Our team comes from a variety of backgrounds, including venture capital investing, development, product management, and marketing. Additionally, the DAO will vote and ultimately be the determinant of any decision we make for the Innovation Fund. As with any early-stage investing approach, not every project will be a hit, but the goal is that enough will be to make it worthwhile."
         }
       },
-      "q4": {
+      "q5": {
         "q": "What can you do to assure the community that this is not a “rugpull?”",
         "a": {
           "text1": "The code will be open source and we have a number of community members who will be peer auditing it. We will also get a third-party audit for our token contract and our smart contracts. All of our contracts and wallets will be multi-sig, with signatories consisting of core team members, third-party advisors (TBD), and DAO leadership."
         }
       },
-      "q5": {
+      "q6": {
         "q": "When do you plan to launch?",
         "a": {
-          "text1": "TOur target is sometime in late November, more info to come."
+          "text1": "Our target is sometime in late November, more info to come."
         }
       },
-      "q6": {
+      "q7": {
         "q": "What chain are you launching on?",
         "a": {
           "text1": "Avalanche."
         }
       },
-      "q7": {
+      "q8": {
         "q": "What are the networks you first had in mind when branching out?",
         "a": {
           "text1": "At first, the focus will likely be around AVAX projects. We are extremely bullish on AVAX and its ecosystem and have gotten some incredible support / partnerships, so naturally we will be very active there. Mid/long-term, we definitely plan on getting involved with other chains."
         }
       },
-      "q8": {
+      "q9": {
         "q": "What else are you doing to innovate?",
         "a": {
           "text1": "We have a lot of ideas for how we can add value to the protocol. A few protocol design ideas we have discussed:",
