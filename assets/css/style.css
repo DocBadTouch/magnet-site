@@ -394,7 +394,7 @@ header {
 }
 .header-mobile .btn.primary {
   
-  position: absolute;
+  position: relative;
   right: 0px;
     --notchSize: 10px;
     clip-path: 
@@ -407,7 +407,13 @@ header {
     );
       
 }
+.flex-row-between {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 .header-mobile .launch-button-cont{
+  padding-left: 20px;
   position: unset;
 }
 .header-mobile .launch-button-cont .header-tooltip{

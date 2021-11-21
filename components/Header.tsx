@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import Image from 'next/image';
 import headerLogo from '../assets/img/magnet-logo.svg';
 import { useTranslation } from 'next-i18next';
+import { display } from '@mui/system';
 
 interface HeaderProps {
 
@@ -38,8 +39,11 @@ export const Header: React.FC<HeaderProps> = ({ }) => {
 const MobileMenu = ({props}) => (
   <div className="header-mobile">
     <span onClick={openNav} >☰</span>
+    <div className="flex-row-between">
+      
     <HeaderImage />
     <LaunchButton />
+    </div>
     <MobileMenuDraw props ={props} />
   </div>
 )
