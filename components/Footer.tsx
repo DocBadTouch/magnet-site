@@ -27,7 +27,7 @@ const CallToAction = ({}) => {
         </div>
         <div className="col-right">
             <div className="btn-group">
-                <a href="https://discord.gg/magnetdao" target="_blank" className="btn btn-secondary"><span>Join Discord</span></a>
+                <a href="https://discord.gg/magnetdao" target="_blank" rel="noreferrer" className="btn btn-secondary"><span>Join Discord</span></a>
                 <a href="https://app.magnetdao.finance/" className="btn btn-primary"><span>Get started</span></a>
             </div>
         </div>
@@ -40,7 +40,7 @@ const Content = () => (
             <SocialsNav/>
         </div>
         <div className="col-right">
-            <a href="https://www.avax.network/" target="_blank" id="powered-by-avalanche" title="Visit avax.network"><Image src={avaxPowered} alt="Powered by Avalanche" /></a>
+            <a href="https://www.avax.network/" target="_blank" rel="noreferrer" id="powered-by-avalanche" title="Visit avax.network"><Image src={avaxPowered} alt="Powered by Avalanche" /></a>
         </div>
     </div>
 
