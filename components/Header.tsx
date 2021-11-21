@@ -43,7 +43,7 @@ const MobileMenu = ({props}) => (
 )
 const MobileMenuDraw = ({props})=>(
   <div style={{ position: "relative"}}>
-    <div id="mobile-draw-mask" onClick={()=>closeDraw()} style={{width: "1200px", height: "1200px",  opacity: ".9", position:"absolute"}}></div>
+    <div id="mobile-draw-mask" onClick={()=>closeDraw()} style={{width: "100vw", height: "100vh",  opacity: ".6", background: "#000", top: "-37px", position:"absolute"}}></div>
     <div id="mobile-draw" onClick={()=>closeDraw()} className="header-menu-draw"style={{ height: "1200px"}} >
     <PageNav props={props}/>
     <SocialsNav />
