@@ -23,7 +23,7 @@ export const Token: React.FC<TokenProps> = ({ }) => {
   return (
     <section  id="token">
       <div className="wrapper">
-        <div className="tokeninfo" style={{ transform: `translate(0,${factor * ratio.current}px)` }}>
+        <div className="tokeninfo">
           <div className="items-background">
             <div className="flex-row">
               <TokenItem label={items.name.label} value={items.name.text}/>
