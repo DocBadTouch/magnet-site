@@ -144,7 +144,7 @@ const Home: NextPage = () => {
           <meta name="twitter:image" content="../assets/img/radar.png" />
         </Head>
         <Header />
-        <main onLoad={()=>{startAnimations();startSmoothie();}}>
+        <main onLoad={()=>{startAnimations();}}>
           
           <Hero />
           <Overview />

@@ -11,16 +11,18 @@ function openNav() {
   const width = el.style.width;
   if(width=='0px'){
     el.style.width = '60%' //todo make this based on class
-    document.getElementById("mobile-draw-mask").style.width = '100vh';//todo make this based on class
+    document.getElementById("mobile-draw-mask").classList.add('open') //style.width = '100vh';//todo make this based on class
   }
   else {
     el.style.width = '0'
-    document.getElementById("mobile-draw-mask").style.width = '0'
+    document.getElementById("mobile-draw-mask").classList.remove('open')
   }
 }
 function closeDraw() {
-  document.getElementById("mobile-draw-mask").style.width = '0';
+  //document.getElementById("mobile-draw-mask").style.width = '0';
+  
   document.getElementById("mobile-draw").style.width = '0';
+  document.getElementById("mobile-draw-mask").classList.remove('open')
 }
 export const Header: React.FC<HeaderProps> = ({ }) => {
   const [menuOpen, updateMenuOpen] = useState(false)
@@ -43,11 +45,11 @@ const MobileMenu = ({props}) => (
 )
 const MobileMenuDraw = ({props})=>(
   <div style={{ position: "relative"}}>
-    <div id="mobile-draw-mask" onClick={()=>closeDraw()} style={{width: "0", height: "100vh",  opacity: ".6", background: "#000", top: "-37px", position:"absolute"}}></div>
+    <div id="mobile-draw-mask" className="header-menu-draw-mask" onClick={()=>closeDraw()} style={{ height: "100vh",  background: "#000", top: "-37px", position:"absolute"}}></div>
     <div id="mobile-draw" onClick={()=>closeDraw()} className="header-menu-draw"style={{ height: "100vh"}} >
-    <HeaderImage />
-    <PageNav props={props}/>
-    <SocialsNav />
+      <HeaderImage />
+      <PageNav props={props}/>
+      <SocialsNav />
   </div>
   </div>
 )
@@ -64,7 +66,12 @@ const DesktopMenu = ({props}) => (
   </div>
 )
 const LaunchButton= ()=>(
-  <a href="https://app.magnetdao.finance/" className="btn primary"><span>Launch app</span></a>
+  <div className="launch-button-cont">
+  <a href="#" onClick={(event)=>{event.preventDefault()}} className="btn primary">
+    <span>Launch app</span>
+    </a>
+    <span className='header-tooltip'>Coming Soon!</span>
+    </div>
 )
 const HeaderImage = ()=>(
   <a href="#" id="logo-header"><Image src={headerLogo} alt="Magnet DAO Logo" layout="intrinsic" /></a>
@@ -76,7 +83,7 @@ const PageNav = ({ props }) => (
       <li><a onClick={closeDraw} href="#tokenomics" className="anchor"><span>{props.tokenomics}</span></a></li>
       <li><a onClick={closeDraw} href="#roadmap" className="anchor"><span>{props.roadmap}</span></a></li>
       <li><a onClick={closeDraw} href="#faq" className="anchor"><span>{props.faq}</span></a></li>
-      <li><a onClick={closeDraw} href="#hero" className="anchor"><span>{props.docs}</span></a></li>
+      <li><a onClick={(event)=>{event.stopPropagation()}} href="#hero" className="anchor header-docs"><span>{props.docs}</span><span className='header-tooltip'>Coming Soon!</span></a></li>
     </ul>
   </nav>
 )
