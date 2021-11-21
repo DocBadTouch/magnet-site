@@ -131,7 +131,7 @@ const Home: NextPage = () => {
           <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg" />
           <link rel="alternate icon" href="../assets/img/favicon.ico" />
           <meta property="og:title" content="Magnet DAO | Revolutionizing early-stage investing" />
-          <meta property="og:image" content="../assets/img/radar.png" />
+          <meta property="og:image" content="../assets/img/og_img.png" />
           <meta property="og:description" content="..." />
           <meta property="og:url" content="https://magnetdao.finance" />
           <meta property="og:image:width" content="1200" />
@@ -141,7 +141,7 @@ const Home: NextPage = () => {
           <meta name="twitter:site" content="@magnet_dao" />
           <meta name="twitter:title" content="Magnet DAO | Revolutionizing early-stage investing" />
           <meta name="twitter:description" content="..." />
-          <meta name="twitter:image" content="../assets/img/radar.png" />
+          <meta name="twitter:image" content="../assets/img/og_img.png" />
         </Head>
         <Header />
         <main onLoad={()=>{startAnimations();}}>

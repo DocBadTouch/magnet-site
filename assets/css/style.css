@@ -340,12 +340,16 @@ header {
 }
 .header-mobile .header-menu-draw nav {
   display: block;
+  width: 100%;
 }
 .header-mobile ul {
   flex-direction: column;
+  margin: 0 0 0 20px;
 }
 .header-mobile .socials ul {
   flex-direction: row;
+  justify-content: center;
+  margin: 0;
 }
 .header-mobile > span {
 
@@ -690,6 +694,7 @@ nav.socials ul li a:hover svg {
   background-color: var(--dark01);
   padding: 100px 0;
   align-content: flex-end;
+  z-index: 2;
 }
 
 #overview .wrapper {
@@ -751,6 +756,7 @@ nav.socials ul li a:hover svg {
   position: relative;
   background-color: var(--dark02);
   padding: 50px 0;
+  z-index: 3;
 }
 
 #token .wrapper {
