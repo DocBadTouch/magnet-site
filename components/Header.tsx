@@ -67,7 +67,7 @@ const LaunchButton= ()=>(
   <a href="https://app.magnetdao.finance/" className="btn primary"><span>Launch app</span></a>
 )
 const HeaderImage = ()=>(
-  <a href="#" id="logo-header"><Image src={headerLogo} alt="Magnet DAO Logo" layout="intrinsic" /></a>
+  <a href="#hero" id="logo-header"><Image src={headerLogo} alt="Magnet DAO Logo" layout="intrinsic" /></a>
 )
 const PageNav = ({ props }) => (
   <nav>
