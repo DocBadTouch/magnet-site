@@ -704,7 +704,7 @@ nav.socials ul li a:hover svg {
 #overview .satellite {
   width: 100%;
   position: absolute;
-  right: -30%;
+  /*right: -30%;*/
   top:  -5%;
   opacity: .25;
 
@@ -1289,6 +1289,13 @@ nav.socials ul li a:hover svg {
 .faq-answer {
   color: var(--brandtertiary);
   font-size: var(--font-16);
+}
+.faq-answer::before {
+  content: "\2022";
+  
+  padding-right: 5px;
+  color: var(--brandprimary);
+  font-size: 16px;
 }
 
 .Collapsible__trigger {
