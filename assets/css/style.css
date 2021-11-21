@@ -357,13 +357,17 @@ header {
   width: 0;
   position: fixed;
   z-index: 1;
-  height: 1200px;
+  height: 100vh;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: space-between;
   top: 0px;
   left: 0px;
-  background-color:var(--dark01);
+  background-color:var(--dark02);
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 40px;
+  padding: 20px 0;
 }
 
 .header-menu-draw li {
