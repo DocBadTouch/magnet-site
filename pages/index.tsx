@@ -82,11 +82,33 @@ const Home: NextPage = () => {
       crossHairObserver.observe(el);
       //el.querySelector('.outline').classList.add('faded')
     });
-    window.onscroll = function () {
-      
+    let scrollStart = 0;
+    let scrollTarget = 250;
+    let scale = .3
+    window.onscroll = function (event) {
+      //console.log("scroll",{event,window: window.scrollY,scrollStart: scrollStart, scrollTarget})
       scrollRotate();
+      /*if(scrollStart>window.scrollY&& scrollTarget>window.scrollY){
+        scrollTarget = window.scrollY-500
+      }
+      else if(scrollStart<window.scrollY&& scrollTarget<window.scrollY){
+        scrollTarget = window.scrollY+500
+      }
+      if(!(window.scrollY < scrollTarget+15 && window.scrollY>scrollTarget-15)) {
+        console.log('outside')
+        scrollStart = window.scrollY+(scrollTarget-window.scrollY)*scale
+        window.scrollTo(0,scrollStart)
+        
+        return;
+      }
+      */
+      
+      
     };
-
+    function scrollSmoothly(target,current){
+      setTimeout(scrollSmoothly)
+      if(target>current){}
+    }
     function scrollRotate() {
       document.querySelectorAll(".crosshair.inview").forEach(el => {
         el.setAttribute("style", "--rotate: " + window.pageYOffset / 2 + "deg");
@@ -96,7 +118,7 @@ const Home: NextPage = () => {
   }
   //window.addEventListener('load',startAnimations)
   return (
-    <SmoothScroll menu={<Header />} >
+    //<SmoothScroll menu={<Header />} >
       <div id='bodyDiv'>
         <Head >
           <meta charSet="utf-8" />
@@ -107,7 +129,7 @@ const Home: NextPage = () => {
           <title>Magnet DAO | Revolutionizing early-stage investing</title>
 
           <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg" />
-          <link rel="alternate icon" href="assets/img/favicon.ico" />
+          <link rel="alternate icon" href="../assets/img/favicon.ico" />
           <meta property="og:title" content="Magnet DAO | Revolutionizing early-stage investing" />
           <meta property="og:image" content="../assets/img/radar.png" />
           <meta property="og:description" content="..." />
@@ -121,8 +143,8 @@ const Home: NextPage = () => {
           <meta name="twitter:description" content="..." />
           <meta name="twitter:image" content="../assets/img/radar.png" />
         </Head>
-        
-        <main onLoad={startAnimations}>
+        <Header />
+        <main onLoad={()=>{startAnimations();startSmoothie();}}>
           
           <Hero />
           <Overview />
@@ -136,7 +158,7 @@ const Home: NextPage = () => {
        
       </div>
       
-    </SmoothScroll>
+    //</SmoothScroll>
 
 
   )

@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import Image from 'next/image';
 import headerLogo from '../assets/img/magnet-logo.svg';
 import { useTranslation } from 'next-i18next';
@@ -9,7 +9,6 @@ interface HeaderProps {
 function openNav() {
   const el = document.getElementById("mobile-draw")
   const width = el.style.width;
-  console.log(width)
   if(width=='0px'){
     el.style.width = '60%' //todo make this based on class
     document.getElementById("mobile-draw-mask").style.width = '100vh';//todo make this based on class
@@ -24,6 +23,7 @@ function closeDraw() {
   document.getElementById("mobile-draw").style.width = '0';
 }
 export const Header: React.FC<HeaderProps> = ({ }) => {
+  const [menuOpen, updateMenuOpen] = useState(false)
   const { t } = useTranslation("header")
   const info: { overview, tokenomics, roadmap, faq, docs } = t('navigation', { returnObjects: true })
   return (
@@ -43,7 +43,7 @@ const MobileMenu = ({props}) => (
 )
 const MobileMenuDraw = ({props})=>(
   <div style={{ position: "relative"}}>
-    <div id="mobile-draw-mask" onClick={()=>closeDraw()} style={{width: "100vw", height: "100vh",  opacity: ".6", background: "#000", top: "-37px", position:"absolute"}}></div>
+    <div id="mobile-draw-mask" onClick={()=>closeDraw()} style={{width: "0", height: "100vh",  opacity: ".6", background: "#000", top: "-37px", position:"absolute"}}></div>
     <div id="mobile-draw" onClick={()=>closeDraw()} className="header-menu-draw"style={{ height: "100vh"}} >
     <HeaderImage />
     <PageNav props={props}/>
@@ -67,7 +67,7 @@ const LaunchButton= ()=>(
   <a href="https://app.magnetdao.finance/" className="btn primary"><span>Launch app</span></a>
 )
 const HeaderImage = ()=>(
-  <a href="index.html" id="logo-header"><Image src={headerLogo} alt="Magnet DAO Logo" /></a>
+  <a href="#" id="logo-header"><Image src={headerLogo} alt="Magnet DAO Logo" layout="intrinsic" /></a>
 )
 const PageNav = ({ props }) => (
   <nav>
@@ -76,11 +76,11 @@ const PageNav = ({ props }) => (
       <li><a onClick={closeDraw} href="#tokenomics" className="anchor"><span>{props.tokenomics}</span></a></li>
       <li><a onClick={closeDraw} href="#roadmap" className="anchor"><span>{props.roadmap}</span></a></li>
       <li><a onClick={closeDraw} href="#faq" className="anchor"><span>{props.faq}</span></a></li>
-      <li><a onClick={closeDraw} href="#" className="anchor"><span>{props.docs}</span></a></li>
+      <li><a onClick={closeDraw} href="#hero" className="anchor"><span>{props.docs}</span></a></li>
     </ul>
   </nav>
 )
-const SocialsNav = () => (
+export const SocialsNav = () => (
   <nav className="socials">
     <ul>
       <DiscordIconLink />
@@ -138,30 +138,4 @@ const MediumIconLink = () => (
       </svg>
     </a>
   </li>
-)
-const HeaderItem = ({ text, link }) => (
-  <a className='header-item' href={link}>
-    {text}
-  </a>
-)
-
-const HeaderIcon = ({ icon }) => (
-  <div className='header-icon'>
-    {icon}
-  </div>
-)
-
-const HeaderLogo = ({ }) => (
-  <div className='header-logo'>
-    <Image src={headerLogo} layout='responsive' />
-  </div>
-)
-
-const HeaderButton = ({ }) => (
-  <button className='header-button group'>
-    Launch App
-    <span className='header-tooltip group-hover:scale-100'>
-      Coming Soon!
-    </span>
-  </button>
 )

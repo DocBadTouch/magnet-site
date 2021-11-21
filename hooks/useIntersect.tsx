@@ -1,16 +1,18 @@
 import { useEffect, useRef, useState } from "react";
-
-export default ({ root = null, rootMargin = '0px', threshold }) => {
+const buildThresholdArray = () => Array.from(Array(100).keys(), i => i / 100);
+export default ({ root = null, rootMargin = '0px', threshold = buildThresholdArray() }) => {
   const [entry, updateEntry] = useState<IntersectionObserverEntry>();
   const [node, setNode] = useState(null);
   const observer = useRef<IntersectionObserver>()
   const [dist, updateDist] = useState(0);
+  const  merp = useRef(0)
   useEffect(
     () => {
 
-      const observer = new window.IntersectionObserver(([entry]) => /*{
-
+      const observer = new window.IntersectionObserver(([entry]) => {
+        
         if (entry.isIntersecting) {
+          
           const element = entry.target as HTMLElement
           const distanceToTop = window.pageYOffset + element.getBoundingClientRect().top;
           const elementHeight = element.offsetHeight;
@@ -18,14 +20,14 @@ export default ({ root = null, rootMargin = '0px', threshold }) => {
 
           
           if (scrollTop > distanceToTop) {
-           updateDist( 1 - (scrollTop - distanceToTop) / elementHeight);
+           merp.current = ( 1 - (scrollTop - distanceToTop) / elementHeight);
           }
-          
+          //console.log("dist",{distanceToTop,elementHeight,scrollTop, merp})
         }
         updateEntry(entry)
-
-      },*/
-      updateEntry(entry),
+        
+      },
+      
         {
           root,
           rootMargin,
@@ -40,5 +42,5 @@ export default ({ root = null, rootMargin = '0px', threshold }) => {
     [node]
   );
 
-  return { setNode, entry, dist };
+  return { setNode, entry, merp };
 };

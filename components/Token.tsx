@@ -3,7 +3,7 @@ import { useTranslation } from 'next-i18next';
 import magToken from '../assets/img/mag-token.svg';
 import avaxToken from '../assets/img/avax-token.svg';
 import Image from 'next/image';
-
+import useIntersect from '../hooks/useIntersect'
 interface TokenProps {
 
 }
@@ -14,15 +14,16 @@ export const Token: React.FC<TokenProps> = ({ }) => {
   const items = t('token.items', {returnObjects: true})
  */
   export const Token: React.FC<TokenProps> = ({ }) => {
+    
     const { t } = useTranslation('token')
     const text1 = t('text1');
     const text2 = t('text2');
-    
+    const factor = 25;
     const items: {name,symbol, totalSupply,initialSupply, chain, contract} = t("items", { returnObjects: true }) 
   return (
-    <section id="token">
+    <section  id="token">
       <div className="wrapper">
-        <div className="tokeninfo">
+        <div className="tokeninfo" style={{ transform: `translate(0,${factor * ratio.current}px)` }}>
           <div className="items-background">
             <div className="flex-row">
               <TokenItem label={items.name.label} value={items.name.text}/>
@@ -49,7 +50,7 @@ const TokenContent = ({text1,text2})=>(
           <div>
             <div className="tokens">
               <div className="token-icons">
-                <Image src={magToken} alt="MAG token icon" className="mag" layout="intrinsic" height={75} width={75}/>
+                <Image src={magToken} alt="MAG token icon" className="mag" layout="intrinsic" height={75} width={75} />
                 <Image src={avaxToken} alt="AVAX token icon" className="avax" layout="intrinsic" height={75} width={75} objectPosition={-1}/>
               </div>
               <p>{text2}</p>
