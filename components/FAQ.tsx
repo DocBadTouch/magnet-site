@@ -49,6 +49,8 @@ const FAQTabContainer = ({ t, magFaqTitle, ohmFaqTitle }) => (
       <Tab className='react-tabs__tab faq-tab-title'>{ohmFaqTitle}</Tab>
     </div>
     </TabList>
+    <div class="tabscont">
+    <div className="wrapper">
     <TabPanel className='faq-tab-panel'>
       {Object.keys(magDaoQuestions).map((key) => (
         <FAQQuestion
@@ -69,6 +71,8 @@ const FAQTabContainer = ({ t, magFaqTitle, ohmFaqTitle }) => (
           />
         ))}
     </TabPanel>
+    </div>
+    </div>
   </Tabs>
 )
 const FAQQuestion = ({ prompt, answers }) => (

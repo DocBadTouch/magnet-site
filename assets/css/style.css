@@ -273,8 +273,8 @@ p.small {
 
 .outline-title h2:after {
   content: '';
-  width: 100px;
-  height: 5px;
+  width: 40px;
+  height: 3px;
   margin: 15px 0 0 20px;
   display: block;
   background-color: var(--brandprimary);
@@ -288,7 +288,7 @@ p.small {
   display:  block;
   font-size: var(--font-50);
   text-transform: uppercase;
-  margin-bottom:  -55px;
+  margin-bottom:  -40px;
   z-index:  1;
   font-family: 'Lufga', sans-serif;
   font-weight: 700;
@@ -960,6 +960,7 @@ nav.socials ul li a:hover svg {
 #community .col-left .line3 {
   font-size: var(--font-70);
   padding-left: 30px;
+  margin-top: -15px;
 }
 
 #community .col-right {
@@ -975,6 +976,7 @@ nav.socials ul li a:hover svg {
   padding: 0px;
   margin: 10px 20px;
   width: 100%;
+  box-sizing: border-box;
 }
 
   #community .col-left, #community .col-right {
@@ -997,6 +999,16 @@ nav.socials ul li a:hover svg {
   transition: fill .2s ease;
 }
 
+#community .col-right a.community-item {
+  color: var(--white);
+}
+
+#community .col-right a:hover.community-item {
+  color: var(--brandprimary);
+}
+
+
+
 #community .col-right .community-item .label {
   font-family: 'Lufga', sans-serif;
   font-weight: 700;
@@ -1006,6 +1018,10 @@ nav.socials ul li a:hover svg {
 
 #community .col-right .community-item .description p {
   color: var(--brandsecondary);
+}
+
+#community .col-right a:hover.community-item .description p {
+  color: var(--white);
 }
 
 #community .col-right .flex-row:last-child  {
@@ -1127,6 +1143,7 @@ nav.socials ul li a:hover svg {
 .react-tabs__tab.faq-tab-title{
   padding: 15px 10px;
   box-sizing: border-box;
+  margin-bottom: 1px;
   text-align: center;
   width: 50%;
   font-family: 'Lufga', sans-serif;
@@ -1164,10 +1181,10 @@ nav.socials ul li a:hover svg {
 .faq-question {
   padding: 20px 0;
   border-bottom: 1px solid var(--dark02-accent);
-  width: 80%;
   margin: 0 auto;
   box-sizing: border-box;
   font-size: var(--font-18);
+  width: 100%;
   }
 
 
@@ -1208,6 +1225,10 @@ nav.socials ul li a:hover svg {
 .Collapsible__trigger.is-disabled {
   opacity: 0.5;
   background-color: grey; 
+}
+
+.tabscont {
+  background-color: var(--dark02);
 }
 
 /* FOOTER */
@@ -1289,10 +1310,30 @@ footer #powered-by-avalanche img {
   flex-shrink: 0;
 }
 
+/* MEDIUM SCREENS > 740px */
 
-/* WIDE SCREENS > 1200px */
+@media (min-width: 740px) {
+  :root {
+  --font-16: 14px;
+  --font-18: 16px;
+  --font-20: 18px;
+  --font-22: 20px;
+  --font-36: 24px;
+  --font-40: 28px;
+  --font-50: 32px;
+  --font-60: 36px;
+  --font-70: 40px;
+  --font-75: 44px;
+  }
 
-@media (min-width: 1200px) {
+  .wrapper {
+  }
+}
+
+
+/* WIDE SCREENS > 1040px */
+
+@media (min-width: 1040px) {
   :root {
   --font-16: 16px;
   --font-18: 18px;
@@ -1307,7 +1348,7 @@ footer #powered-by-avalanche img {
   }
 
   .wrapper {
-    width: 1200px;
+    width: 940px;
     margin: auto;
   }
 
@@ -1319,6 +1360,11 @@ footer #powered-by-avalanche img {
   .outline-title span.outline  {margin-bottom: -70px;}
   .outline-title.left span.outline {margin-left: -30px;}
   .outline-title.right span.outline {margin-right: -30px;}
+
+  .outline-title h2:after {
+  width: 100px;
+  height: 5px;
+  }
 
   header {
     padding: 30px;
@@ -1387,9 +1433,10 @@ footer #powered-by-avalanche img {
   }
 
   #hero .metrics {
-  width: 40%;
+  width: 50%;
   position:  absolute;
-  right: 5%;
+  left: 50%;
+  margin: 0;
   bottom: -100px;
   z-index: 9;
   padding:  50px 75px;
@@ -1535,10 +1582,6 @@ footer #powered-by-avalanche img {
     width: 25%;
   }
 
-  .faq-question {
-    width: 60%;
-  }
-
   .faq-tab-panel.react-tabs__tab-panel--selected {
     padding-top: 80px;
   }
@@ -1574,5 +1617,25 @@ footer #powered-by-avalanche img {
 
   footer .content .col-left nav.socials {
     margin: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  :root {
+  --font-16: 16px;
+  --font-18: 18px;
+  --font-20: 20px;
+  --font-22: 22px;
+  --font-36: 36px;
+  --font-40: 40px;
+  --font-50: 50px;
+  --font-60: 60px;
+  --font-70: 70px;
+  --font-75: 75px;
+  }
+
+  .wrapper {
+    width: 1340px;
+    margin: auto;
   }
 }
