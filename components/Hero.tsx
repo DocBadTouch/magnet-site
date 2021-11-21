@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'next-i18next';
 import Radar from '../assets/img/radar.png';
 import Image from 'next/image';
+import { Parallax } from './Parrallax'
 interface HeroProps {
 
 }
@@ -10,9 +11,9 @@ const scrollToSection = (tag) => {
 }
 export const Hero: React.FC<HeroProps> = ({ }) => {
   const { t } = useTranslation('hero')
-  const caption = t("caption",{ returnObjects: true })
+  const caption = t("caption", { returnObjects: true })
   const metrics = t("metrics", { returnObjects: true })
-  console.log("Metrics",metrics)
+  console.log("Metrics", metrics)
   return (
     <section id="hero">
       <HeroCaption props={caption} />
@@ -40,23 +41,32 @@ const HeroCaption = ({ props }) => (
 )
 
 const HeroImage = (percentage) => (
+
   <div className="radar">
-    <Image src={Radar} alt="Radar background image"/>
+    <Parallax props={{ ratio: 25, height: '700px', width: '500px' }}>
+      <Image src={Radar} alt="Radar background image" />
+    </Parallax>
   </div>
+
 
 )
 
 const HeroMetrics = ({ metrics }) => (
-  <div className="metrics">
-    <div className="flex-row">
-      <HeroMetricsItem item={metrics.cAPY} valClass='percentage' xClass='primary'/>
-      <HeroMetricsItem item={metrics.tBal} valClass='monetary' xClass= ''/>
+  //<div className="metric-container">
+    //<Parallax props={{ height: '400px', width: '600px', ratio: 55 }}>
+    <div className="metrics">
+        <div className="flex-row">
+          <HeroMetricsItem item={metrics.cAPY} valClass='percentage' xClass='primary' />
+          <HeroMetricsItem item={metrics.tBal} valClass='monetary' xClass='' />
+        </div>
+        <div className="flex-row">
+          <HeroMetricsItem item={metrics.mCap} valClass='monetary' xClass='' />
+          <HeroMetricsItem item={metrics.tvl} valClass='monetary' xClass='' />
+        </div>
     </div>
-    <div className="flex-row">
-      <HeroMetricsItem item={metrics.mCap} valClass='monetary' xClass= ''/>
-      <HeroMetricsItem item={metrics.tvl}  valClass='monetary' xClass=''/>
-    </div>
-  </div>
+    //</Parallax>
+  //</div>
+
 )
 
 

@@ -502,6 +502,10 @@ nav.socials ul li a:hover svg {
   border: 1px solid var(--white);
 }
 
+#hero .metric-container {
+  display: flex;
+  
+}
 #hero .metrics {
   border-top: 5px solid var(--brandtertiary);
   width: 90%;
@@ -623,14 +627,16 @@ nav.socials ul li a:hover svg {
   #hero .radar {
   display: block;
   }
-
   #hero .metrics {
+    
   width: 50%;
   position:  absolute;
   left: 50%;
   bottom: -100px;
-  z-index: 9;
+  
   padding:  50px 75px;
+  
+  z-index: 9;
   --notchSize: 50px;
   }
 }

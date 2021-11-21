@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'next-i18next';
 import Satellite from '../assets/img/satellite.png';
 import Image from 'next/image';
+import { Parallax } from './Parrallax'
 interface OverviewProps {
 
 }
@@ -34,7 +35,9 @@ export const Overview: React.FC<OverviewProps> = ({ }) => {
 
 const OverviewImage = () => (
   <div className="satellite">
+    <Parallax props={{ratio: 25, width: '100%', height: '800px' }}>
     <Image src={Satellite} alt="Satellite background image" />
+    </Parallax>
   </div>
 )
 
