@@ -414,6 +414,12 @@ header {
   right: 5rem;
   top: 4rem;
 }
+.header-mobile .header-docs .header-tooltip {
+  
+  top: 55%;
+  left: 30%;
+  
+}
 
 .launch-button-cont {
   position: relative;
