@@ -11,8 +11,8 @@ function openNav() {
   const width = el.style.width;
   console.log(width)
   if(width=='0px'){
-    el.style.width = '280px' //todo make this based on class
-    document.getElementById("mobile-draw-mask").style.width = '1200px';//todo make this based on class
+    el.style.width = '60%' //todo make this based on class
+    document.getElementById("mobile-draw-mask").style.width = '100vh';//todo make this based on class
   }
   else {
     el.style.width = '0'
@@ -44,7 +44,8 @@ const MobileMenu = ({props}) => (
 const MobileMenuDraw = ({props})=>(
   <div style={{ position: "relative"}}>
     <div id="mobile-draw-mask" onClick={()=>closeDraw()} style={{width: "100vw", height: "100vh",  opacity: ".6", background: "#000", top: "-37px", position:"absolute"}}></div>
-    <div id="mobile-draw" onClick={()=>closeDraw()} className="header-menu-draw"style={{ height: "1200px"}} >
+    <div id="mobile-draw" onClick={()=>closeDraw()} className="header-menu-draw"style={{ height: "100vh"}} >
+    <HeaderImage />
     <PageNav props={props}/>
     <SocialsNav />
   </div>

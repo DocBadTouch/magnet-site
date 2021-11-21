@@ -3,11 +3,34 @@
 @font-face {
   font-family: "Lufga";
   font-display: block;
-  src: url('../fonts/lufga-bold.woff2');
+  src:  url('../fonts/lufga-bold.woff2') format('woff2'),
+        url('../fonts/lufga-bold.woff') format('woff');
+  font-weight: 700;
   }
 
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@font-face {
+  font-family: "Poppins";
+  font-display: block;
+  src: url('../fonts/poppins-regular.woff2') format('woff2'),
+        url('../fonts/poppins-regular.woff') format('woff');
+  font-weight: 400;
+  }
+
+@font-face {
+  font-family: "Poppins";
+  font-display: block;
+  src: url('../fonts/poppins-bold.woff2') format('woff2'),
+        url('../fonts/poppins-bold.woff') format('woff');
+  font-weight: 700;
+  }
+
+@font-face {
+  font-family: "Inconsolata";
+  font-display: block;
+  src: url('../fonts/inconsolata-regular.woff2') format('woff2'),
+        url('../fonts/inconsolata-regular.woff') format('woff');
+  font-weight: 400;
+  }
 
 
 /* COLORS : THEME */
@@ -62,7 +85,7 @@ body {
   margin:0px;
   background-color:  var(--body-bg);
   color: var(--txt-color);
-  font-family: 'Poppins', monospace;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   }
 .bodyDiv {
@@ -70,7 +93,7 @@ body {
   margin:0px;    
   background-color:  var(--body-bg);
   color: var(--txt-color);
-  font-family: 'Poppins', monospace;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
       
   }
@@ -113,7 +136,8 @@ a:hover {
   }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Lufga';
+  font-family: 'Lufga', sans-serif;
+  font-weight: 700;
 }
 
 p {
@@ -122,7 +146,8 @@ p {
 }
 
 p.big {
-  font-family: 'Lufga';
+  font-family: 'Lufga', sans-serif;
+  font-weight: 700;
   font-size: var(--font-18);
 }
 
@@ -171,7 +196,8 @@ p.small {
 /* BUTTONS */
 
 .btn {
-  font-family: 'Lufga';
+  font-family: 'Lufga', sans-serif;
+  font-weight: 700;
   padding: 10px 15px;
   background-color: var(--brandprimary);
   color: var(--white);
@@ -247,8 +273,8 @@ p.small {
 
 .outline-title h2:after {
   content: '';
-  width: 100px;
-  height: 5px;
+  width: 40px;
+  height: 3px;
   margin: 15px 0 0 20px;
   display: block;
   background-color: var(--brandprimary);
@@ -262,9 +288,10 @@ p.small {
   display:  block;
   font-size: var(--font-50);
   text-transform: uppercase;
-  margin-bottom:  -55px;
+  margin-bottom:  -40px;
   z-index:  1;
-  font-family: 'Lufga', Fallback, sans-serif;
+  font-family: 'Lufga', sans-serif;
+  font-weight: 700;
   color:  transparent;
    -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: var(--dark01-accent);
@@ -330,13 +357,17 @@ header {
   width: 0;
   position: fixed;
   z-index: 1;
-  height: 1200px;
+  height: 100vh;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: space-between;
   top: 0px;
   left: 0px;
-  background-color:var(--dark01);
+  background-color:var(--dark02);
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 40px;
+  padding: 20px 0;
 }
 
 .header-menu-draw li {
@@ -520,14 +551,16 @@ nav.socials ul li a:hover svg {
 }
 
 #hero .metrics .metrics-item .value {
-  font-family: 'Lufga';
+  font-family: 'Lufga', sans-serif;
+  font-weight: 700;
+  font-weight: 700;
   font-size: var(--font-30);
 }
 
 #hero .metrics .metrics-item .value.percentage span:after {
   content: ' %';
   font-size: var(--font-18);
-  font-family: 'Poppins', monospace;
+  font-family: 'Poppins', sans-serif;
 }
 
 #hero .metrics .metrics-item .value.monetary span:before {
@@ -537,7 +570,7 @@ nav.socials ul li a:hover svg {
 #hero .metrics .metrics-item .value.monetary span:after {
   content: ' USD';
   font-size: var(--font-18);
-  font-family: 'Poppins', monospace;
+  font-family: 'Poppins', sans-serif;
 }
 
 #hero .crosshair {
@@ -743,7 +776,8 @@ nav.socials ul li a:hover svg {
 }
 
 #token .tokeninfo .tokeninfo-item .value {
-  font-family: 'Lufga';
+  font-family: 'Lufga', sans-serif;
+  font-weight: 700;
   font-size: var(--font-20);
 }
 
@@ -834,7 +868,8 @@ nav.socials ul li a:hover svg {
 
 #roadmap .timeline .step .content span {
   color:  var(--brandprimary);
-  font-family: 'Lufga';
+  font-family: 'Lufga', sans-serif;
+  font-weight: 700;
 }
 
 #roadmap .timeline .step .content {margin:  0 0 20px 0;}
@@ -937,7 +972,8 @@ nav.socials ul li a:hover svg {
 #community .col-left .line2,
 #community .col-left .line3 {
   color: var(--brandprimary);
-  font-family: 'Lufga';
+  font-family: 'Lufga', sans-serif;
+  font-weight: 700;
   line-height: 100%;
 }
 
@@ -954,6 +990,7 @@ nav.socials ul li a:hover svg {
 #community .col-left .line3 {
   font-size: var(--font-70);
   padding-left: 30px;
+  margin-top: -15px;
 }
 
 #community .col-right {
@@ -969,6 +1006,7 @@ nav.socials ul li a:hover svg {
   padding: 0px;
   margin: 10px 20px;
   width: 100%;
+  box-sizing: border-box;
 }
 
   #community .col-left, #community .col-right {
@@ -991,14 +1029,29 @@ nav.socials ul li a:hover svg {
   transition: fill .2s ease;
 }
 
+#community .col-right a.community-item {
+  color: var(--white);
+}
+
+#community .col-right a:hover.community-item {
+  color: var(--brandprimary);
+}
+
+
+
 #community .col-right .community-item .label {
-  font-family: 'Lufga';
+  font-family: 'Lufga', sans-serif;
+  font-weight: 700;
   font-size: var(--font-20);
   margin-bottom: 10px;
 }
 
 #community .col-right .community-item .description p {
   color: var(--brandsecondary);
+}
+
+#community .col-right a:hover.community-item .description p {
+  color: var(--white);
 }
 
 #community .col-right .flex-row:last-child  {
@@ -1035,7 +1088,8 @@ nav.socials ul li a:hover svg {
 #faq .tabs-select div a {
   width: 50%;
   display: block;
-  font-family: 'Lufga';
+  font-family: 'Lufga', sans-serif;
+  font-weight: 700;
   font-size: var(--font-18);
   text-align: center;
   background-color: var(--dark03);
@@ -1061,7 +1115,8 @@ nav.socials ul li a:hover svg {
 }
 
 #faq .tabs .question .title {
-  font-family: 'Lufga';
+  font-family: 'Lufga', sans-serif;
+  font-weight: 700;
   font-size: var(--font-18);
   color: var(--white);
   padding: 20px 0;
@@ -1118,9 +1173,11 @@ nav.socials ul li a:hover svg {
 .react-tabs__tab.faq-tab-title{
   padding: 15px 10px;
   box-sizing: border-box;
+  margin-bottom: 1px;
   text-align: center;
   width: 50%;
-  font-family: Lufga;
+  font-family: 'Lufga', sans-serif;
+  font-weight: 700;
   font-style: normal;
   font-size: var(--font-18);
   line-height: 150%;
@@ -1154,10 +1211,10 @@ nav.socials ul li a:hover svg {
 .faq-question {
   padding: 20px 0;
   border-bottom: 1px solid var(--dark02-accent);
-  width: 80%;
   margin: 0 auto;
   box-sizing: border-box;
   font-size: var(--font-18);
+  width: 100%;
   }
 
 
@@ -1172,7 +1229,8 @@ nav.socials ul li a:hover svg {
   position: relative;
   cursor: pointer;
   padding-right: 50px;
-  font-family: 'Lufga';
+  font-family: 'Lufga', sans-serif;
+  font-weight: 700;
   line-height: 175%;
    }
 
@@ -1197,6 +1255,10 @@ nav.socials ul li a:hover svg {
 .Collapsible__trigger.is-disabled {
   opacity: 0.5;
   background-color: grey; 
+}
+
+.tabscont {
+  background-color: var(--dark02);
 }
 
 /* FOOTER */
@@ -1234,7 +1296,8 @@ footer .cta .col-left {
 }
 
 footer .cta .col-left .title {
-  font-family: 'Lufga';
+  font-family: 'Lufga', sans-serif;
+  font-weight: 700;
   font-size: var(--font-40);
 }
 
@@ -1277,10 +1340,30 @@ footer #powered-by-avalanche img {
   flex-shrink: 0;
 }
 
+/* MEDIUM SCREENS > 740px */
 
-/* WIDE SCREENS > 1200px */
+@media (min-width: 740px) {
+  :root {
+  --font-16: 14px;
+  --font-18: 16px;
+  --font-20: 18px;
+  --font-22: 20px;
+  --font-36: 24px;
+  --font-40: 28px;
+  --font-50: 32px;
+  --font-60: 36px;
+  --font-70: 40px;
+  --font-75: 44px;
+  }
 
-@media (min-width: 1200px) {
+  .wrapper {
+  }
+}
+
+
+/* WIDE SCREENS > 1040px */
+
+@media (min-width: 1040px) {
   :root {
   --font-16: 16px;
   --font-18: 18px;
@@ -1295,7 +1378,7 @@ footer #powered-by-avalanche img {
   }
 
   .wrapper {
-    width: 1200px;
+    width: 940px;
     margin: auto;
   }
 
@@ -1307,6 +1390,11 @@ footer #powered-by-avalanche img {
   .outline-title span.outline  {margin-bottom: -70px;}
   .outline-title.left span.outline {margin-left: -30px;}
   .outline-title.right span.outline {margin-right: -30px;}
+
+  .outline-title h2:after {
+  width: 100px;
+  height: 5px;
+  }
 
   header {
     padding: 30px;
@@ -1378,6 +1466,7 @@ footer #powered-by-avalanche img {
   width: 50%;
   position:  absolute;
   left: 50%;
+  margin: 0;
   bottom: -100px;
   z-index: 9;
   padding:  50px 75px;
@@ -1523,10 +1612,6 @@ footer #powered-by-avalanche img {
     width: 25%;
   }
 
-  .faq-question {
-    width: 60%;
-  }
-
   .faq-tab-panel.react-tabs__tab-panel--selected {
     padding-top: 80px;
   }
@@ -1562,5 +1647,25 @@ footer #powered-by-avalanche img {
 
   footer .content .col-left nav.socials {
     margin: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  :root {
+  --font-16: 16px;
+  --font-18: 18px;
+  --font-20: 20px;
+  --font-22: 22px;
+  --font-36: 36px;
+  --font-40: 40px;
+  --font-50: 50px;
+  --font-60: 60px;
+  --font-70: 70px;
+  --font-75: 75px;
+  }
+
+  .wrapper {
+    width: 1340px;
+    margin: auto;
   }
 }
