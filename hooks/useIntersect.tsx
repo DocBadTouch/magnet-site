@@ -8,7 +8,7 @@ export default ({ root = null, rootMargin = '0px', threshold }) => {
   useEffect(
     () => {
 
-      const observer = new window.IntersectionObserver(([entry]) => {
+      const observer = new window.IntersectionObserver(([entry]) => /*{
 
         if (entry.isIntersecting) {
           const element = entry.target as HTMLElement
@@ -24,7 +24,8 @@ export default ({ root = null, rootMargin = '0px', threshold }) => {
         }
         updateEntry(entry)
 
-      },
+      },*/
+      updateEntry(entry),
         {
           root,
           rootMargin,
