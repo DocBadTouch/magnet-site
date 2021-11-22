@@ -124,7 +124,7 @@ const Home: NextPage = () => {
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=5, user-scalable=1, viewport-fit=cover" />
-          <meta name="description" content="..." />
+          <meta name="description" content="Magnet DAO is a crypto incubator that uses its treasury to cultivate, incubate, and invest in early-stage crypto projects." />
           <link rel="preload" href="../assets/fonts/lufga-bold.woff2" as="font" crossOrigin="anonymous" />
           <title>Magnet DAO | Revolutionizing early-stage investing</title>
 
@@ -132,7 +132,7 @@ const Home: NextPage = () => {
           <link rel="alternate icon" href="../assets/img/favicon.ico" />
           <meta property="og:title" content="Magnet DAO | Revolutionizing early-stage investing" />
           <meta property="og:image" content="../assets/img/og_img.png" />
-          <meta property="og:description" content="..." />
+          <meta property="og:description" content="Magnet DAO is a crypto incubator that uses its treasury to cultivate, incubate, and invest in early-stage crypto projects." />
           <meta property="og:url" content="https://magnetdao.finance" />
           <meta property="og:image:width" content="1200" />
           <meta property="og:image:height" content="627" />
@@ -140,7 +140,7 @@ const Home: NextPage = () => {
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@magnet_dao" />
           <meta name="twitter:title" content="Magnet DAO | Revolutionizing early-stage investing" />
-          <meta name="twitter:description" content="..." />
+          <meta name="twitter:description" content="Magnet DAO is a crypto incubator that uses its treasury to cultivate, incubate, and invest in early-stage crypto projects." />
           <meta name="twitter:image" content="../assets/img/og_img.png" />
         </Head>
         <Header />

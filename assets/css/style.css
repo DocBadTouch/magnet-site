@@ -336,7 +336,7 @@ header {
   position: relative;
   display: flex;
   align-content: center;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 .header-mobile .header-menu-draw nav {
   display: block;
@@ -379,12 +379,12 @@ header {
 .header-menu-draw-mask {
   opacity: 0;
   width: 0;
-  transition: 0.5s;
+  transition: 0.2s;
 }
 .header-menu-draw-mask.open {
   width: 100vw;
   opacity: .6;
-  transition: 0.5s;
+  transition: 0.2s;
 
 }
 
@@ -414,59 +414,64 @@ header {
 }
 .header-mobile .launch-button-cont{
   padding-left: 20px;
+  align-self: flex-end;
+  margin-left: auto;
   
 }
 .header-mobile .launch-button-cont .header-tooltip{
-  right: 1rem;
-  top: 2rem;
+  bottom: -25px;
 }
 .header-mobile .header-docs .header-tooltip {
-  
-  top: 55%;
-  left: 30%;
-  
+  bottom: -30px; 
 }
+
 .header-mobile .launch-button-cont:hover .header-tooltip {
-  transform: scale(1.1) translateY(20px);
+  transform: scale(1) translateY(20px);
 }
 
 .launch-button-cont {
   position: relative;
   right: 0px;
 }
+
 .launch-button-cont:hover .header-tooltip {
   opacity: 1;
-  transform: scale(1.2);
+  transform: scale(1);
 }
+
+.launch-button-cont a, a.header-docs {
+  cursor: not-allowed}
+
 .header-tooltip {
   opacity: 0;
   position: absolute; 
-  top: 3rem; 
+  bottom: -45px;
   z-index: 16;
-  margin-left: -240px; 
+  left: 0; 
   text-align: center;
-  padding: 1rem; 
-  background-color: #111827; 
+  padding: 10px 15px; 
+  background-color: rgba(0,0,0,.7); 
   transition-property: all; 
-  transition-duration: 700ms; 
+  transition-duration: 200ms; 
   --transform-scale-x: 0;
   --transform-scale-y: 0; 
   color: #ffffff; 
-  font-size: 0.75rem;
+  font-size: 14px;
   line-height: 1rem; 
   font-weight: 500; 
   width: fit-content; 
-  border-radius: 0.75rem; 
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 3px;
+  white-space: nowrap;
 }
+
 .header-docs .header-tooltip {
-  margin-left: 30px;
-  top:5rem;
 }
+
 .header-docs:hover .header-tooltip {
   opacity: 1;
-  transform: scale(1.2);
+  transform: scale(1);
 }
+
 .header-desktop {
   display: none;
 }
@@ -499,6 +504,7 @@ header nav ul li, footer nav ul li  {
 
 header nav ul li:last-child, footer nav ul li:last-child {
   padding-right: 0;
+  position: relative;
 }
 
 header nav ul li a, footer nav ul li a  {

@@ -39,17 +39,15 @@ export const Header: React.FC<HeaderProps> = ({ }) => {
 const MobileMenu = ({props}) => (
   <div className="header-mobile">
     <span onClick={openNav} >☰</span>
-    <div className="flex-row-between">
       
     <HeaderImage />
     <LaunchButton />
-    </div>
     <MobileMenuDraw props ={props} />
   </div>
 )
 const MobileMenuDraw = ({props})=>(
-  <div style={{ position: "relative"}}>
-    <div id="mobile-draw-mask" className="header-menu-draw-mask" onClick={()=>closeDraw()} style={{ height: "100vh",  background: "#000", top: "-37px", position:"absolute"}}></div>
+  <div>
+    <div id="mobile-draw-mask" className="header-menu-draw-mask" onClick={()=>closeDraw()} style={{ height: "100vh",  background: "#000", top: "-20px", right: "-20px", position:"absolute"}}></div>
     <div id="mobile-draw" onClick={()=>closeDraw()} className="header-menu-draw"style={{ height: "100vh"}} >
       <HeaderImage />
       <PageNav props={props}/>
@@ -74,7 +72,7 @@ const LaunchButton= ()=>(
   <a href="#" onClick={(event)=>{event.preventDefault()}} className="btn primary">
     <span>Launch app</span>
     </a>
-    <span className='header-tooltip'>Coming Soon!</span>
+    <span className='header-tooltip'>Coming soon</span>
     </div>
 )
 const HeaderImage = ()=>(
@@ -87,7 +85,7 @@ const PageNav = ({ props }) => (
       <li><a onClick={closeDraw} href="#tokenomics" className="anchor"><span>{props.tokenomics}</span></a></li>
       <li><a onClick={closeDraw} href="#roadmap" className="anchor"><span>{props.roadmap}</span></a></li>
       <li><a onClick={closeDraw} href="#faq" className="anchor"><span>{props.faq}</span></a></li>
-      <li><a onClick={(event)=>{event.stopPropagation()}} href="#hero" className="anchor header-docs"><span>{props.docs}</span><span className='header-tooltip'>Coming Soon!</span></a></li>
+      <li><a onClick={(event)=>{event.stopPropagation()}} className="anchor header-docs"><span>{props.docs}</span><span className='header-tooltip'>Coming Soon!</span></a></li>
     </ul>
   </nav>
 )
