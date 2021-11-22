@@ -85,7 +85,7 @@ const PageNav = ({ props }) => (
       <li><a onClick={closeDraw} href="#tokenomics" className="anchor"><span>{props.tokenomics}</span></a></li>
       <li><a onClick={closeDraw} href="#roadmap" className="anchor"><span>{props.roadmap}</span></a></li>
       <li><a onClick={closeDraw} href="#faq" className="anchor"><span>{props.faq}</span></a></li>
-      <li><a onClick={(event)=>{event.stopPropagation()}} className="anchor header-docs"><span>{props.docs}</span><span className='header-tooltip'>Coming Soon!</span></a></li>
+      <li><a onClick={(event)=>{event.stopPropagation()}} className="anchor header-docs"><span>{props.docs}</span><span className='header-tooltip'>Coming soon</span></a></li>
     </ul>
   </nav>
 )
