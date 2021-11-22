@@ -10,6 +10,7 @@ interface OverviewProps {
 export const Overview: React.FC<OverviewProps> = ({ }) => {
   const { t } = useTranslation('overview')
   const title: String = t('title')
+  const bold1: String = t('bold1');
   const text1: String = t('text1')
   const text2: String = t('text2');
   const text3: String = t('text3')
@@ -26,7 +27,7 @@ export const Overview: React.FC<OverviewProps> = ({ }) => {
           <span className="outline">{title}</span>
           <h2>{title}</h2>
         </div>
-        <OverviewTextSection props={{text1,text2,text3,text4,text5,text6,text7}} />
+        <OverviewTextSection props={{bold1,text1,text2,text3,text4,text5,text6,text7}} />
       </div>
       <div className="angle"></div>
     </section>
