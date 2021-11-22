@@ -45,9 +45,7 @@ const HeroCaption = ({ props }) => (
 const HeroImage = (percentage) => (
 
   <div className="radar">
-    <Parallax props={{ ratio: 15, height: '700px', width: '500px' }}>
       <Image src={Radar} alt="Radar background image" />
-    </Parallax>
   </div>
 
 
