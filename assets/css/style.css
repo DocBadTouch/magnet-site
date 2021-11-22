@@ -414,17 +414,20 @@ header {
 }
 .header-mobile .launch-button-cont{
   padding-left: 20px;
-  position: unset;
+  
 }
 .header-mobile .launch-button-cont .header-tooltip{
-  right: 5rem;
-  top: 4rem;
+  right: 1rem;
+  top: 2rem;
 }
 .header-mobile .header-docs .header-tooltip {
   
   top: 55%;
   left: 30%;
   
+}
+.header-mobile .launch-button-cont:hover .header-tooltip {
+  transform: scale(1.1) translateY(20px);
 }
 
 .launch-button-cont {
@@ -433,7 +436,7 @@ header {
 }
 .launch-button-cont:hover .header-tooltip {
   opacity: 1;
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 .header-tooltip {
   opacity: 0;
@@ -462,7 +465,7 @@ header {
 }
 .header-docs:hover .header-tooltip {
   opacity: 1;
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 .header-desktop {
   display: none;
