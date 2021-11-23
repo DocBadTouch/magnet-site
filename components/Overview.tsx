@@ -29,7 +29,7 @@ export const Overview: React.FC<OverviewProps> = ({ }) => {
           <span className="outline">{title}</span>
           <h2>{title}</h2>
         </div>
-        <OverviewTextSection props={{bold1,text1,text2,text3,text4,text5,text6,text7,text8,text9}} />
+        <OverviewTextSection props={{bold1,text1,text2,text3,text4,text5,text6,text7,text8,text9,link}} />
       </div>
       <div className="angle"></div>
     </section>
@@ -49,7 +49,7 @@ const OverviewTextSection = ({ props }) => (
     <p className="big">{props.bold1}</p>
     <p>{props.text2}<strong>{props.text3}</strong>{props.text4}</p>
     <p>{props.text5}</p>
-    <p>{props.text6}<strong>{props.text7}</strong>{props.text8}<a href="{props.link}" title="Go to our blog">{props.text9}</a>.</p>
+    <p>{props.text6}<strong>{props.text7}</strong>{props.text8}<a href={props.link} target="_blank" title="Go to our blog">{props.text9}</a>.</p>
   </div>
 
 )

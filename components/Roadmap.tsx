@@ -194,7 +194,7 @@ export const Roadmap: React.FC<RoadmapProps> = ({ }) => {
                         <div className="bubble"></div>
                         <div className="line"></div>
                       </div>
-                      <div className="content"><span>Q3 2022 and beyond</span><p>Continue to develop, incubate, and fund new protocols and get the DAO involved as much as possible in new initiatives</p></div>
+                      <div className="content"><span>Q3 2022 and Beyond</span><p>Continue to develop, incubate, and fund new protocols and get the DAO involved as much as possible in new initiatives</p></div>
                     </div>
                   </div>
               </div>
