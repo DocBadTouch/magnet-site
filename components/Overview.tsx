@@ -45,10 +45,9 @@ const OverviewImage = () => (
 const OverviewTextSection = ({ props }) => (
   <div className="contents">
     <p className="big">{props.bold1}</p>
-    <p>{props.text1}</p>
     <p>{props.text2}<strong>{props.text3}</strong>{props.text4}</p>
     <p>{props.text5}</p>
-    <p>{props.text6}<a href={props.link} title="Go to our blog">{props.text7}</a>.</p>
+    <p>{props.text6}<strong>{props.text7}</strong>{props.text8}<a href="{props.link}" title="Go to our blog">{props.text9}</a>.</p>
   </div>
 
 )

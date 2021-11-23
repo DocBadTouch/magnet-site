@@ -585,6 +585,17 @@ nav.socials ul li a:hover svg {
   border: 1px solid var(--white);
 }
 
+  #hero .caption .intro {
+    margin-bottom: 30px;
+    font-size: var(--font-18);
+    line-height: 175%;
+  }
+
+  #hero .caption .intro strong {
+    font-weight: 700;
+    color: var(--brandprimary);
+  }
+
 #hero .metric-container {
   display: flex;
   
@@ -1552,7 +1563,7 @@ footer #powered-by-avalanche img {
 
   #hero .caption h1 div.line2 {
     padding: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 
   #hero .radar {
