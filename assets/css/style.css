@@ -1634,6 +1634,10 @@ footer #powered-by-avalanche img {
     width: 50%;
   }
 
+  #token .tokeninfo .flex-row:last-child .tokeninfo-item:last-child {
+    width: 100%;
+  }
+
   #token .tokeninfo .tokeninfo-item .label {
     margin-bottom: 15px;
   }

@@ -36,10 +36,9 @@ export const Token: React.FC<TokenProps> = ({ }) => {
             </div>
             <div className="flex-row">
               <TokenItem label={items.totalSupply.label} value={items.totalSupply.text}/>
-              <TokenItem label={items.initialSupply.label} value={items.initialSupply.text}/>
+              <TokenItem label={items.chain.label} value={items.chain.text}/>
             </div>
             <div className="flex-row">
-              <TokenItem label={items.chain.label} value={items.chain.text}/>
               <TokenItem label={items.contract.label} value={items.contract.text}/>
             </div>
           </div>
