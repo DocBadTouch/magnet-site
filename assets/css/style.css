@@ -40,12 +40,12 @@
   --brandsecondary: #A5B8D4;
   --brandtertiary: #D4DFF0;
 
-  --dark01: #0D1C2E;
-  --dark01-accent: #283B51;
-  --dark02: #28374D;
-  --dark02-accent: #3E516C;
-  --dark03: #405066;
-  --dark03-accent: #5F728B;
+  --dark01: #0b1420;
+  --dark01-accent: #1b2734;
+  --dark02: #0D1C2E;
+  --dark02-accent: #162a42;
+  --dark03: #1f3048;
+  --dark03-accent: #324866;
 
   --white: #FFFFFF;
   }
@@ -536,6 +536,8 @@ nav.socials ul li a:hover svg {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
+  background: rgb(13,28,46);
+background: linear-gradient(132deg, rgba(13,28,46,1) 0%, rgba(13,28,46,1) 57%, rgba(23,50,81,1) 100%);
 }
 
 #hero .caption {
