@@ -16,6 +16,7 @@ export const Hero: React.FC<HeroProps> = ({ }) => {
   const caption = t("caption", { returnObjects: true })
   const metrics = t("metrics", { returnObjects: true })
   const factor = 50; //This is the factor for controlling the parallax on the metrics section.
+  
   return (
     <section ref={ref} id="hero">
       <HeroCaption props={caption} />
@@ -56,7 +57,7 @@ const HeroMetrics = ({ metrics, ratio, factor }) => {
 
   return (
     //The style with the transform in the outer div is dynamic and is controlling the parallax effect
-    <div className="metrics" style={{ transform: `translate(0,${factor-factor * ratio.current}px)` }}>
+    <div className="metrics" style={{ transform: `translate(0,${(factor * (1-ratio.current+.001))}px)` }}>
       <div style={{ width: "1px", height: "100vh", top: "-200%", position: "absolute" }}>f</div>
       <div className="flex-row">
         <HeroMetricsItem item={metrics.cAPY} valClass='percentage' xClass='primary' />

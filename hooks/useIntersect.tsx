@@ -5,7 +5,7 @@ export default ({ root = null, rootMargin = '0px', threshold = buildThresholdArr
   const [node, setNode] = useState(null);
   const observer = useRef<IntersectionObserver>()
   const [dist, updateDist] = useState(0);
-  const  merp = useRef(0)
+  const  merp = useRef(1)
   useEffect(
     () => {
 
