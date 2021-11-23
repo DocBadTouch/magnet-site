@@ -1364,7 +1364,7 @@ nav.socials ul li a:hover svg {
 /* FOOTER */
 
 footer {
-  padding: 100px 0;
+  padding: 100px 0 0 0;
   background-color: var(--dark01);
 }
 
@@ -1375,9 +1375,10 @@ footer .cta {
   box-sizing: border-box;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   flex-flow: column wrap;
+  text-align: center;
 
   --notchSize: 20px;
   clip-path: 
@@ -1722,14 +1723,16 @@ footer #powered-by-avalanche img {
 
   footer .cta {
     padding: 50px;
-    --notch-size: 50px;
+    --notchSize: 50px;
     flex-flow: row wrap;
+    justify-content: space-between;
   }
 
   footer .cta .col-left {
     width: 60%;
     padding-bottom: 0;
     flex-flow: row wrap;
+    text-align: left;
   }
 
   footer .content {
