@@ -35,7 +35,7 @@ const HeroCaption = ({ props }) => (
         <div className="line1">{props.line1}</div>
         <div className="line2">{props.line2}</div>
       </h1>
-      <div className="intro">{props.intro1}<strong>{props.intro2}</strong>{props.intro3}</div>
+      <div className="intro">{props.intro1}<strong>{props.intro2}</strong>, <strong>{props.intro3}</strong>, {props.intro4}<strong>{props.intro5}</strong>{props.intro6}</div>
       <div className="btn-group">
         <a href="#overview" className="btn btn-primary anchor"><span>{props.but1}</span></a>
         <a href="https://discord.gg/magnetdao" className="btn btn-secondary"><span>{props.but2}</span></a>

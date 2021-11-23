@@ -34,6 +34,33 @@ export const Roadmap: React.FC<RoadmapProps> = ({ }) => {
                       <div className="content"><span>Q4 2021</span><p> Discord, Twitter, and Telegram Launch</p></div>
                     </div>
                   </div>
+                  <div className="step checked">
+                    <div className="wrap">
+                      <div className="pointer">
+                        <div className="bubble"></div>
+                        <div className="line"></div>
+                      </div>
+                      <div className="content"><span>Q4 2021</span><p> Team build out</p></div>
+                    </div>
+                  </div>
+                  <div className="step checked">
+                    <div className="wrap">
+                      <div className="pointer">
+                        <div className="bubble"></div>
+                        <div className="line"></div>
+                      </div>
+                      <div className="content"><span>Q4 2021</span><p> Form partnerships in the Avalanche ecosystem</p></div>
+                    </div>
+                  </div>
+                  <div className="step checked">
+                    <div className="wrap">
+                      <div className="pointer">
+                        <div className="bubble"></div>
+                        <div className="line"></div>
+                      </div>
+                      <div className="content"><span>Q4 2021</span><p> Complete AMAs with prospective projects for incubation fund</p></div>
+                    </div>
+                  </div>
                   <div className="step">
                     <div className="wrap">
                       <div className="pointer">
@@ -41,6 +68,24 @@ export const Roadmap: React.FC<RoadmapProps> = ({ }) => {
                         <div className="line"></div>
                       </div>
                       <div className="content"><span>Q4 2021</span><p>$MAG token sale</p></div>
+                    </div>
+                  </div>
+                  <div className="step">
+                    <div className="wrap">
+                      <div className="pointer">
+                        <div className="bubble"></div>
+                        <div className="line"></div>
+                      </div>
+                      <div className="content"><span>Q4 2021</span><p> Receive Tier 1 audits for all smart contracts</p></div>
+                    </div>
+                  </div>
+                  <div className="step">
+                    <div className="wrap">
+                      <div className="pointer">
+                        <div className="bubble"></div>
+                        <div className="line"></div>
+                      </div>
+                      <div className="content"><span>Q4 2021</span><p> Launch MAG protocol and liquidity</p></div>
                     </div>
                   </div>
                   <div className="step">

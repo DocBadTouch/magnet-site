@@ -1004,7 +1004,7 @@ nav.socials ul li a:hover svg {
 }
 
 #roadmap .timeline .step.checked .content {
-  text-decoration: line-through;
+  text-decoration: line-through solid rgba(255,255,255,.6);
 }
 
 #roadmap .timeline .step .pointer .bubble {
