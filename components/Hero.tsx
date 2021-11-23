@@ -56,7 +56,7 @@ const HeroMetrics = ({ metrics, ratio, factor }) => {
 
   return (
     //The style with the transform in the outer div is dynamic and is controlling the parallax effect
-    <div className="metrics" style={{ transform: `translate(0,${factor * ratio.current}px)` }}>
+    <div className="metrics" style={{ transform: `translate(0,${factor-factor * ratio.current}px)` }}>
       <div style={{ width: "1px", height: "100vh", top: "-200%", position: "absolute" }}>f</div>
       <div className="flex-row">
         <HeroMetricsItem item={metrics.cAPY} valClass='percentage' xClass='primary' />
