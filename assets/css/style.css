@@ -326,7 +326,7 @@ header {
   top: 0;
   box-sizing: border-box;
 }
-.header-desktop, .header-mobile {
+.header-desktop {
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -335,6 +335,7 @@ header {
 .header-mobile{
   position: relative;
   display: flex;
+  align-items: center;
   align-content: center;
   justify-content: space-between;
 }
