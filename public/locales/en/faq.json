@@ -30,7 +30,7 @@
         }
       },
       "q5": {
-        "q": "What can you do to assure the community that this is not a “rugpull?”",
+        "q": "What can you do to assure the community that this is not a rugpull”",
         "a": {
           "text1": "The code will be open source and we have a number of community members who will be peer auditing it. We will also get multiple, tier 1 third-party audits for our token contract and our smart contracts prior to launching the protocol. All of our contracts and wallets will be multi-sig, with signatories consisting of core team members, third-party advisors (advisors TBD), and DAO leadership. Liquidity providing will also be locked, and team tokens locked and vested - we will post both contracts so the community can view these easily."
         }
@@ -48,14 +48,14 @@
         }
       },
       "q9": {
-        "q": "What else are you doing to innovate?",
+        "q": "What are you doing to innovate?",
         "a": {
           "text1": "We have a lot of ideas for how we can add value to the protocol. A few protocol design ideas we have discussed:",
-          "text2": "Implement vesting schedules for bonds, where the user can receive a higher ROI if they opt to vest their tokens over a longer period of time (rather than 5 day standard)",
-          "text3": "Implement a diamond hands bonus for staking, to incentivize (🧲,🧲)",
-          "text4": "Add “zapping” liquidity to our protocol for ease of bonding LP pairs",
-          "text5": "Generate yield on our stablecoins. Given the amount of stablecoins we will have in our treasury, we will certainly be exploring how we can best generate return on these assets",
-          "text6": "Develop protocols under the Magnet DAO name. We already have various ideas for projects we want to develop, all of which are synergistic to our primary protocol"
+          "text2": "- Implement vesting schedules for bonds, where the user can receive a higher ROI if they opt to vest their tokens over a longer period of time (rather than 5 day standard)",
+          "text3": "- Implement a diamond hands bonus for staking, to incentivize (🧲,🧲)",
+          "text4": "- Add “zapping” liquidity to our protocol for ease of bonding LP pairs",
+          "text5": "- Generate yield on our stablecoins. Given the amount of stablecoins we will have in our treasury, we will certainly be exploring how we can best generate return on these assets",
+          "text6": "- Develop protocols under the Magnet DAO name. We already have various ideas for projects we want to develop, all of which are synergistic to our primary protocol"
 
         }
       }

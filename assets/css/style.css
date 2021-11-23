@@ -776,6 +776,11 @@ nav.socials ul li a:hover svg {
   font-weight: 600;
 }
 
+#overview .contents p a { 
+  font-weight: 700;
+  text-decoration: underline;
+}
+
 #overview .angle {
   top: 45px;
   left: 25px;
@@ -1325,13 +1330,6 @@ nav.socials ul li a:hover svg {
 .faq-answer {
   color: var(--brandtertiary);
   font-size: var(--font-16);
-}
-.faq-answer::before {
-  content: "\2022";
-  
-  padding-right: 5px;
-  color: var(--brandprimary);
-  font-size: 16px;
 }
 
 .Collapsible__trigger {
