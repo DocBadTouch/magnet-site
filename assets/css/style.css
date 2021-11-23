@@ -1576,7 +1576,7 @@ footer #powered-by-avalanche img {
 
   #hero .crosshair {
     top: calc(50% - 10px);
-    left: 95px;
+    left: 35px;
   }
 
   #overview .satellite {
@@ -1592,8 +1592,8 @@ footer #powered-by-avalanche img {
   }
 
   #overview .angle {
-    top: 100px;
-    left: 100px;
+    top: 40px;
+    left: 40px;
   }
 
   #token .contents {
@@ -1652,8 +1652,8 @@ footer #powered-by-avalanche img {
   }
 
   #tokenomics .crosshair {
-    top: 95px;
-    right: 95px;
+    top: 35px;
+    right: 35px;
   }
 
   #roadmap {
@@ -1661,8 +1661,8 @@ footer #powered-by-avalanche img {
   }
 
   #roadmap .angle {
-    top: 100px;
-    left: 100px;
+    top: 40px;
+    left: 40px;
   }
 
   #community {
@@ -1701,8 +1701,8 @@ footer #powered-by-avalanche img {
   }
 
   #faq .crosshair {
-    top: 95px;
-    right: 95px;
+    top: 35px;
+    right: 35px;
   }
 
   .faq-question {
