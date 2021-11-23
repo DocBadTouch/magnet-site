@@ -18,6 +18,8 @@ export const Overview: React.FC<OverviewProps> = ({ }) => {
   const text5: String = t('text5');
   const text6: String = t('text6');
   const text7: String = t('text7');
+  const text8: String = t('text8');
+  const text9: String = t('text9');
   const link: String = t('link')
   return (
     <section id="overview">
@@ -27,7 +29,7 @@ export const Overview: React.FC<OverviewProps> = ({ }) => {
           <span className="outline">{title}</span>
           <h2>{title}</h2>
         </div>
-        <OverviewTextSection props={{bold1,text1,text2,text3,text4,text5,text6,text7}} />
+        <OverviewTextSection props={{bold1,text1,text2,text3,text4,text5,text6,text7,text8,text9}} />
       </div>
       <div className="angle"></div>
     </section>
