@@ -319,6 +319,7 @@ header {
   z-index: 10;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   display: flex;
   padding: 20px;
   position: fixed;
