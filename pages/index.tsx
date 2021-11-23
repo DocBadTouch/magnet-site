@@ -129,9 +129,9 @@ const Home: NextPage = () => {
           <title>Magnet DAO | Revolutionizing early-stage investing</title>
 
           <link rel="icon" type="image/svg+xml" href="https://beta.magnetdao.finance/assets/img/favicon.svg" />
-          <link rel="alternate icon" href="https://beta.magnetdao.finance/assets/img/favicon.ico" />
+          <link rel="alternate icon" href="/favicon.ico" />
           <meta property="og:title" content="Magnet DAO | Revolutionizing early-stage investing" />
-          <meta property="og:image" content="https://beta.magnetdao.finance/assets/img/og_img.png" />
+          <meta property="og:image" content="/og_img.png" />
           <meta property="og:description" content="Magnet DAO is a crypto incubator that uses its treasury to cultivate, incubate, and invest in early-stage crypto projects." />
           <meta property="og:url" content="https://beta.magnetdao.finance/" />
           <meta property="og:image:width" content="1200" />
@@ -141,7 +141,7 @@ const Home: NextPage = () => {
           <meta name="twitter:site" content="@magnet_dao" />
           <meta name="twitter:title" content="Magnet DAO | Revolutionizing early-stage investing" />
           <meta name="twitter:description" content="Magnet DAO is a crypto incubator that uses its treasury to cultivate, incubate, and invest in early-stage crypto projects." />
-          <meta name="twitter:image" content="https://beta.magnetdao.finance/assets/img/og_img.png" />
+          <meta name="twitter:image" content="/og_img.png" />
         </Head>
         <Header />
         <main onLoad={()=>{startAnimations();}}>
