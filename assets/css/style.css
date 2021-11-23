@@ -809,13 +809,16 @@ nav.socials ul li a:hover svg {
   background-color: transparent;
 }
 #token .contents .tokens .token-icons .mag {
-
+  z-index: 4;
+  right: -15px;
+  top: 0;
   background-color: transparent;
 }
 
 #token .contents .tokens .token-icons .avax {
+  z-index: 2;
   background-color: transparent;
-  
+  top: 0;
 }
 
 #token .tokeninfo {
