@@ -125,10 +125,9 @@ const Home: NextPage = () => {
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=5, user-scalable=1, viewport-fit=cover" />
           <meta name="description" content="Magnet DAO is a crypto incubator that uses its treasury to cultivate, incubate, and invest in early-stage crypto projects." />
-          <link rel="preload" href="https://beta.magnetdao.finance/assets/fonts/lufga-bold.woff2" as="font" crossOrigin="anonymous" />
+          <link rel="preload" href="/lufga-bold.woff2" as="font" crossOrigin="anonymous" />
           <title>Magnet DAO | Revolutionizing early-stage investing</title>
-
-          <link rel="icon" type="image/svg+xml" href="https://beta.magnetdao.finance/assets/img/favicon.svg" />
+          <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
           <link rel="alternate icon" href="/favicon.ico" />
           <meta property="og:title" content="Magnet DAO | Revolutionizing early-stage investing" />
           <meta property="og:image" content="/og_img.png" />
