@@ -28,7 +28,6 @@ const CallToAction = ({}) => {
         <div className="col-right">
             <div className="btn-group">
                 <a href="https://discord.gg/magnetdao" target="_blank" rel="noreferrer" className="btn btn-secondary"><span>Join Discord</span></a>
-                <a href="https://app.magnetdao.finance/" className="btn btn-primary"><span>Get started</span></a>
             </div>
         </div>
     </div>
