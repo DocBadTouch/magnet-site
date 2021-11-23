@@ -128,7 +128,7 @@ const Home: NextPage = () => {
           <link rel="preload" href="https://beta.magnetdao.finance/assets/fonts/lufga-bold.woff2" as="font" crossOrigin="anonymous" />
           <title>Magnet DAO | Revolutionizing early-stage investing</title>
 
-          <link rel="icon" type="image/svg+xml" href="https://beta.magnetdao.finance/assets/img/favicon.svg" />
+          <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
           <link rel="alternate icon" href="/favicon.ico" />
           <meta property="og:title" content="Magnet DAO | Revolutionizing early-stage investing" />
           <meta property="og:image" content="/og_img.png" />
