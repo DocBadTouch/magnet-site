@@ -10,19 +10,19 @@ interface HeaderProps {
 function openNav() {
   const el = document.getElementById("mobile-draw")
   const width = el.style.width;
-  if(width=='0px'){
-    el.style.width = '60%' //todo make this based on class
+  //if(width=='0px'){
+    el.classList.add('open') //todo make this based on class
     document.getElementById("mobile-draw-mask").classList.add('open') //style.width = '100vh';//todo make this based on class
-  }
+  /*}
   else {
-    el.style.width = '0'
+    document.getElementById("mobile-draw").classList.remove('open')
     document.getElementById("mobile-draw-mask").classList.remove('open')
-  }
+  }*/
 }
 function closeDraw() {
   //document.getElementById("mobile-draw-mask").style.width = '0';
   
-  document.getElementById("mobile-draw").style.width = '0';
+  document.getElementById("mobile-draw").classList.remove('open');
   document.getElementById("mobile-draw-mask").classList.remove('open')
 }
 export const Header: React.FC<HeaderProps> = ({ }) => {
@@ -38,17 +38,18 @@ export const Header: React.FC<HeaderProps> = ({ }) => {
 }
 const MobileMenu = ({props}) => (
   <div className="header-mobile">
-    <span onClick={openNav} >☰</span>
-      
-    <HeaderImage />
-    <LaunchButton />
+    <div className="header-mobile-bar">
+      <span className="header-mobile-open-button" onClick={openNav} >☰</span>
+      <HeaderImage />
+      <LaunchButton />
+    </div>
     <MobileMenuDraw props ={props} />
   </div>
 )
 const MobileMenuDraw = ({props})=>(
-  <div>
-    <div id="mobile-draw-mask" className="header-menu-draw-mask" onClick={()=>closeDraw()} style={{ height: "100vh",  background: "#000", top: "-20px", right: "-20px", position:"absolute"}}></div>
-    <div id="mobile-draw" onClick={()=>closeDraw()} className="header-menu-draw"style={{ height: "100vh"}} >
+  <div className="flex-row">
+    <div id="mobile-draw-mask" className="header-menu-draw-mask" onClick={()=>closeDraw()} ></div>
+    <div id="mobile-draw" onClick={()=>closeDraw()} className="header-menu-draw" >
       <HeaderImage />
       <PageNav props={props}/>
       <SocialsNav />

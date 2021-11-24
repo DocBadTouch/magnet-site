@@ -163,6 +163,11 @@ p.small {
   justify-content: space-evenly;
   width: 100%;
 }
+.flex-col {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
 
 
 @keyframes fadein {
@@ -242,8 +247,8 @@ p.small {
 .outline-title-anim h2 {
   white-space: nowrap;
   overflow: hidden;
-  width: 30em;
-  animation: type 3s steps(120, end);
+  width: 50vw;
+  animation: type 1.5s steps(120, end);
 }
 @keyframes type{ 
   from { width: 0; } 
@@ -282,7 +287,7 @@ p.small {
   display: block;
   background-color: var(--brandprimary);
 }
-
+  
 .outline-title.right h2:after {
   margin: 15px 0 0 20px;
 }
@@ -326,7 +331,7 @@ header {
   top: 0;
   box-sizing: border-box;
 }
-.header-desktop, .header-mobile {
+.header-desktop {
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -335,12 +340,21 @@ header {
 .header-mobile{
   position: relative;
   display: flex;
+  
+  flex-direction: column;
+  align-items: center;
   align-content: center;
   justify-content: space-between;
 }
+.header-mobile-bar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
 .header-mobile .header-menu-draw nav {
   display: block;
-  width: 100%;
+  width: 100vw;
 }
 .header-mobile ul {
   flex-direction: column;
@@ -351,7 +365,7 @@ header {
   justify-content: center;
   margin: 0;
 }
-.header-mobile > span {
+.header-mobile-open-button {
 
   background-color: transparent;
   color: var(--white);
@@ -377,10 +391,18 @@ header {
   transition: 0.5s;
   padding: 20px 0;
 }
+.header-menu-draw.open {
+  width: 65vw;
+}
 .header-menu-draw-mask {
+  height: 100vh;
   opacity: 0;
   width: 0;
   transition: 0.2s;
+  background: #000; 
+  top: -20px; 
+  left: 15px;
+  position: absolute;
 }
 .header-menu-draw-mask.open {
   width: 100vw;
@@ -1510,6 +1532,7 @@ footer #powered-by-avalanche img {
 
   header {
     padding: 30px;
+    width: 100%;
   }
 
   .header-desktop .primary {

@@ -38,10 +38,12 @@ export const Overview: React.FC<OverviewProps> = ({ }) => {
 
 const OverviewImage = () => (
   <div className="satellite">
-    <Parallax props={{ratio: 25, width: '100%', height: '800px' }}>
     <Image src={Satellite} alt="Satellite background image" layout="intrinsic" />
-    </Parallax>
   </div>
+    //<Parallax props={{ratio: 25, width: '100%', height: '800px' }}>
+    //<Image src={Satellite} alt="Satellite background image" layout="intrinsic" />
+    //</Parallax>
+  //</div>
 )
 
 const OverviewTextSection = ({ props }) => (
