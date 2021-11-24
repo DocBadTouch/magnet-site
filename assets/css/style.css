@@ -340,7 +340,7 @@ header {
 .header-mobile{
   position: relative;
   display: flex;
-  
+  width: 100%;
   flex-direction: column;
   align-items: center;
   align-content: center;
@@ -351,6 +351,7 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+  align-items: center;
 }
 .header-mobile .header-menu-draw nav {
   display: block;
@@ -702,6 +703,7 @@ background: linear-gradient(132deg, var(--dark02) 0%, var(--dark02) 57%, rgba(43
 #hero .radar {
   display: block;
   width: 80%;
+  max-width: 500px;
   position: absolute;
   right: 10%;
   bottom:  0;
