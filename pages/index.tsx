@@ -95,6 +95,7 @@ const Home: NextPage = () => {
   }
   return (
     //<SmoothScroll menu={<Header />} >
+    //<main onLoad={()=>{startAnimations();}}> replace main with this for animations
       <div id='bodyDiv'>
         <Head >
           <meta charSet="utf-8" />
@@ -118,7 +119,7 @@ const Home: NextPage = () => {
           <meta name="twitter:description" content="Magnet DAO is a crypto incubator that uses its treasury to cultivate, incubate, and invest in early-stage crypto projects." />
           <meta name="twitter:image" content="/og_img.png" />
         </Head>
-        <main onLoad={()=>{startAnimations();}}>  
+        <main onLoad={()=>{startAnimations();}} > 
           <Hero />
           <Overview />
           <Token />
