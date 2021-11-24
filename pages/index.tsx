@@ -117,7 +117,7 @@ const Home: NextPage = () => {
           <meta name="twitter:site" content="@magnet_dao" />
           <meta name="twitter:title" content="Magnet DAO | Revolutionizing early-stage investing" />
           <meta name="twitter:description" content="Magnet DAO is a crypto incubator that uses its treasury to cultivate, incubate, and invest in early-stage crypto projects." />
-          <meta name="twitter:image" content="/og_img.png" />
+          <meta name="twitter:image" content="https://www.magnetdao.finance/og_img.png" />
         </Head>
         <main onLoad={()=>{startAnimations();}} > 
           <Hero />
