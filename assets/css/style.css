@@ -282,7 +282,7 @@ p.small {
   display: block;
   background-color: var(--brandprimary);
 }
-
+  
 .outline-title.right h2:after {
   margin: 15px 0 0 20px;
 }
@@ -319,7 +319,6 @@ header {
   z-index: 10;
   justify-content: space-between;
   align-items: center;
-  /*width: 100%;*/
   display: flex;
   padding: 20px;
   position: fixed;
