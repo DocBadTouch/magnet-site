@@ -82,33 +82,10 @@ const Home: NextPage = () => {
       crossHairObserver.observe(el);
       //el.querySelector('.outline').classList.add('faded')
     });
-    let scrollStart = 0;
-    let scrollTarget = 250;
-    let scale = .3
+    
     window.onscroll = function (event) {
-      //console.log("scroll",{event,window: window.scrollY,scrollStart: scrollStart, scrollTarget})
-      scrollRotate();
-      /*if(scrollStart>window.scrollY&& scrollTarget>window.scrollY){
-        scrollTarget = window.scrollY-500
-      }
-      else if(scrollStart<window.scrollY&& scrollTarget<window.scrollY){
-        scrollTarget = window.scrollY+500
-      }
-      if(!(window.scrollY < scrollTarget+15 && window.scrollY>scrollTarget-15)) {
-        console.log('outside')
-        scrollStart = window.scrollY+(scrollTarget-window.scrollY)*scale
-        window.scrollTo(0,scrollStart)
-        
-        return;
-      }
-      */
-      
-      
+      scrollRotate();     
     };
-    function scrollSmoothly(target,current){
-      setTimeout(scrollSmoothly)
-      if(target>current){}
-    }
     function scrollRotate() {
       document.querySelectorAll(".crosshair.inview").forEach(el => {
         el.setAttribute("style", "--rotate: " + window.pageYOffset / 2 + "deg");
@@ -116,7 +93,6 @@ const Home: NextPage = () => {
 
     }
   }
-  //window.addEventListener('load',startAnimations)
   return (
     //<SmoothScroll menu={<Header />} >
       <div id='bodyDiv'>
@@ -142,9 +118,7 @@ const Home: NextPage = () => {
           <meta name="twitter:description" content="Magnet DAO is a crypto incubator that uses its treasury to cultivate, incubate, and invest in early-stage crypto projects." />
           <meta name="twitter:image" content="/og_img.png" />
         </Head>
-        <Header />
-        <main onLoad={()=>{startAnimations();}}>
-          
+        <main onLoad={()=>{startAnimations();}}>  
           <Hero />
           <Overview />
           <Token />
@@ -154,7 +128,7 @@ const Home: NextPage = () => {
           <FAQ />
           <Footer />
         </main>
-       
+        <Header />
       </div>
       
     //</SmoothScroll>
