@@ -951,11 +951,6 @@ background: linear-gradient(132deg, var(--dark02) 0%, var(--dark02) 57%, rgba(43
   right: 20px;
 }
 
-#tokenomics p a {
-    font-weight: 700;
-    text-decoration: underline;
-}
-
 /* ROADMAP */
 
 #roadmap {
