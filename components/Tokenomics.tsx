@@ -43,6 +43,6 @@ const TokenomicsText = ({ totalSupply, distribution }) => (
     <p>{totalSupply.text1}</p>
     <h3>{distribution.title}</h3>
     <p>{distribution.text1}</p>
-    <p>{distribution.text2}</p>
+    <p>{distribution.text2}<a href={distribution.link}>{distribution.text3}</a>{distribution.text4}</p>
   </div>
 )
