@@ -5,60 +5,66 @@ import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
-
+import { useTranslation } from 'next-i18next';
+import { SSL_OP_NO_TLSv1_1 } from 'constants';
 interface RoadmapProps {
 
 }
 
 export const Roadmap: React.FC<RoadmapProps> = ({ }) => {
-
+  const {t} = useTranslation('roadmap')
+  const timeline = t("timeline",{returnObjects: true})
+  const title: String = t("title")
   return (
-    <div>
+    <div id="roadmap-section">
       <div className='roadmap-container'>
-        <RoadmapTitle />
+        <RoadmapTitle title={title} />
       </div>
       <div className='roadmap'>
-        <RoadmapTimeline />
+        <RoadmapTimeline timeline={timeline}/>
       </div>
     </div>
   )
 }
 
-const RoadmapTitle = ({ }) => (
+const RoadmapTitle = ({ title }) => (
   <div className='roadmap-title'>
-    Roadmap
+    {title}
   </div>
 )
 
-const RoadmapTimeline = ({ }) => (
+const RoadmapTimeline = ({ timeline}) => (
   <Timeline position='alternate'>
-    <RoadmapItem title='Q4 - 2021' text='Discord, Twitter, and Telegram Launch. $MAG Token Launch. CoinGecko and CoinMarketCap Listings. Begin deploying treasury to further build out the team - emphasis on launching our first protocol ASAP' />
-    <RoadmapItem title='Q1 - 2022' text='Launch of Magnet DAO Investment Thesis. Call with DAO for Development and Incubation Strategy Outline' />
-    <RoadmapItem title='Q2 - 2022' text='DAO proposals begin - Tokenomics, Treasury Management, etc.
-      Begin developing, incubating, and funding new protocols using 10% of the treasury
-      First protocol we are focused on developing - native DAO tooling platform, expected launch in Q2-Q3 2022
-      Other protocols will come next - direction of what to build will be governed by the DAO
-      Magnet DAO will also incubate projects, helping early-stage blockchain projects with building their protocols and providing funding from the treasury in return for tokens, which Magnet DAO treasury will receive and hold
-      Magnet DAO will also participate in early-stage funding rounds for projects if we see fit and if the DAO decides to do so - these tokens will be owned and held in the Magnet DAO treasury' />
-    <RoadmapItem title='Q3 - 2022 and Beyond' text='Integrate native DAO tooling to make management seamless and integrated
-      Promote key contributors to leadership positions in the DAO
-      License our DAO tooling to other DAO’s looking for a management system
-      Continue to develop, incubate, and fund new protocols
-      At this stage, we will have initial products and will be building out networks and communities
-      We’d like DAO members to help contribute as much as possible with these new protocols, ideally with people taking on positions in the sub-communities
-      And much, much more!' />
+    {timeline.map((tl)=>(
+      <RoadmapItem  key={tl.title} title={tl.title} items={tl.items}></RoadmapItem>
+    ))}
   </Timeline>
 )
 
-const RoadmapItem = ({ title, text }) => (
-  <TimelineItem className=''>
+const RoadmapItem = ({ title, items }) => (
+  <TimelineItem className='roadmap-item'>
     <TimelineSeparator>
       <TimelineDot />
       <TimelineConnector />
     </TimelineSeparator>
     <TimelineContent>
       <div className='roadmap-item-title'>{title}</div>
-      <div className='roadmap-item-text'>{text}</div>
+      <TimelineList items={items} />
     </TimelineContent>
   </TimelineItem>
+)
+
+const TimelineList = ({items})=>(
+  <ul className="timeline-list">
+    {items.map(item=>(
+      <TimelineListItem key={item.text} item={item}></TimelineListItem>
+    ))}
+  </ul>
+)
+const TimelineListItem =({item}) =>(
+  <li className={`timeline-list-item ${item.isComplete?"completed":"incomplete"}`}> 
+  {item.text}
+  {item.subItems?<TimelineList items={item.subItems} />:""}
+  </li>
+  
 )

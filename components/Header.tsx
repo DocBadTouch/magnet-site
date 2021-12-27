@@ -3,23 +3,25 @@ import Image from 'next/image'
 import Logo from '../public/logo_text.png'
 import {SiDiscord,SiTwitter,SiTelegram,SiGithub} from 'react-icons/si'
 import {IoLogoMedium} from 'react-icons/io5'
+import { useTranslation} from 'next-i18next';
 
 interface HeaderProps {
 
 }
 
 export const Header: React.FC<HeaderProps> = ({ }) => {
-
+  const {t} = useTranslation("header")
+  const info: {about,tokenomics,roadmap,faq,docs} = t('navigation', {returnObjects: true})
   return (
     <header className='header-container'>
 
       <div className='header-left'>
         <HeaderLogo />
-        <HeaderItem text='About' />
-        <HeaderItem text='Tokenomics' />
-        <HeaderItem text='Roadmap' />
-        <HeaderItem text='FAQ' />
-        <HeaderItem text='Docs' />
+        <HeaderItem text={info.about} link={`#${info.about.toLowerCase()}-section`} />
+        <HeaderItem text={info.tokenomics} link={`#${info.tokenomics.toLowerCase()}-section`} />
+        <HeaderItem text={info.roadmap} link={`#${info.roadmap.toLowerCase()}-section`} />
+        <HeaderItem text={info.faq} link={`#${info.faq.toLowerCase()}-section`}/>
+        <HeaderItem text={info.docs} link={`#${info.docs.toLowerCase()}-section`} />
       </div>
 
       <div className='header-right'>
@@ -35,10 +37,10 @@ export const Header: React.FC<HeaderProps> = ({ }) => {
   )
 }
 
-const HeaderItem = ({ text }) => (
-  <div className='header-item'>
+const HeaderItem = ({ text, link }) => (
+  <a className='header-item' href={link}>
     {text}
-  </div>
+  </a>
 )
 
 const HeaderIcon = ({ icon }) => (
